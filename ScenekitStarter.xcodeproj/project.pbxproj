@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
+		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
+		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
+		BFB813D51981646100E09822 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* GameViewController.m */; };
+		BFB813D71981646200E09822 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D61981646200E09822 /* art.scnassets */; };
+		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
+		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
+		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFB813E21981646200E09822 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFB813BE1981646100E09822 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFB813C51981646100E09822;
+			remoteInfo = ScenekitStarter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFB813CD1981646100E09822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFB813CE1981646100E09822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFB813D01981646100E09822 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		BFB813D11981646100E09822 /* GameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		BFB813D31981646100E09822 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BFB813D41981646100E09822 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		BFB813D61981646200E09822 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		BFB813D81981646200E09822 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFB813DB1981646200E09822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScenekitStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB813E61981646200E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB813E71981646200E09822 /* ScenekitStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScenekitStarterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFB813C31981646100E09822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFB813DE1981646200E09822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFB813BD1981646100E09822 = {
+			isa = PBXGroup;
+			children = (
+				BFB813C81981646100E09822 /* ScenekitStarter */,
+				BFB813E41981646200E09822 /* ScenekitStarterTests */,
+				BFB813C71981646100E09822 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFB813C71981646100E09822 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFB813C61981646100E09822 /* ScenekitStarter.app */,
+				BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFB813C81981646100E09822 /* ScenekitStarter */ = {
+			isa = PBXGroup;
+			children = (
+				BFB813CD1981646100E09822 /* AppDelegate.h */,
+				BFB813CE1981646100E09822 /* AppDelegate.m */,
+				BFB813D01981646100E09822 /* GameView.h */,
+				BFB813D11981646100E09822 /* GameView.m */,
+				BFB813D31981646100E09822 /* GameViewController.h */,
+				BFB813D41981646100E09822 /* GameViewController.m */,
+				BFB813D61981646200E09822 /* art.scnassets */,
+				BFB813D81981646200E09822 /* Images.xcassets */,
+				BFB813DA1981646200E09822 /* MainMenu.xib */,
+				BFB813C91981646100E09822 /* Supporting Files */,
+			);
+			path = ScenekitStarter;
+			sourceTree = "<group>";
+		};
+		BFB813C91981646100E09822 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFB813CA1981646100E09822 /* Info.plist */,
+				BFB813CB1981646100E09822 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFB813E41981646200E09822 /* ScenekitStarterTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFB813E71981646200E09822 /* ScenekitStarterTests.m */,
+				BFB813E51981646200E09822 /* Supporting Files */,
+			);
+			path = ScenekitStarterTests;
+			sourceTree = "<group>";
+		};
+		BFB813E51981646200E09822 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFB813E61981646200E09822 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFB813C51981646100E09822 /* ScenekitStarter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFB813EB1981646200E09822 /* Build configuration list for PBXNativeTarget "ScenekitStarter" */;
+			buildPhases = (
+				BFB813C21981646100E09822 /* Sources */,
+				BFB813C31981646100E09822 /* Frameworks */,
+				BFB813C41981646100E09822 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScenekitStarter;
+			productName = ScenekitStarter;
+			productReference = BFB813C61981646100E09822 /* ScenekitStarter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFB813E01981646200E09822 /* ScenekitStarterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFB813EE1981646200E09822 /* Build configuration list for PBXNativeTarget "ScenekitStarterTests" */;
+			buildPhases = (
+				BFB813DD1981646200E09822 /* Sources */,
+				BFB813DE1981646200E09822 /* Frameworks */,
+				BFB813DF1981646200E09822 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFB813E31981646200E09822 /* PBXTargetDependency */,
+			);
+			name = ScenekitStarterTests;
+			productName = ScenekitStarterTests;
+			productReference = BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFB813BE1981646100E09822 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Creative Workflow Hacks";
+				TargetAttributes = {
+					BFB813C51981646100E09822 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					BFB813E01981646200E09822 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = BFB813C51981646100E09822;
+					};
+				};
+			};
+			buildConfigurationList = BFB813C11981646100E09822 /* Build configuration list for PBXProject "ScenekitStarter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFB813BD1981646100E09822;
+			productRefGroup = BFB813C71981646100E09822 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFB813C51981646100E09822 /* ScenekitStarter */,
+				BFB813E01981646200E09822 /* ScenekitStarterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFB813C41981646100E09822 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB813D71981646200E09822 /* art.scnassets in Resources */,
+				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
+				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFB813DF1981646200E09822 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFB813C21981646100E09822 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB813D51981646100E09822 /* GameViewController.m in Sources */,
+				BFB813D21981646100E09822 /* GameView.m in Sources */,
+				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
+				BFB813CC1981646100E09822 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFB813DD1981646200E09822 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFB813E31981646200E09822 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFB813C51981646100E09822 /* ScenekitStarter */;
+			targetProxy = BFB813E21981646200E09822 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFB813DA1981646200E09822 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFB813DB1981646200E09822 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFB813E91981646200E09822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BFB813EA1981646200E09822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BFB813EC1981646200E09822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScenekitStarter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BFB813ED1981646200E09822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScenekitStarter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BFB813EF1981646200E09822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScenekitStarter.app/Contents/MacOS/ScenekitStarter";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScenekitStarterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		BFB813F01981646200E09822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScenekitStarter.app/Contents/MacOS/ScenekitStarter";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScenekitStarterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFB813C11981646100E09822 /* Build configuration list for PBXProject "ScenekitStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFB813E91981646200E09822 /* Debug */,
+				BFB813EA1981646200E09822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFB813EB1981646200E09822 /* Build configuration list for PBXNativeTarget "ScenekitStarter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFB813EC1981646200E09822 /* Debug */,
+				BFB813ED1981646200E09822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFB813EE1981646200E09822 /* Build configuration list for PBXNativeTarget "ScenekitStarterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFB813EF1981646200E09822 /* Debug */,
+				BFB813F01981646200E09822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFB813BE1981646100E09822 /* Project object */;
+}
