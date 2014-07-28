@@ -9,9 +9,11 @@
 #import <SceneKit/SceneKit.h>
 
 #import "GameView.h"
+#import "CWHShadingNode.h"
 
 @interface GameViewController : NSViewController
 
 @property (assign) IBOutlet GameView *gameView;
+@property (nonatomic, retain) CWHShadingNode *torusNode;
 
 @end

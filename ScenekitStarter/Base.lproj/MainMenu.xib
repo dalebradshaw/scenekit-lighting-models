@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A282" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="101000" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.21"/>
-        <plugIn identifier="com.apple.SceneKitIBPlugin" version="6154.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6185.11"/>
+        <plugIn identifier="com.apple.SceneKitIBPlugin" version="6185.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -12,13 +12,13 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
-                <menuItem title="SceneKit Mac Template" id="56">
-                    <menu key="submenu" title="SceneKit Mac Template" systemMenu="apple" id="57">
+                <menuItem title="SceneKit Starter" id="56">
+                    <menu key="submenu" title="SceneKit Starter" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About SceneKit Mac Template" id="58">
+                            <menuItem title="About SceneKit Starter" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
@@ -648,17 +648,17 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="SceneKit Mac Template" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+        <window title="SceneKit Starter Template" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="640" height="480"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <sceneView autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="536" customClass="GameView" customModuleProvider="">
+                    <sceneView autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="536" customClass="GameView">
                         <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </sceneView>
@@ -672,13 +672,13 @@
             </view>
             <point key="canvasLocation" x="385" y="452"/>
         </window>
-        <customObject id="494" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="494" customClass="AppDelegate">
             <connections>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <viewController id="z44-Lp-cgU" customClass="GameViewController" customModuleProvider="">
+        <viewController id="z44-Lp-cgU" customClass="GameViewController">
             <connections>
                 <outlet property="gameView" destination="536" id="No3-Ct-Xwn"/>
                 <outlet property="view" destination="372" id="bTQ-MN-Ejh"/>

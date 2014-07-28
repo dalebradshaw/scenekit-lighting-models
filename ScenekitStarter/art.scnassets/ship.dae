@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2014-07-02T15:29:44Z</created>
-  <modified>2014-07-02T15:29:44Z</modified>
+  <created>2014-07-25T17:56:03Z</created>
+  <modified>2014-07-25T17:56:03Z</modified>
   <unit meter="0.010000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -132,7 +132,7 @@
   <visual_scene id="scene7">
    <node id="ship" name="ship">
     <node id="shipMesh" name="shipMesh">
-     <matrix>0.2 0 0 0 0 0.2 0 -1.187411 0 0 0.2 0.7991223 0 0 0 1 </matrix>
+     <matrix>0.2 0 0 -0.1881988 0 0.2 0 -2.030825 0 0 0.2 4.058877 0 0 0 1 </matrix>
      <instance_geometry url="#Scrap_MeshShape">
       <bind_material>
        <technique_common>
@@ -143,7 +143,7 @@
       </bind_material>
      </instance_geometry>
      <node id="emitter" name="emitter">
-      <matrix>-0.9998822 0.01057715 -0.0111275 0.009105275 0.01387102 0.31177 -0.9500563 5.406124 -0.006579665 -0.9500988 -0.3118801 -22.78586 0 0 0 1 </matrix>
+      <matrix>-0.9998822 0.01057715 -0.0111275 3.095164 0.01387102 0.31177 -0.9500563 10.4078 -0.006579665 -0.9500988 -0.3118801 1.499375 0 0 0 1 </matrix>
      </node>
     </node>
    </node>

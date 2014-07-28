@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B611986986E00F1C758 /* CWHShadingNode.m */; };
+		BF035B6619869A1000F1C758 /* LightingProgram.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6419869A1000F1C758 /* LightingProgram.fsh */; };
+		BF035B6719869A1000F1C758 /* LightingProgram.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6519869A1000F1C758 /* LightingProgram.vsh */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
@@ -28,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF035B601986986E00F1C758 /* CWHShadingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHShadingNode.h; sourceTree = "<group>"; };
+		BF035B611986986E00F1C758 /* CWHShadingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHShadingNode.m; sourceTree = "<group>"; };
+		BF035B6419869A1000F1C758 /* LightingProgram.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LightingProgram.fsh; sourceTree = "<group>"; };
+		BF035B6519869A1000F1C758 /* LightingProgram.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LightingProgram.vsh; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF035B631986999600F1C758 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF035B6419869A1000F1C758 /* LightingProgram.fsh */,
+				BF035B6519869A1000F1C758 /* LightingProgram.vsh */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		BFB813BD1981646100E09822 = {
 			isa = PBXGroup;
 			children = (
@@ -90,9 +106,12 @@
 				BFB813D11981646100E09822 /* GameView.m */,
 				BFB813D31981646100E09822 /* GameViewController.h */,
 				BFB813D41981646100E09822 /* GameViewController.m */,
+				BF035B601986986E00F1C758 /* CWHShadingNode.h */,
+				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
+				BF035B631986999600F1C758 /* Resources */,
 				BFB813C91981646100E09822 /* Supporting Files */,
 			);
 			path = ScenekitStarter;
@@ -205,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB813D71981646200E09822 /* art.scnassets in Resources */,
+				BF035B6719869A1000F1C758 /* LightingProgram.vsh in Resources */,
+				BF035B6619869A1000F1C758 /* LightingProgram.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
 			);
@@ -228,6 +249,7 @@
 				BFB813D21981646100E09822 /* GameView.m in Sources */,
 				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
+				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +436,7 @@
 				BFB813ED1981646200E09822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFB813EE1981646200E09822 /* Build configuration list for PBXNativeTarget "ScenekitStarterTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +445,7 @@
 				BFB813F01981646200E09822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

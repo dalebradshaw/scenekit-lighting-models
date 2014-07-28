@@ -13,7 +13,7 @@
 -(void)awakeFromNib
 {
     // create a new scene
-    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ship.dae"];
+    SCNScene *scene = [SCNScene scene];
 
     // create and add a camera to the scene
     SCNNode *cameraNode = [SCNNode node];
@@ -37,11 +37,23 @@
     ambientLightNode.light.color = [NSColor darkGrayColor];
     [scene.rootNode addChildNode:ambientLightNode];
     
-    // retrieve the ship node
-    SCNNode *ship = [scene.rootNode childNodeWithName:@"ship" recursively:YES];
-
-    // animate the 3d object
-    [ship runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
+    
+ 
+    
+    SCNTorus *torusShape = [SCNTorus torusWithRingRadius:3.
+                                              pipeRadius:1.];
+    
+    
+    CWHShadingNode *torusNode = [[CWHShadingNode alloc] initWithGeometry:torusShape];
+    torusNode.position = SCNVector3Make(0., 0., 0.);
+    torusNode.scale = SCNVector3Make(1., 1., 1.);
+    
+    [torusNode runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:2 y:0 z:0 duration:1]]];
+    
+    self.torusNode = torusNode;
+    
+    [scene.rootNode addChildNode:self.torusNode];
+    
     
     // set the scene to the view
     self.gameView.scene = scene;
