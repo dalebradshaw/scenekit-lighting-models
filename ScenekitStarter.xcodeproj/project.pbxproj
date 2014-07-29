@@ -22,6 +22,9 @@
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
 		BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */; };
+		BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */; };
+		BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE08198847D100FBDAAD /* Gooch.fsh */; };
+		BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE09198847D100FBDAAD /* Gooch.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		BFB813E71981646200E09822 /* ScenekitStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScenekitStarterTests.m; sourceTree = "<group>"; };
 		BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHPhongPointLightProgram.h; sourceTree = "<group>"; };
 		BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHPhongPointLightProgram.m; sourceTree = "<group>"; };
+		BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGoochProgram.h; sourceTree = "<group>"; };
+		BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHGoochProgram.m; sourceTree = "<group>"; };
+		BFF2DE08198847D100FBDAAD /* Gooch.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gooch.fsh; sourceTree = "<group>"; };
+		BFF2DE09198847D100FBDAAD /* Gooch.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gooch.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,8 @@
 		BF035B631986999600F1C758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFF2DE08198847D100FBDAAD /* Gooch.fsh */,
+				BFF2DE09198847D100FBDAAD /* Gooch.vsh */,
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
@@ -120,10 +129,12 @@
 				BFB813D41981646100E09822 /* GameViewController.m */,
 				BF035B601986986E00F1C758 /* CWHShadingNode.h */,
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
-				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
-				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
 				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
 				BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */,
+				BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */,
+				BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */,
+				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
+				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
@@ -239,6 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */,
+				BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */,
 				BFB813D71981646200E09822 /* art.scnassets in Resources */,
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
@@ -269,6 +282,7 @@
 				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
+				BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

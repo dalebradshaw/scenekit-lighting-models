@@ -9,6 +9,7 @@
 #import "CWHShadingNode.h"
 #import "CWHBlinnProgram.h"
 #import "CWHPhongPointLightProgram.h"
+#import "CWHGoochProgram.h"
 #import <GLKit/GLKit.h>
 #import <OpenGL/gl.h>
 #import <OpenGL/glext.h>
@@ -65,8 +66,16 @@
     SCNMaterial *programMaterial = [SCNMaterial material];
     
     //CWHBlinnProgram *program = [CWHBlinnProgram program];
-    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    //CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    CWHGoochProgram *program = [CWHGoochProgram program];
+    
+    NSColor *warmColor = [NSColor colorWithRed:1. green:.3 blue:.3 alpha:1.];
+    program.warmColor = warmColor;
+    NSColor *coolColor = [NSColor colorWithRed:0.2 green:0.2 blue:1. alpha:1.];
+    program.coolColor = coolColor;
     program.lightnode = light;
+    program.diffuseCool = 0.;
+    program.diffuseWarm = 1.;
     
     // Set program on geometry
     programMaterial.program = program;
