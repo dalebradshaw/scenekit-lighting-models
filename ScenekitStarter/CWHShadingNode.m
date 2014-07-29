@@ -7,6 +7,9 @@
 //
 
 #import "CWHShadingNode.h"
+#import <GLKit/GLKit.h>
+#import <OpenGL/gl.h>
+#import <OpenGL/glext.h>
 
 @implementation CWHShadingNode
 -(instancetype)init
@@ -81,4 +84,45 @@
     programMaterial.program = program;
     self.geometry.materials = @[programMaterial];
 }
+
+- (BOOL)    program:(SCNProgram *)program
+ bindValueForSymbol:(NSString *)symbol
+         atLocation:(unsigned int)location
+          programID:(unsigned int)programID
+           renderer:(SCNRenderer *)renderer
+{
+
+    //NSLog(@" symbol %@", symbol);
+    
+    if ([symbol isEqualToString:@"light_position"]) {
+        SCNNode *lightNode = [self.parentNode childNodeWithName:@"light" recursively:YES];
+        if(lightNode){
+            //NSLog(@" position %f, %f, %f", lightNode.position.x, lightNode.position.y, lightNode.position.z);
+             glUniform3f(location, lightNode.position.x, lightNode.position.y, lightNode.position.z);
+        }
+       
+        return YES; // indicate that the symbol was bound successfully.
+    }
+    
+    if ([symbol isEqualToString:@"light_color"]) {
+        SCNNode *lightNode = [self.parentNode childNodeWithName:@"light" recursively:YES];
+        if(lightNode){
+            glUniform3f(location,[lightNode.light.color redComponent] , [lightNode.light.color greenComponent] , [lightNode.light.color blueComponent]);
+        }
+        
+        return YES;
+    }
+    
+    
+    return NO; // no symbol was bound.
+}
+
+#pragma  mark SCNProgramDelegate Protocol Methods
+- (void)program:(SCNProgram*)program handleError:(NSError*)error {
+    // Log the shader compilation error
+    NSLog(@"SceneKit compilation error: %@", error);
+}
+
+
+
 @end

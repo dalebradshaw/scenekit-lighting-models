@@ -17,11 +17,12 @@ uniform mat4 u_proj;  // Projection transform
 uniform mat4 u_mvproj; //ModelViewProjection
 uniform mat4 u_norm; //Normal transform
 
-// Varyings (to Fragment Shader)
-//varying vec4
-varying vec3 normal,lightDir;
+uniform vec3 light_color;
+uniform vec3 light_position;
 
-vec3 light_position = vec3(0., 10., 10.);
+// Varyings (to Fragment Shader)
+varying vec3 normal,lightDir,lightColor;
+
 
 // Blinn Vertex Shader
 void phongVS(in vec4 vertex)
@@ -40,6 +41,7 @@ void main()
     
     phongVS(Vertex);
     
+    lightColor = light_color;
     //Transform vertex by modelview and projection matrices
     gl_Position = u_mvproj * a_srcPos;
     

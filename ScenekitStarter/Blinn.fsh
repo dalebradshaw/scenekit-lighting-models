@@ -8,19 +8,16 @@
  */
 
 // Varyings (from Vertex Shader)
-varying vec3 normal, lightDir;
+varying vec3 normal, lightDir, lightColor;
 
 //vec4 scene_color = vec4(0.,0.,0.,1.);
 vec4 light_ambient = vec4(0.,0.,0.,1.);
-vec4 light_diffuse = vec4(1.,0.,0.,1.);
+vec4 light_diffuse = vec4(lightColor.r,lightColor.g,lightColor.b,1.);
 vec4 light_specular = vec4(0.,0.,0.,1.);
 
 vec4 material_ambient = vec4(0.,0.,0.,1.);
 vec4 material_emission = vec4(0.,0.,0.,1.);
 vec4 material_diffuse = vec4(1., 1., 1.,1.);
-float material_specular = 1.;
-float shininess = 10.35;
-
 
 // Blinn Directional Fragment Shader
 vec4 blinnDirectionalFS()

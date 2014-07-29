@@ -7,11 +7,15 @@ uniform mat4 u_proj;  // Projection transform
 uniform mat4 u_mvproj; //ModelViewProjection
 uniform mat4 u_norm; //Normal transform
 
+uniform vec3 light_color;
+uniform vec3 light_position;
+
+
 // Varyings (to Fragment Shader)
 //varying vec4
-varying vec3 normal,lightDir, eyeVec;
+varying vec3 normal,lightDir, lightColor, eyeVec;
 
-vec3 light_position = vec3(0., 10., 10.);
+
 
 // Phong Point Vertex Shader function
 void phongVS(in vec4 vertex)
@@ -27,6 +31,7 @@ void main()
     vec4 n = u_norm * a_normPos;
     normal = n.xyz;
     
+    lightColor = light_color;
     vec4 Vertex = u_mv * a_srcPos;
     
     phongVS(Vertex);

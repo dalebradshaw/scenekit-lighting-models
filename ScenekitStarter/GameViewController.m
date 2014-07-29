@@ -23,21 +23,22 @@
     // place the camera
     cameraNode.position = SCNVector3Make(0, 0, 15);
     
-    // create and add a light to the scene
-    SCNNode *lightNode = [SCNNode node];
-    lightNode.light = [SCNLight light];
-    lightNode.light.type = SCNLightTypeOmni;
-    lightNode.position = SCNVector3Make(0, 10, 10);
-    [scene.rootNode addChildNode:lightNode];
-    
     // create and add an ambient light to the scene
     SCNNode *ambientLightNode = [SCNNode node];
+    ambientLightNode.name = @"light";
     ambientLightNode.light = [SCNLight light];
+    ambientLightNode.position = SCNVector3Make(0, 10, 10);
     ambientLightNode.light.type = SCNLightTypeAmbient;
-    ambientLightNode.light.color = [NSColor darkGrayColor];
+    ambientLightNode.light.color = [NSColor redColor];
     [scene.rootNode addChildNode:ambientLightNode];
     
     
+    SCNAction *moveByAction = [SCNAction moveBy:SCNVector3Make(20, 30, 10) duration:2];
+    moveByAction.timingMode = SCNActionTimingModeEaseInEaseOut;
+    SCNAction *reversed = [moveByAction reversedAction];
+    
+    [ambientLightNode  runAction:[SCNAction repeatActionForever:[SCNAction sequence:@[moveByAction, reversed]]]];
+
     SCNTorus *torusShape = [SCNTorus torusWithRingRadius:3.
                                               pipeRadius:1.];
     
