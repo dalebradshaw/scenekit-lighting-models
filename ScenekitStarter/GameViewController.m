@@ -2,7 +2,7 @@
 //  GameViewController.m
 //  ScenekitStarter
 //
-//  Created by Super on 7/24/14.
+//  Created by Dale Bradshaw on 7/24/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
@@ -23,7 +23,7 @@
     // place the camera
     cameraNode.position = SCNVector3Make(0, 0, 15);
     
-    // create and add an ambient light to the scene
+    // create and add a light to the scene
     SCNNode *ambientLightNode = [SCNNode node];
     ambientLightNode.name = @"light";
     ambientLightNode.light = [SCNLight light];
