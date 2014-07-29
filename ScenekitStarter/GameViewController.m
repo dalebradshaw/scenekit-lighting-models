@@ -43,7 +43,8 @@
                                               pipeRadius:1.];
     
     
-    CWHShadingNode *torusNode = [[CWHShadingNode alloc] initWithGeometry:torusShape];
+    CWHShadingNode *torusNode = [[CWHShadingNode alloc] initWithGeometry:torusShape
+                                                                   light:ambientLightNode];
     torusNode.position = SCNVector3Make(0., 0., 0.);
     torusNode.scale = SCNVector3Make(1., 1., 1.);
     

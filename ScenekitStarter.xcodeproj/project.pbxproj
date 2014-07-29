@@ -12,6 +12,7 @@
 		BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6519869A1000F1C758 /* PhongPointLight.vsh */; };
 		BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B681987E9C300F1C758 /* Blinn.fsh */; };
 		BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B691987E9C300F1C758 /* Blinn.vsh */; };
+		BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
@@ -20,6 +21,7 @@
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
+		BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		BF035B6519869A1000F1C758 /* PhongPointLight.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PhongPointLight.vsh; sourceTree = "<group>"; };
 		BF035B681987E9C300F1C758 /* Blinn.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blinn.fsh; sourceTree = "<group>"; };
 		BF035B691987E9C300F1C758 /* Blinn.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blinn.vsh; sourceTree = "<group>"; };
+		BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHBlinnProgram.h; sourceTree = "<group>"; };
+		BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHBlinnProgram.m; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScenekitStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813E61981646200E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813E71981646200E09822 /* ScenekitStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScenekitStarterTests.m; sourceTree = "<group>"; };
+		BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHPhongPointLightProgram.h; sourceTree = "<group>"; };
+		BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHPhongPointLightProgram.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 				BFB813D41981646100E09822 /* GameViewController.m */,
 				BF035B601986986E00F1C758 /* CWHShadingNode.h */,
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
+				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
+				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
+				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
+				BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
@@ -256,7 +266,9 @@
 				BFB813D51981646100E09822 /* GameViewController.m in Sources */,
 				BFB813D21981646100E09822 /* GameView.m in Sources */,
 				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
+				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
+				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

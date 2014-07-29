@@ -10,6 +10,8 @@
 
 @interface CWHShadingNode : SCNNode<SCNProgramDelegate>
 
--(instancetype)initWithGeometry:(SCNGeometry *)geometry;
--(void)prepareProgramWithGeometry:(SCNGeometry *)geometry;
+-(instancetype)initWithGeometry:(SCNGeometry *)geometry
+                          light:(SCNNode *)light;
+-(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
+                            light:(SCNNode *)light;
 @end
