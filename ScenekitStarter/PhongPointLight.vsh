@@ -35,5 +35,5 @@ void main()
     gl_Position = u_mvproj * a_srcPos;
     
     //Forward texture coordinates after applying texture matrix
-    gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+    //gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
 }

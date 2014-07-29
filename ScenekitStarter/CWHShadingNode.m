@@ -39,23 +39,19 @@
 
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
 {
-    SCNNode *textureNode = [SCNNode node];
-    textureNode.name = @"texture";
-    
-    textureNode.geometry = geometry;
-    
-    [self addChildNode:textureNode];
+
+    self.geometry = geometry;
     
     // Create a material
-    SCNMaterial *textureWrapMaterial = [SCNMaterial material];
+    SCNMaterial *programMaterial = [SCNMaterial material];
     
     // Create a program
     SCNProgram *program = [SCNProgram program];
     
     // Read the shader files from your bundle
     
-    NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"LightingProgram" withExtension:@"vsh"];
-    NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"LightingProgram" withExtension:@"fsh"];
+    NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"PhongPointLight" withExtension:@"vsh"];
+    NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"PhongPointLight" withExtension:@"fsh"];
     
     NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
                                                             encoding:NSUTF8StringEncoding
@@ -77,14 +73,12 @@
     [program setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
     [program setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
     [program setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-    
-    
-    
+
     // Become the program delegate so that you get the binding callback
     program.delegate = self;
     
     // Set program on geometry
-    textureWrapMaterial.program = program;
-    textureNode.geometry.materials = @[textureWrapMaterial];
+    programMaterial.program = program;
+    self.geometry.materials = @[programMaterial];
 }
 @end

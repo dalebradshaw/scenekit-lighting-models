@@ -38,8 +38,6 @@
     [scene.rootNode addChildNode:ambientLightNode];
     
     
- 
-    
     SCNTorus *torusShape = [SCNTorus torusWithRingRadius:3.
                                               pipeRadius:1.];
     
