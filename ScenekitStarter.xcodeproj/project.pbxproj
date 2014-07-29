@@ -10,6 +10,8 @@
 		BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B611986986E00F1C758 /* CWHShadingNode.m */; };
 		BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6419869A1000F1C758 /* PhongPointLight.fsh */; };
 		BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6519869A1000F1C758 /* PhongPointLight.vsh */; };
+		BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B681987E9C300F1C758 /* Blinn.fsh */; };
+		BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B691987E9C300F1C758 /* Blinn.vsh */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
@@ -35,6 +37,8 @@
 		BF035B611986986E00F1C758 /* CWHShadingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHShadingNode.m; sourceTree = "<group>"; };
 		BF035B6419869A1000F1C758 /* PhongPointLight.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PhongPointLight.fsh; sourceTree = "<group>"; };
 		BF035B6519869A1000F1C758 /* PhongPointLight.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PhongPointLight.vsh; sourceTree = "<group>"; };
+		BF035B681987E9C300F1C758 /* Blinn.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blinn.fsh; sourceTree = "<group>"; };
+		BF035B691987E9C300F1C758 /* Blinn.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blinn.vsh; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 		BF035B631986999600F1C758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF035B681987E9C300F1C758 /* Blinn.fsh */,
+				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
 			);
@@ -226,8 +232,10 @@
 				BFB813D71981646200E09822 /* art.scnassets in Resources */,
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
+				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
+				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

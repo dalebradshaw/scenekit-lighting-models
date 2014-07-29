@@ -50,8 +50,8 @@
     
     // Read the shader files from your bundle
     
-    NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"PhongPointLight" withExtension:@"vsh"];
-    NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"PhongPointLight" withExtension:@"fsh"];
+    NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"Blinn" withExtension:@"vsh"];
+    NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"Blinn" withExtension:@"fsh"];
     
     NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
                                                             encoding:NSUTF8StringEncoding
