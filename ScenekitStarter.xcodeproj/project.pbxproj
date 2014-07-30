@@ -13,6 +13,9 @@
 		BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B681987E9C300F1C758 /* Blinn.fsh */; };
 		BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B691987E9C300F1C758 /* Blinn.vsh */; };
 		BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */; };
+		BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */; };
+		BF728C51198966CF0018E76C /* Velvet.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C4F198966CF0018E76C /* Velvet.fsh */; };
+		BF728C52198966CF0018E76C /* Velvet.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C50198966CF0018E76C /* Velvet.vsh */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
@@ -46,6 +49,10 @@
 		BF035B691987E9C300F1C758 /* Blinn.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blinn.vsh; sourceTree = "<group>"; };
 		BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHBlinnProgram.h; sourceTree = "<group>"; };
 		BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHBlinnProgram.m; sourceTree = "<group>"; };
+		BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHVelvetProgram.h; sourceTree = "<group>"; };
+		BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHVelvetProgram.m; sourceTree = "<group>"; };
+		BF728C4F198966CF0018E76C /* Velvet.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Velvet.fsh; sourceTree = "<group>"; };
+		BF728C50198966CF0018E76C /* Velvet.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Velvet.vsh; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +103,8 @@
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
+				BF728C4F198966CF0018E76C /* Velvet.fsh */,
+				BF728C50198966CF0018E76C /* Velvet.vsh */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -135,6 +144,8 @@
 				BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
+				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
+				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
@@ -252,11 +263,13 @@
 			files = (
 				BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */,
 				BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */,
+				BF728C52198966CF0018E76C /* Velvet.vsh in Resources */,
 				BFB813D71981646200E09822 /* art.scnassets in Resources */,
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
 				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
+				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
 			);
@@ -278,6 +291,7 @@
 			files = (
 				BFB813D51981646100E09822 /* GameViewController.m in Sources */,
 				BFB813D21981646100E09822 /* GameView.m in Sources */,
+				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
 				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
 				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,

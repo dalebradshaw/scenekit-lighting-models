@@ -26,6 +26,7 @@ varying float NdotL;
 varying vec3  ReflectVec;
 varying vec3  ViewVec;
 
+
 // Gooch Vertex Shader function
 void goochVS(in vec4 V)
 {
