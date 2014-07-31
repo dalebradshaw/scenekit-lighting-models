@@ -11,6 +11,7 @@
 #import "CWHPhongPointLightProgram.h"
 #import "CWHGoochProgram.h"
 #import "CWHHemisphereProgram.h"
+#import "CWHLambSkinProgram.h"
 #import "CWHVelvetProgram.h"
 #import <GLKit/GLKit.h>
 #import <OpenGL/gl.h>
@@ -90,13 +91,20 @@
     NSColor *fuzzColor = [NSColor colorWithRed:0.9 green:0.7 blue:0.5 alpha:1.];
     program.fuzzColor = fuzzColor;
     program.rolloff = 0.528;
-    */
+   
   
     CWHHemisphereProgram *program = [CWHHemisphereProgram program];
     NSColor *skyColor = [NSColor colorWithRed:0.0 green:0.7 blue:1. alpha:1.];
     program.skyColor = skyColor;
     NSColor *groundColor = [NSColor colorWithRed:0.7 green:0.5 blue:0.2 alpha:1.];
     program.groundColor = groundColor;
+     */
+    CWHLambSkinProgram *program = [CWHLambSkinProgram program];
+    NSColor *diffuseColor = [NSColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.];
+    program.diffuseColor = diffuseColor;
+    NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+    program.ambientColor = ambientColor;
+    program.rolloff = 0.575;
     
     program.lightnode = light;
   

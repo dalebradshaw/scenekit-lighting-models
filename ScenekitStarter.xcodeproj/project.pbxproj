@@ -19,6 +19,12 @@
 		BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C54198A77E60018E76C /* CWHHemisphereProgram.m */; };
 		BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C56198A78710018E76C /* Hemisphere.fsh */; };
 		BF728C59198A78710018E76C /* Hemisphere.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C57198A78710018E76C /* Hemisphere.vsh */; };
+		BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */; };
+		BF728C5F198AB4500018E76C /* GlossyWetHighlight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */; };
+		BF728C60198AB4500018E76C /* GlossyWetHighlight.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C5E198AB4500018E76C /* GlossyWetHighlight.vsh */; };
+		BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */; };
+		BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C64198AC03E0018E76C /* LambSkin.fsh */; };
+		BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C65198AC03E0018E76C /* LambSkin.vsh */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
@@ -60,6 +66,14 @@
 		BF728C54198A77E60018E76C /* CWHHemisphereProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHHemisphereProgram.m; sourceTree = "<group>"; };
 		BF728C56198A78710018E76C /* Hemisphere.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Hemisphere.fsh; sourceTree = "<group>"; };
 		BF728C57198A78710018E76C /* Hemisphere.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Hemisphere.vsh; sourceTree = "<group>"; };
+		BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGlossyWetHighlightProgram.h; sourceTree = "<group>"; };
+		BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHGlossyWetHighlightProgram.m; sourceTree = "<group>"; };
+		BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GlossyWetHighlight.fsh; sourceTree = "<group>"; };
+		BF728C5E198AB4500018E76C /* GlossyWetHighlight.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = GlossyWetHighlight.vsh; sourceTree = "<group>"; };
+		BF728C61198ABF450018E76C /* CWHLambSkinProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLambSkinProgram.h; sourceTree = "<group>"; };
+		BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLambSkinProgram.m; sourceTree = "<group>"; };
+		BF728C64198AC03E0018E76C /* LambSkin.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LambSkin.fsh; sourceTree = "<group>"; };
+		BF728C65198AC03E0018E76C /* LambSkin.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LambSkin.vsh; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,10 +120,14 @@
 			children = (
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
+				BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */,
+				BF728C5E198AB4500018E76C /* GlossyWetHighlight.vsh */,
 				BFF2DE08198847D100FBDAAD /* Gooch.fsh */,
 				BFF2DE09198847D100FBDAAD /* Gooch.vsh */,
 				BF728C56198A78710018E76C /* Hemisphere.fsh */,
 				BF728C57198A78710018E76C /* Hemisphere.vsh */,
+				BF728C64198AC03E0018E76C /* LambSkin.fsh */,
+				BF728C65198AC03E0018E76C /* LambSkin.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
 				BF728C4F198966CF0018E76C /* Velvet.fsh */,
@@ -149,10 +167,14 @@
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
 				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
 				BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */,
+				BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */,
+				BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */,
 				BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */,
 				BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */,
 				BF728C53198A77E60018E76C /* CWHHemisphereProgram.h */,
 				BF728C54198A77E60018E76C /* CWHHemisphereProgram.m */,
+				BF728C61198ABF450018E76C /* CWHLambSkinProgram.h */,
+				BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
@@ -273,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */,
+				BF728C60198AB4500018E76C /* GlossyWetHighlight.vsh in Resources */,
 				BF728C59198A78710018E76C /* Hemisphere.vsh in Resources */,
+				BF728C5F198AB4500018E76C /* GlossyWetHighlight.fsh in Resources */,
 				BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */,
 				BF728C52198966CF0018E76C /* Velvet.vsh in Resources */,
 				BFB813D71981646200E09822 /* art.scnassets in Resources */,
@@ -282,9 +306,11 @@
 				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
 				BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
+				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
 				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
+				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +331,14 @@
 				BFB813D51981646100E09822 /* GameViewController.m in Sources */,
 				BFB813D21981646100E09822 /* GameView.m in Sources */,
 				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
+				BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */,
 				BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */,
 				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
 				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
 				BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */,
+				BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
