@@ -10,6 +10,7 @@
 #import "CWHBlinnProgram.h"
 #import "CWHPhongPointLightProgram.h"
 #import "CWHGoochProgram.h"
+#import "CWHHemisphereProgram.h"
 #import "CWHVelvetProgram.h"
 #import <GLKit/GLKit.h>
 #import <OpenGL/gl.h>
@@ -80,6 +81,8 @@
     program.diffuseCool = 0.;
     program.diffuseWarm = 1.;
     */
+    
+    /*
     CWHVelvetProgram *program = [CWHVelvetProgram program];
 
     NSColor *underColor = [NSColor colorWithRed:0.7 green:0.7 blue:0 alpha:1.];
@@ -87,8 +90,16 @@
     NSColor *fuzzColor = [NSColor colorWithRed:0.9 green:0.7 blue:0.5 alpha:1.];
     program.fuzzColor = fuzzColor;
     program.rolloff = 0.528;
+    */
+  
+    CWHHemisphereProgram *program = [CWHHemisphereProgram program];
+    NSColor *skyColor = [NSColor colorWithRed:0.0 green:0.7 blue:1. alpha:1.];
+    program.skyColor = skyColor;
+    NSColor *groundColor = [NSColor colorWithRed:0.7 green:0.5 blue:0.2 alpha:1.];
+    program.groundColor = groundColor;
     
     program.lightnode = light;
+  
     // Set program on geometry
     programMaterial.program = program;
     self.geometry.materials = @[programMaterial];
