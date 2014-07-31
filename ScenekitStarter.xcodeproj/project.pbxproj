@@ -25,6 +25,9 @@
 		BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */; };
 		BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C64198AC03E0018E76C /* LambSkin.fsh */; };
 		BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C65198AC03E0018E76C /* LambSkin.vsh */; };
+		BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */; };
+		BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */; };
+		BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
@@ -74,6 +77,10 @@
 		BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLambSkinProgram.m; sourceTree = "<group>"; };
 		BF728C64198AC03E0018E76C /* LambSkin.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LambSkin.fsh; sourceTree = "<group>"; };
 		BF728C65198AC03E0018E76C /* LambSkin.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LambSkin.vsh; sourceTree = "<group>"; };
+		BF728C68198AE6800018E76C /* CWHEdgeFuzzProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHEdgeFuzzProgram.h; sourceTree = "<group>"; };
+		BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHEdgeFuzzProgram.m; sourceTree = "<group>"; };
+		BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EdgeFuzz.fsh; sourceTree = "<group>"; };
+		BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EdgeFuzz.vsh; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +127,8 @@
 			children = (
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
+				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
+				BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */,
 				BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */,
 				BF728C5E198AB4500018E76C /* GlossyWetHighlight.vsh */,
 				BFF2DE08198847D100FBDAAD /* Gooch.fsh */,
@@ -167,6 +176,8 @@
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
 				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
 				BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */,
+				BF728C68198AE6800018E76C /* CWHEdgeFuzzProgram.h */,
+				BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */,
 				BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */,
 				BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */,
 				BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */,
@@ -309,7 +320,9 @@
 				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
 				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
+				BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
+				BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */,
 				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +350,7 @@
 				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
+				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
 				BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */,
 				BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,

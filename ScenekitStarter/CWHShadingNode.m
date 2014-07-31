@@ -9,6 +9,7 @@
 #import "CWHShadingNode.h"
 #import "CWHBlinnProgram.h"
 #import "CWHPhongPointLightProgram.h"
+#import "CWHEdgeFuzzProgram.h"
 #import "CWHGoochProgram.h"
 #import "CWHHemisphereProgram.h"
 #import "CWHLambSkinProgram.h"
@@ -98,14 +99,27 @@
     program.skyColor = skyColor;
     NSColor *groundColor = [NSColor colorWithRed:0.7 green:0.5 blue:0.2 alpha:1.];
     program.groundColor = groundColor;
-     */
+     
     CWHLambSkinProgram *program = [CWHLambSkinProgram program];
     NSColor *diffuseColor = [NSColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.];
     program.diffuseColor = diffuseColor;
     NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
     program.ambientColor = ambientColor;
     program.rolloff = 0.575;
+    */
+    CWHEdgeFuzzProgram *program = [CWHEdgeFuzzProgram program];
+    NSColor *surfaceColor = [NSColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:1.];
+    program.surfaceColor = surfaceColor;
+    NSColor *edgeColor = [NSColor colorWithRed:0.4 green:0.8 blue:1. alpha:1.];
+    program.edgeColor = edgeColor;
+    NSColor *lightColor = [NSColor colorWithRed:1. green:1. blue:1. alpha:1.];
+    program.lightColor = lightColor;
+    NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+    program.ambientColor = ambientColor;
     
+    program.fuzziness = 0.166;
+    program.edgeFade = 3.868;
+    program.specularity = 0.1488;
     program.lightnode = light;
   
     // Set program on geometry
