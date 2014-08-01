@@ -44,6 +44,7 @@
     
     
 }
+
 -(instancetype)initWithGeometry:(SCNGeometry *)geometry
                           light:(SCNNode *)light
 {
@@ -70,7 +71,7 @@
     SCNMaterial *programMaterial = [SCNMaterial material];
     
     //CWHBlinnProgram *program = [CWHBlinnProgram program];
-    //CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
     /*
     CWHGoochProgram *program = [CWHGoochProgram program];
     
@@ -84,7 +85,7 @@
     program.diffuseWarm = 1.;
     */
     
-    /*
+   /*
     CWHVelvetProgram *program = [CWHVelvetProgram program];
 
     NSColor *underColor = [NSColor colorWithRed:0.7 green:0.7 blue:0 alpha:1.];
@@ -93,7 +94,7 @@
     program.fuzzColor = fuzzColor;
     program.rolloff = 0.528;
    
-  
+   
     CWHHemisphereProgram *program = [CWHHemisphereProgram program];
     NSColor *skyColor = [NSColor colorWithRed:0.0 green:0.7 blue:1. alpha:1.];
     program.skyColor = skyColor;
@@ -106,7 +107,7 @@
     NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
     program.ambientColor = ambientColor;
     program.rolloff = 0.575;
-    */
+   
     CWHEdgeFuzzProgram *program = [CWHEdgeFuzzProgram program];
     NSColor *surfaceColor = [NSColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:1.];
     program.surfaceColor = surfaceColor;
@@ -120,6 +121,7 @@
     program.fuzziness = 0.166;
     program.edgeFade = 3.868;
     program.specularity = 0.1488;
+     */
     program.lightnode = light;
   
     // Set program on geometry

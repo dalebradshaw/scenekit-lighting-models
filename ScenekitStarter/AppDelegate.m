@@ -7,12 +7,50 @@
 //
 
 #import "AppDelegate.h"
+#import "CWHLightingModelWindowController.h"
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+
+// -------------------------------------------------------------------------------
+//	newDocument:sender
+// -------------------------------------------------------------------------------
+- (IBAction)newDocument:(id)sender
 {
-    // Insert code here to initialize your application
+    if(windowController == nil)
+    {
+       windowController = [[CWHLightingModelWindowController alloc] initWithWindowNibName:@"LightingModelWindow"];
+    }
+    
+    [windowController showWindow:self];
 }
+
+// -------------------------------------------------------------------------------
+//	applicationDidFinishLaunching:notification
+// -------------------------------------------------------------------------------
+- (void)applicationDidFinishLaunching:(NSNotification*)notification
+{
+    [self newDocument:self];
+}
+
+
+// -------------------------------------------------------------------------------
+//	validateMenuItem:theMenuItem
+// -------------------------------------------------------------------------------
+- (BOOL)validateMenuItem:(NSMenuItem *)theMenuItem
+{
+    BOOL enable = [self respondsToSelector:[theMenuItem action]];
+    
+    // disable "New" if the window is already up
+    if ([theMenuItem action] == @selector(newDocument:))
+    {
+        if ([[windowController window] isKeyWindow])
+        {
+            enable = NO;
+        }
+    }
+    return enable;
+}
+
 
 @end

@@ -11,9 +11,9 @@
 #import "GameView.h"
 #import "CWHShadingNode.h"
 
-@interface GameViewController : NSViewController
+@interface LightingViewController : NSViewController
+@property (weak) IBOutlet GameView *gameView;
 
-@property (assign) IBOutlet GameView *gameView;
 @property (nonatomic, retain) CWHShadingNode *torusNode;
 
 @end

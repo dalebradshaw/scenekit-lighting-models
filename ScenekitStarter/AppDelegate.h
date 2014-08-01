@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@class CWHLightingModelWindowController;
 
-@property (assign) IBOutlet NSWindow *window;
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    CWHLightingModelWindowController *windowController;
+}
 
 @end

@@ -28,10 +28,11 @@
 		BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */; };
 		BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */; };
 		BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */; };
+		BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
-		BFB813D51981646100E09822 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* GameViewController.m */; };
+		BFB813D51981646100E09822 /* LightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* LightingViewController.m */; };
 		BFB813D71981646200E09822 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D61981646200E09822 /* art.scnassets */; };
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
@@ -40,6 +41,11 @@
 		BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */; };
 		BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE08198847D100FBDAAD /* Gooch.fsh */; };
 		BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE09198847D100FBDAAD /* Gooch.vsh */; };
+		BFFB6DE8198BF0A500C14A7C /* PhongPointLightParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */; };
+		BFFB6DEB198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */; };
+		BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */; };
+		BFFB6DF0198C368900C14A7C /* LightingModelWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */; };
+		BFFB6DF2198C40CD00C14A7C /* LightingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DF1198C40CD00C14A7C /* LightingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,8 @@
 		BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHEdgeFuzzProgram.m; sourceTree = "<group>"; };
 		BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EdgeFuzz.fsh; sourceTree = "<group>"; };
 		BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EdgeFuzz.vsh; sourceTree = "<group>"; };
+		BF91E0AD198AEF6A00965DF7 /* CWHLUTSkinProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLUTSkinProgram.h; sourceTree = "<group>"; };
+		BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLUTSkinProgram.m; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813CA1981646100E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,8 +96,8 @@
 		BFB813CE1981646100E09822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BFB813D01981646100E09822 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
 		BFB813D11981646100E09822 /* GameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
-		BFB813D31981646100E09822 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		BFB813D41981646100E09822 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		BFB813D31981646100E09822 /* LightingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightingViewController.h; sourceTree = "<group>"; };
+		BFB813D41981646100E09822 /* LightingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightingViewController.m; sourceTree = "<group>"; };
 		BFB813D61981646200E09822 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BFB813D81981646200E09822 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFB813DB1981646200E09822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -102,6 +110,13 @@
 		BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHGoochProgram.m; sourceTree = "<group>"; };
 		BFF2DE08198847D100FBDAAD /* Gooch.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gooch.fsh; sourceTree = "<group>"; };
 		BFF2DE09198847D100FBDAAD /* Gooch.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gooch.vsh; sourceTree = "<group>"; };
+		BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhongPointLightParameterView.xib; sourceTree = "<group>"; };
+		BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHPhongPointLightParameterViewController.h; sourceTree = "<group>"; };
+		BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHPhongPointLightParameterViewController.m; sourceTree = "<group>"; };
+		BFFB6DEC198C272300C14A7C /* CWHLightingModelWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLightingModelWindowController.h; sourceTree = "<group>"; };
+		BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLightingModelWindowController.m; sourceTree = "<group>"; };
+		BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingModelWindow.xib; sourceTree = "<group>"; };
+		BFFB6DF1198C40CD00C14A7C /* LightingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +140,7 @@
 		BF035B631986999600F1C758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFFB6DF1198C40CD00C14A7C /* LightingView.xib */,
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
@@ -139,6 +155,7 @@
 				BF728C65198AC03E0018E76C /* LambSkin.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
+				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
 				BF728C4F198966CF0018E76C /* Velvet.fsh */,
 				BF728C50198966CF0018E76C /* Velvet.vsh */,
 			);
@@ -168,10 +185,12 @@
 			children = (
 				BFB813CD1981646100E09822 /* AppDelegate.h */,
 				BFB813CE1981646100E09822 /* AppDelegate.m */,
+				BFFB6DEC198C272300C14A7C /* CWHLightingModelWindowController.h */,
+				BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */,
 				BFB813D01981646100E09822 /* GameView.h */,
 				BFB813D11981646100E09822 /* GameView.m */,
-				BFB813D31981646100E09822 /* GameViewController.h */,
-				BFB813D41981646100E09822 /* GameViewController.m */,
+				BFB813D31981646100E09822 /* LightingViewController.h */,
+				BFB813D41981646100E09822 /* LightingViewController.m */,
 				BF035B601986986E00F1C758 /* CWHShadingNode.h */,
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
 				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
@@ -186,13 +205,18 @@
 				BF728C54198A77E60018E76C /* CWHHemisphereProgram.m */,
 				BF728C61198ABF450018E76C /* CWHLambSkinProgram.h */,
 				BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */,
+				BF91E0AD198AEF6A00965DF7 /* CWHLUTSkinProgram.h */,
+				BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
+				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
+				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
 				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
+				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BF035B631986999600F1C758 /* Resources */,
 				BFB813C91981646100E09822 /* Supporting Files */,
 			);
@@ -307,6 +331,7 @@
 			files = (
 				BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */,
 				BF728C60198AB4500018E76C /* GlossyWetHighlight.vsh in Resources */,
+				BFFB6DF0198C368900C14A7C /* LightingModelWindow.xib in Resources */,
 				BF728C59198A78710018E76C /* Hemisphere.vsh in Resources */,
 				BF728C5F198AB4500018E76C /* GlossyWetHighlight.fsh in Resources */,
 				BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */,
@@ -315,8 +340,10 @@
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
 				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
+				BFFB6DE8198BF0A500C14A7C /* PhongPointLightParameterView.xib in Resources */,
 				BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
+				BFFB6DF2198C40CD00C14A7C /* LightingView.xib in Resources */,
 				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
 				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
@@ -341,18 +368,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB813D51981646100E09822 /* GameViewController.m in Sources */,
+				BFB813D51981646100E09822 /* LightingViewController.m in Sources */,
 				BFB813D21981646100E09822 /* GameView.m in Sources */,
 				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
 				BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */,
 				BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */,
 				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
 				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
+				BFFB6DEB198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
+				BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */,
 				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
 				BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */,
 				BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */,
+				BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

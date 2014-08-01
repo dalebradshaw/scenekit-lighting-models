@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "LightingViewController.h"
 
-@implementation GameViewController
+@implementation LightingViewController
 
 -(void)awakeFromNib
 {
+    NSLog(@"awakeFromNib");
     // create a new scene
     SCNScene *scene = [SCNScene scene];
 
@@ -53,8 +54,8 @@
     self.torusNode = torusNode;
     
     [scene.rootNode addChildNode:self.torusNode];
-    
-    
+   
+
     // set the scene to the view
     self.gameView.scene = scene;
     
