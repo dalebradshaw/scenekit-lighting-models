@@ -75,9 +75,16 @@
     
     if ([symbol isEqualToString:@"light_color"]) {
 
-        if(self.lightnode){
-            glUniform3f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent]);
+        if(self.lightColor){
+        
+            glUniform3f(location,[self.lightColor redComponent] , [self.lightColor greenComponent] , [self.lightColor blueComponent]);
+
+        }else{
+            if(self.lightnode){
+                glUniform3f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent]);
+            }
         }
+     
         
         return YES;
     }

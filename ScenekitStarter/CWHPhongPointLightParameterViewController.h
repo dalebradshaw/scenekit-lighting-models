@@ -21,4 +21,12 @@
 @property (weak) IBOutlet NSColorWell *ambientColorWell;
 @property (weak) IBOutlet NSColorWell *lightColorWell;
 
+-(IBAction)setMaterialSpecularity:(id)sender;
+-(IBAction)setShininess:(id)sender;
+-(IBAction)setAmbientColor:(id)sender;
+
+@property (strong) NSColor *lightColor;
+-(IBAction)updateLightColor:(id)sender;
+
+
 @end

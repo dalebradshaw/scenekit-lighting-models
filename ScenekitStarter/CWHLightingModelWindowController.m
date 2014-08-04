@@ -36,6 +36,11 @@
     self.lightingParameterState = FALSE;
 }
 
+-(void)updateShaderValues:(NSDictionary *)values
+{
+    [self.lightingViewController.torusNode updateParameters:values];
+}
+
 -(IBAction)showInputParameters:(id)sender
 {
 

@@ -60,6 +60,18 @@
     return self;
 }
 
+-(void)updateParameters:(NSDictionary*)parameters
+{
+    NSLog(@"updateParameters: %@", parameters);
+    if(parameters[@"light_color"]){
+        
+        SCNMaterial *programMaterial = [SCNMaterial material];
+       CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+        program.lightColor = parameters[@"light_color"];
+        programMaterial.program = program;
+        self.geometry.materials = @[programMaterial];
+    }
+}
 
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
                             light:(SCNNode *)light

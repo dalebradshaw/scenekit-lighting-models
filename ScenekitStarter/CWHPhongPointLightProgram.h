@@ -11,5 +11,5 @@
 @interface CWHPhongPointLightProgram: SCNProgram<SCNProgramDelegate>
 
 @property (strong) SCNNode *lightnode;
-
+@property (strong) NSColor *lightColor;
 @end

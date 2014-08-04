@@ -10,4 +10,5 @@
 
 @protocol ParameterViewProtocol <NSObject>
 -(void)parameterViewDidClose;
+-(void)updateShaderValues:(NSDictionary *)values;
 @end
