@@ -117,6 +117,7 @@
 		BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLightingModelWindowController.m; sourceTree = "<group>"; };
 		BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingModelWindow.xib; sourceTree = "<group>"; };
 		BFFB6DF1198C40CD00C14A7C /* LightingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingView.xib; sourceTree = "<group>"; };
+		BFFB6DF31990048200C14A7C /* ParameterViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterViewProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +212,7 @@
 				BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
+				BFFB6DF31990048200C14A7C /* ParameterViewProtocol.h */,
 				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
 				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,

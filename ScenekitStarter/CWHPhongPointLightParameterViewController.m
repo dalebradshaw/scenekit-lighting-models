@@ -18,5 +18,19 @@
     [super viewDidLoad];
     // Do view setup here.
 }
+- (void)viewDidAppear
+{
+    
+}
+
+-(void)viewWillDisappear
+{
+}
+
+-(void)viewDidDisappear
+{
+    [self.delegate parameterViewDidClose];
+    self.delegate  = nil;
+}
 
 @end

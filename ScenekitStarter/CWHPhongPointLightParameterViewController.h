@@ -7,8 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ParameterViewProtocol.h"
 
 @interface CWHPhongPointLightParameterViewController : NSViewController
+@property (nonatomic, retain) id delegate;
 
 @property (weak) IBOutlet NSSlider *specularitySlider;
 @property (weak) IBOutlet NSSlider *shininessSlider;
