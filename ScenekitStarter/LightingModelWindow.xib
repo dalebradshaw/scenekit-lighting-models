@@ -40,6 +40,9 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="smallSystem"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="showInputParameters:" target="-2" id="tis-bU-0jH"/>
+                            </connections>
                         </button>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="D5744E3A-D31C-4D1C-8215-6AF51D23737B" label="Lighting Model" paletteLabel="Lighting Model" id="aWf-fF-g8m">

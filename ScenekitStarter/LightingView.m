@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
-#import "GameView.h"
+#import "LightingView.h"
 
-@implementation GameView
+@implementation LightingView
 
 -(void)mouseDown:(NSEvent *)theEvent
 {

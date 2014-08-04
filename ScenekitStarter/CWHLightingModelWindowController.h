@@ -16,6 +16,7 @@
     __weak IBOutlet NSView *targetView;
 }
 
+-(IBAction)showInputParameters:(id)sender;
 @property (nonatomic, strong) LightingViewController *lightingViewController;
 
 @end

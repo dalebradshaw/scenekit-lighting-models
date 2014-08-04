@@ -8,11 +8,11 @@
 
 #import <SceneKit/SceneKit.h>
 
-#import "GameView.h"
+#import "LightingView.h"
 #import "CWHShadingNode.h"
 
 @interface LightingViewController : NSViewController
-@property (weak) IBOutlet GameView *gameView;
+@property (weak) IBOutlet LightingView *lightingView;
 
 @property (nonatomic, retain) CWHShadingNode *torusNode;
 

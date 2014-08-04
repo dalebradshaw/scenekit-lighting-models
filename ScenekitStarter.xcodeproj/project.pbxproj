@@ -31,7 +31,7 @@
 		BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
-		BFB813D21981646100E09822 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* GameView.m */; };
+		BFB813D21981646100E09822 /* LightingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* LightingView.m */; };
 		BFB813D51981646100E09822 /* LightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* LightingViewController.m */; };
 		BFB813D71981646200E09822 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D61981646200E09822 /* art.scnassets */; };
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
@@ -94,8 +94,8 @@
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFB813CD1981646100E09822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFB813CE1981646100E09822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFB813D01981646100E09822 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
-		BFB813D11981646100E09822 /* GameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		BFB813D01981646100E09822 /* LightingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightingView.h; sourceTree = "<group>"; };
+		BFB813D11981646100E09822 /* LightingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightingView.m; sourceTree = "<group>"; };
 		BFB813D31981646100E09822 /* LightingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightingViewController.h; sourceTree = "<group>"; };
 		BFB813D41981646100E09822 /* LightingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightingViewController.m; sourceTree = "<group>"; };
 		BFB813D61981646200E09822 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -140,6 +140,8 @@
 		BF035B631986999600F1C758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFB813DA1981646200E09822 /* MainMenu.xib */,
+				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BFFB6DF1198C40CD00C14A7C /* LightingView.xib */,
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
@@ -187,8 +189,8 @@
 				BFB813CE1981646100E09822 /* AppDelegate.m */,
 				BFFB6DEC198C272300C14A7C /* CWHLightingModelWindowController.h */,
 				BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */,
-				BFB813D01981646100E09822 /* GameView.h */,
-				BFB813D11981646100E09822 /* GameView.m */,
+				BFB813D01981646100E09822 /* LightingView.h */,
+				BFB813D11981646100E09822 /* LightingView.m */,
 				BFB813D31981646100E09822 /* LightingViewController.h */,
 				BFB813D41981646100E09822 /* LightingViewController.m */,
 				BF035B601986986E00F1C758 /* CWHShadingNode.h */,
@@ -215,8 +217,6 @@
 				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
-				BFB813DA1981646200E09822 /* MainMenu.xib */,
-				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BF035B631986999600F1C758 /* Resources */,
 				BFB813C91981646100E09822 /* Supporting Files */,
 			);
@@ -369,7 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB813D51981646100E09822 /* LightingViewController.m in Sources */,
-				BFB813D21981646100E09822 /* GameView.m in Sources */,
+				BFB813D21981646100E09822 /* LightingView.m in Sources */,
 				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
 				BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */,
 				BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */,

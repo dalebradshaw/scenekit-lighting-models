@@ -1,5 +1,5 @@
 //
-//  GameViewController.m
+//  lightingViewController.m
 //  ScenekitStarter
 //
 //  Created by Dale Bradshaw on 7/24/14.
@@ -57,16 +57,16 @@
    
 
     // set the scene to the view
-    self.gameView.scene = scene;
+    self.lightingView.scene = scene;
     
     // allows the user to manipulate the camera
-    self.gameView.allowsCameraControl = YES;
+    self.lightingView.allowsCameraControl = YES;
     
     // show statistics such as fps and timing information
-    self.gameView.showsStatistics = YES;
+    self.lightingView.showsStatistics = YES;
     
     // configure the view
-    self.gameView.backgroundColor = [NSColor blackColor];  
+    self.lightingView.backgroundColor = [NSColor blackColor];  
 }
 
 @end

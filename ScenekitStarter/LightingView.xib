@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LightingViewController">
             <connections>
-                <outlet property="gameView" destination="qxu-gg-2Um" id="7In-hq-1Hs"/>
+                <outlet property="lightingView" destination="qxu-gg-2Um" id="Tvy-S1-Kyb"/>
                 <outlet property="view" destination="0Hr-EF-VBH" id="mJY-LR-qTa"/>
             </connections>
         </customObject>
@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <sceneView autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxu-gg-2Um" customClass="GameView">
+                <sceneView autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxu-gg-2Um" customClass="LightingView">
                     <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </sceneView>
