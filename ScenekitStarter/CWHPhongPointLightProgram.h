@@ -12,4 +12,5 @@
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *lightColor;
+@property (assign) double   shininess;
 @end

@@ -12,7 +12,6 @@
 
 @interface CWHLightingModelWindowController : NSWindowController<ParameterViewProtocol>
 {
-    
     __weak IBOutlet NSView *targetView;
 }
 

@@ -17,10 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    
+    self.ambientColor = [self.ambientColorWell color];
+    self.lightColor = [self.lightColorWell color];
+    self.shininess = [self.shininessSlider doubleValue];
+   
     [self.specularityTextField setDoubleValue:[self.specularitySlider doubleValue]];
     [self.shininessTextField setDoubleValue:[self.shininessSlider doubleValue]];
 }
+
 - (void)viewDidAppear
 {
     
@@ -28,6 +32,7 @@
 
 -(void)viewWillDisappear
 {
+    
 }
 
 -(void)viewDidDisappear
@@ -36,23 +41,32 @@
     self.delegate  = nil;
 }
 
--(IBAction)setMaterialSpecularity:(id)sender
+-(IBAction)updateMaterialSpecularity:(id)sender
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
     [self.specularityTextField setDoubleValue:value];
+    
+    [self updateShaderValues];
 }
 
--(IBAction)setShininess:(id)sender
+-(IBAction)updateShininess:(id)sender
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
+    self.shininess = [self.shininessSlider doubleValue];
     [self.shininessTextField setDoubleValue:value];
+    
+    [self updateShaderValues];
 }
 
--(IBAction)setAmbientColor:(id)sender
+-(IBAction)updateAmbientColor:(id)sender
 {
+    NSColorWell *colorWell = sender;
+    NSColor *color = [colorWell color];
     
+    self.ambientColor = color;
+    [self updateShaderValues];
 }
 
 -(IBAction)updateLightColor:(id)sender
@@ -66,7 +80,11 @@
 
 -(void)updateShaderValues
 {
-    NSDictionary *values = @{@"light_color":self.lightColor};
+    NSDictionary *values = @{@"light_color":self.lightColor,
+                            @"ambientColor":self.ambientColor,
+                               @"shininess":[NSNumber numberWithDouble:self.shininess],
+                     @"materialSpecularity":[NSNumber numberWithDouble:self.materialSpecularity ]};
+    
     [self.delegate updateShaderValues:values];
 }
 

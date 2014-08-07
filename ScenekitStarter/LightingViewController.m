@@ -12,7 +12,7 @@
 
 -(void)awakeFromNib
 {
-    NSLog(@"awakeFromNib");
+    //NSLog(@"awakeFromNib");
     // create a new scene
     SCNScene *scene = [SCNScene scene];
 

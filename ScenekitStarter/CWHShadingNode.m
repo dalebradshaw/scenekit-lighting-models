@@ -63,14 +63,19 @@
 -(void)updateParameters:(NSDictionary*)parameters
 {
     NSLog(@"updateParameters: %@", parameters);
+    SCNMaterial *programMaterial = [SCNMaterial material];
+    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    
     if(parameters[@"light_color"]){
-        
-        SCNMaterial *programMaterial = [SCNMaterial material];
-       CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
         program.lightColor = parameters[@"light_color"];
-        programMaterial.program = program;
-        self.geometry.materials = @[programMaterial];
     }
+    
+    if (parameters[@"shininess"]) {
+        program.shininess = [parameters[@"shininess"] doubleValue];
+    }
+    
+    programMaterial.program = program;
+    self.geometry.materials = @[programMaterial];
 }
 
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry

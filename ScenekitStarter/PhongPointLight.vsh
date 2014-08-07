@@ -31,6 +31,7 @@ void main()
     vec4 n = u_norm * a_normPos;
     normal = n.xyz;
     
+
     lightColor = light_color;
     vec4 Vertex = u_mv * a_srcPos;
     

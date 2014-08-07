@@ -8,7 +8,9 @@
  */
 
 // Varyings (from Vertex Shader)
+
 varying vec3 normal,lightDir, lightColor, eyeVec;
+uniform float shininess;
 
 //vec4 scene_color = vec4(0.,0.,0.,1.);
 vec4 light_ambient = vec4(0.,0.,0.,1.);
@@ -19,7 +21,7 @@ vec4 material_ambient = vec4(0.,0.,0.,1.);
 vec4 material_emission = vec4(0.,0.,0.,1.);
 vec4 material_diffuse = vec4(1., 1., 1.,1.);
 float material_specular = 1.;
-float shininess = 10.35;
+
 
 // Phong Point function
 vec4 phongPointFS()
@@ -42,7 +44,7 @@ vec4 phongPointFS()
         final_color += light_specular
         * material_specular * specular;
     }
-    
+
     return final_color;
 }
 

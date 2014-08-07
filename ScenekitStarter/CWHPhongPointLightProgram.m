@@ -47,6 +47,8 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        //some defaults
+        self.shininess = 10.8;
     }
     
     return self;
@@ -88,7 +90,15 @@
         
         return YES;
     }
-    
+    if ([symbol isEqualToString:@"shininess"]) {
+        
+        if(self.shininess){
+            //NSLog(@" self.shininess %f", self.shininess);
+            glUniform1f(location, self.shininess);
+        }
+        
+        return YES; // indicate that the symbol was bound successfully.
+    }
     
     return NO; // no symbol was bound.
 }
