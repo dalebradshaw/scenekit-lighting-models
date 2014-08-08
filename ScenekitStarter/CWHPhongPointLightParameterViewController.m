@@ -19,8 +19,9 @@
     // Do view setup here.
     self.ambientColor = [self.ambientColorWell color];
     self.lightColor = [self.lightColorWell color];
+    self.materialSpecularity = [self.specularitySlider doubleValue];
     self.shininess = [self.shininessSlider doubleValue];
-   
+
     [self.specularityTextField setDoubleValue:[self.specularitySlider doubleValue]];
     [self.shininessTextField setDoubleValue:[self.shininessSlider doubleValue]];
 }
@@ -46,6 +47,7 @@
     NSSlider *slider = sender;
     double value = [slider doubleValue];
     [self.specularityTextField setDoubleValue:value];
+    self.materialSpecularity = value;
     
     [self updateShaderValues];
 }
@@ -54,7 +56,8 @@
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
-    self.shininess = [self.shininessSlider doubleValue];
+    self.shininess = value;
+    
     [self.shininessTextField setDoubleValue:value];
     
     [self updateShaderValues];

@@ -90,6 +90,18 @@
         
         return YES;
     }
+    
+    if ([symbol isEqualToString:@"light_ambient"]) {
+        
+        if(self.ambientColor){
+            
+            glUniform3f(location,[self.ambientColor redComponent] , [self.ambientColor greenComponent] , [self.ambientColor blueComponent]);
+            
+        }
+        
+        return YES;
+    }
+    
     if ([symbol isEqualToString:@"shininess"]) {
         
         if(self.shininess){
@@ -99,6 +111,17 @@
         
         return YES; // indicate that the symbol was bound successfully.
     }
+    
+    if ([symbol isEqualToString:@"material_specular"]) {
+        
+        if(self.materialSpecularity){
+            glUniform1f(location, self.materialSpecularity);
+        }
+        
+        return YES; // indicate that the symbol was bound successfully.
+    }
+    
+    
     
     return NO; // no symbol was bound.
 }

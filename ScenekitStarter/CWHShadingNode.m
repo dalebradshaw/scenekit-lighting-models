@@ -42,7 +42,6 @@
     
     return self;
     
-    
 }
 
 -(instancetype)initWithGeometry:(SCNGeometry *)geometry
@@ -52,17 +51,20 @@
     
     if ( self != nil )
     {
-        
         [self prepareProgramWithGeometry:geometry
                                    light:light];
     }
     
     return self;
 }
+-(void)updateLightingModel:(NSString*)lightingModel
+{
+    
+}
 
 -(void)updateParameters:(NSDictionary*)parameters
 {
-    NSLog(@"updateParameters: %@", parameters);
+    //NSLog(@"updateParameters: %@", parameters);
     SCNMaterial *programMaterial = [SCNMaterial material];
     CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
     
@@ -70,8 +72,16 @@
         program.lightColor = parameters[@"light_color"];
     }
     
+    if(parameters[@"ambientColor"]){
+        program.ambientColor = parameters[@"ambientColor"];
+    }
+    
     if (parameters[@"shininess"]) {
         program.shininess = [parameters[@"shininess"] doubleValue];
+    }
+    
+    if (parameters[@"materialSpecularity"]) {
+        program.materialSpecularity = [parameters[@"materialSpecularity"] doubleValue];
     }
     
     programMaterial.program = program;

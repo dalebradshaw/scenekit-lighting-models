@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="101000" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6185.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CWHLightingModelWindowController">
@@ -48,14 +48,14 @@
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="D5744E3A-D31C-4D1C-8215-6AF51D23737B" label="Lighting Model" paletteLabel="Lighting Model" id="aWf-fF-g8m">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="100" height="28"/>
-                        <size key="maxSize" width="100" height="30"/>
+                        <size key="minSize" width="80" height="28"/>
+                        <size key="maxSize" width="150" height="40"/>
                         <popUpButton key="view" verticalHuggingPriority="750" id="HuQ-mo-ozh">
-                            <rect key="frame" x="0.0" y="14" width="100" height="28"/>
+                            <rect key="frame" x="0.0" y="14" width="140" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="roundTextured" title="Phong Point Light" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="dF8-Ai-y7P" id="UrR-4G-zVx">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="menu"/>
+                                <font key="font" metaFont="system"/>
                                 <menu key="menu" id="UlQ-XP-3CW">
                                     <items>
                                         <menuItem title="Phong Point Light" state="on" id="dF8-Ai-y7P"/>
@@ -65,6 +65,9 @@
                                     </items>
                                 </menu>
                             </popUpButtonCell>
+                            <connections>
+                                <action selector="updateLightingModel:" target="-2" id="QEb-Hy-Cjk"/>
+                            </connections>
                         </popUpButton>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="7yv-qq-f14"/>

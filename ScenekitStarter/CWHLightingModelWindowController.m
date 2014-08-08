@@ -65,11 +65,24 @@
                                                  preferredEdge:NSMinYEdge
                                                       behavior:NSPopoverBehaviorTransient];
         parameterViewController.delegate = self;
+        
+        self.currentLightingProgram = @"Phong Point Light";//use enum?
         self.lightingParameterState = TRUE;
     }else{
         self.lightingParameterState = FALSE;
     }
 
+}
+
+- (IBAction)updateLightingModel:(id)sender {
+    NSString *updatedModel = [sender titleOfSelectedItem];
+    
+    NSLog(@" updateLightingModel %@", updatedModel);
+    if(![self.currentLightingProgram isEqualToString:updatedModel]){
+        [self.lightingViewController.torusNode updateLightingModel:updatedModel];
+         self.currentLightingProgram = [sender titleOfSelectedItem];
+    }
+   
 }
 
 @end

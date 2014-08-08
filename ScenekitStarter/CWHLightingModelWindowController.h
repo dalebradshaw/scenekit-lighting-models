@@ -16,7 +16,10 @@
 }
 
 -(IBAction)showInputParameters:(id)sender;
+-(IBAction)updateLightingModel:(id)sender;
+
 @property (strong) LightingViewController *lightingViewController;
 @property (assign) BOOL lightingParameterState;
+@property (strong) NSString *currentLightingProgram;
 
 @end
