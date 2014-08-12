@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ParameterViewProtocol.h"
+#import "CWHPhongPointLightProgram.h"
 
 @interface CWHPhongPointLightParameterViewController : NSViewController
 @property (nonatomic, retain) id delegate;

@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SceneKit/SceneKit.h> 
 
 @protocol ParameterViewProtocol <NSObject>
 -(void)parameterViewDidClose;
--(void)updateShaderValues:(NSDictionary *)values;
+-(void)updateShaderValues:(SCNProgram *)program;
 @end

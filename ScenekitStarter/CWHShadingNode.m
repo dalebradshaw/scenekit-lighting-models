@@ -59,33 +59,25 @@
 }
 -(void)updateLightingModel:(NSString*)lightingModel
 {
+    //NSLog(@"updateLightingModel::lightingModel(%@)", lightingModel);
+    
+    CWHGoochProgram *program = [CWHGoochProgram program];
+    SCNMaterial *programMaterial = [SCNMaterial material];
+
+    programMaterial.program = program;
+    self.geometry.materials = @[programMaterial];
     
 }
 
--(void)updateParameters:(NSDictionary*)parameters
+-(void)updateParameters:(SCNProgram *)program
 {
     //NSLog(@"updateParameters: %@", parameters);
     SCNMaterial *programMaterial = [SCNMaterial material];
-    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
     
-    if(parameters[@"light_color"]){
-        program.lightColor = parameters[@"light_color"];
+    if ([program isKindOfClass:[SCNProgram class]]) {
+        programMaterial.program = program;
+        self.geometry.materials = @[programMaterial];
     }
-    
-    if(parameters[@"ambientColor"]){
-        program.ambientColor = parameters[@"ambientColor"];
-    }
-    
-    if (parameters[@"shininess"]) {
-        program.shininess = [parameters[@"shininess"] doubleValue];
-    }
-    
-    if (parameters[@"materialSpecularity"]) {
-        program.materialSpecularity = [parameters[@"materialSpecularity"] doubleValue];
-    }
-    
-    programMaterial.program = program;
-    self.geometry.materials = @[programMaterial];
 }
 
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry

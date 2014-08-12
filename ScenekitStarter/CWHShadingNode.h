@@ -8,6 +8,7 @@
 
 #import <SceneKit/SceneKit.h>
 
+
 @interface CWHShadingNode : SCNNode<SCNProgramDelegate>
 
 -(void)updateParameters:(NSDictionary*)parameters;

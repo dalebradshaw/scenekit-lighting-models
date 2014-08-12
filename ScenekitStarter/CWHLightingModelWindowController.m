@@ -80,7 +80,7 @@
     NSLog(@" updateLightingModel %@", updatedModel);
     if(![self.currentLightingProgram isEqualToString:updatedModel]){
         [self.lightingViewController.torusNode updateLightingModel:updatedModel];
-         self.currentLightingProgram = [sender titleOfSelectedItem];
+         self.currentLightingProgram = updatedModel;
     }
    
 }

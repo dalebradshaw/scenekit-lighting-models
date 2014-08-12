@@ -83,12 +83,15 @@
 
 -(void)updateShaderValues
 {
-    NSDictionary *values = @{@"light_color":self.lightColor,
-                            @"ambientColor":self.ambientColor,
-                               @"shininess":[NSNumber numberWithDouble:self.shininess],
-                     @"materialSpecularity":[NSNumber numberWithDouble:self.materialSpecularity ]};
+   
+    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+
+    program.lightColor = self.lightColor;
+    program.ambientColor = self.ambientColor;
+    program.shininess = self.shininess;
+    program.materialSpecularity = self.materialSpecularity;
     
-    [self.delegate updateShaderValues:values];
+    [self.delegate updateShaderValues:program];
 }
 
 @end

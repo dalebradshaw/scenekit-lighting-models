@@ -47,6 +47,17 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        
+        //defaults
+        NSColor *warmColor = [NSColor colorWithRed:1. green:.3 blue:.3 alpha:1.];
+        self.warmColor = warmColor;
+        NSColor *coolColor = [NSColor colorWithRed:0.2 green:0.2 blue:1. alpha:1.];
+        
+        self.coolColor = coolColor;
+        
+        self.diffuseCool = 0.;
+        self.diffuseWarm = 1.;
+        
     }
     
     return self;
