@@ -53,12 +53,12 @@
                         <popUpButton key="view" verticalHuggingPriority="750" id="HuQ-mo-ozh">
                             <rect key="frame" x="0.0" y="14" width="140" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <popUpButtonCell key="cell" type="roundTextured" title="Phong Point Light" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="dF8-Ai-y7P" id="UrR-4G-zVx">
+                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UrR-4G-zVx">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
+                                <font key="font" metaFont="menu"/>
                                 <menu key="menu" id="UlQ-XP-3CW">
                                     <items>
-                                        <menuItem title="Phong Point Light" state="on" id="dF8-Ai-y7P"/>
+                                        <menuItem title="Phong Point Light" id="dF8-Ai-y7P"/>
                                         <menuItem title="Blinn" id="iCM-jc-oNK"/>
                                         <menuItem title="Edge Fuzz" id="uez-MC-ZVr"/>
                                         <menuItem title="Gooch" id="qPy-6U-M8Z"/>

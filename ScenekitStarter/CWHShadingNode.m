@@ -57,6 +57,7 @@
     
     return self;
 }
+
 -(void)updateLightingModel:(NSString*)lightingModel
 {
     //NSLog(@"updateLightingModel::lightingModel(%@)", lightingModel);

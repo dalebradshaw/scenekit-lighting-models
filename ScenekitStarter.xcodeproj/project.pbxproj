@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF018EF2199A93F700917508 /* GoochParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF018EF1199A93F700917508 /* GoochParameterView.xib */; };
+		BF018EF5199A948F00917508 /* CWHGoochParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */; };
 		BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B611986986E00F1C758 /* CWHShadingNode.m */; };
 		BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6419869A1000F1C758 /* PhongPointLight.fsh */; };
 		BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B6519869A1000F1C758 /* PhongPointLight.vsh */; };
@@ -59,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF018EF1199A93F700917508 /* GoochParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoochParameterView.xib; sourceTree = "<group>"; };
+		BF018EF3199A948F00917508 /* CWHGoochParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGoochParameterViewController.h; sourceTree = "<group>"; };
+		BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHGoochParameterViewController.m; sourceTree = "<group>"; };
 		BF035B601986986E00F1C758 /* CWHShadingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHShadingNode.h; sourceTree = "<group>"; };
 		BF035B611986986E00F1C758 /* CWHShadingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHShadingNode.m; sourceTree = "<group>"; };
 		BF035B6419869A1000F1C758 /* PhongPointLight.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PhongPointLight.fsh; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
 				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
+				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
 				BF728C4F198966CF0018E76C /* Velvet.fsh */,
 				BF728C50198966CF0018E76C /* Velvet.vsh */,
 			);
@@ -213,6 +219,8 @@
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
 				BFFB6DF31990048200C14A7C /* ParameterViewProtocol.h */,
+				BF018EF3199A948F00917508 /* CWHGoochParameterViewController.h */,
+				BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */,
 				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
 				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
@@ -346,6 +354,7 @@
 				BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
 				BFFB6DF2198C40CD00C14A7C /* LightingView.xib in Resources */,
+				BF018EF2199A93F700917508 /* GoochParameterView.xib in Resources */,
 				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
 				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
@@ -376,6 +385,7 @@
 				BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */,
 				BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */,
 				BFB813CF1981646100E09822 /* AppDelegate.m in Sources */,
+				BF018EF5199A948F00917508 /* CWHGoochParameterViewController.m in Sources */,
 				BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */,
 				BFFB6DEB198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,

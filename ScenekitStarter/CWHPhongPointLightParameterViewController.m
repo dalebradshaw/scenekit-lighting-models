@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+   
     self.ambientColor = [self.ambientColorWell color];
     self.lightColor = [self.lightColorWell color];
     self.materialSpecularity = [self.specularitySlider doubleValue];
@@ -46,6 +47,7 @@
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
+    
     [self.specularityTextField setDoubleValue:value];
     self.materialSpecularity = value;
     
@@ -56,8 +58,8 @@
 {
     NSSlider *slider = sender;
     double value = [slider doubleValue];
-    self.shininess = value;
     
+    self.shininess = value;
     [self.shininessTextField setDoubleValue:value];
     
     [self updateShaderValues];
