@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CWHPhongPointLightParameterViewController.h"
-@class LightingViewController;
+@class CWHLightingViewController;
 
 @interface CWHLightingModelWindowController : NSWindowController<CWHParameterViewProtocol>
 {
@@ -18,7 +18,7 @@
 -(IBAction)showInputParameters:(id)sender;
 -(IBAction)updateLightingModel:(id)sender;
 
-@property (strong) LightingViewController *lightingViewController;
+@property (strong) CWHLightingViewController *lightingViewController;
 @property (assign) BOOL lightingParameterState;
 @property (strong) NSString *currentLightingProgram;
 

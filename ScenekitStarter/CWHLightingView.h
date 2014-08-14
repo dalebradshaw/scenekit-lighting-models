@@ -8,6 +8,6 @@
 
 #import <SceneKit/SceneKit.h>
 
-@interface LightingView : SCNView
+@interface CWHLightingView : SCNView
 
 @end

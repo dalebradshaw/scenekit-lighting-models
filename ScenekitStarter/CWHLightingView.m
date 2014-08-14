@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
-#import "LightingView.h"
+#import "CWHLightingView.h"
 
-@implementation LightingView
+@implementation CWHLightingView
 
 -(void)mouseDown:(NSEvent *)theEvent
 {

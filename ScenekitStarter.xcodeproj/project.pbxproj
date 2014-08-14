@@ -33,8 +33,8 @@
 		BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
-		BFB813D21981646100E09822 /* LightingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* LightingView.m */; };
-		BFB813D51981646100E09822 /* LightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* LightingViewController.m */; };
+		BFB813D21981646100E09822 /* CWHLightingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* CWHLightingView.m */; };
+		BFB813D51981646100E09822 /* CWHLightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* CWHLightingViewController.m */; };
 		BFB813D71981646200E09822 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D61981646200E09822 /* art.scnassets */; };
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
@@ -48,7 +48,7 @@
 		BFFB6DEB198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */; };
 		BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */; };
 		BFFB6DF0198C368900C14A7C /* LightingModelWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */; };
-		BFFB6DF2198C40CD00C14A7C /* LightingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DF1198C40CD00C14A7C /* LightingView.xib */; };
+		BFFB6DF2198C40CD00C14A7C /* CWHLightingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +100,10 @@
 		BFB813CB1981646100E09822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFB813CD1981646100E09822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFB813CE1981646100E09822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BFB813D01981646100E09822 /* LightingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightingView.h; sourceTree = "<group>"; };
-		BFB813D11981646100E09822 /* LightingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightingView.m; sourceTree = "<group>"; };
-		BFB813D31981646100E09822 /* LightingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightingViewController.h; sourceTree = "<group>"; };
-		BFB813D41981646100E09822 /* LightingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightingViewController.m; sourceTree = "<group>"; };
+		BFB813D01981646100E09822 /* CWHLightingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHLightingView.h; sourceTree = "<group>"; };
+		BFB813D11981646100E09822 /* CWHLightingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWHLightingView.m; sourceTree = "<group>"; };
+		BFB813D31981646100E09822 /* CWHLightingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHLightingViewController.h; sourceTree = "<group>"; };
+		BFB813D41981646100E09822 /* CWHLightingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWHLightingViewController.m; sourceTree = "<group>"; };
 		BFB813D61981646200E09822 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BFB813D81981646200E09822 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFB813DB1981646200E09822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		BFFB6DEC198C272300C14A7C /* CWHLightingModelWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLightingModelWindowController.h; sourceTree = "<group>"; };
 		BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLightingModelWindowController.m; sourceTree = "<group>"; };
 		BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingModelWindow.xib; sourceTree = "<group>"; };
-		BFFB6DF1198C40CD00C14A7C /* LightingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingView.xib; sourceTree = "<group>"; };
+		BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWHLightingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 			children = (
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
 				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
-				BFFB6DF1198C40CD00C14A7C /* LightingView.xib */,
+				BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */,
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
@@ -199,10 +199,10 @@
 				BFB813CE1981646100E09822 /* AppDelegate.m */,
 				BFFB6DEC198C272300C14A7C /* CWHLightingModelWindowController.h */,
 				BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */,
-				BFB813D01981646100E09822 /* LightingView.h */,
-				BFB813D11981646100E09822 /* LightingView.m */,
-				BFB813D31981646100E09822 /* LightingViewController.h */,
-				BFB813D41981646100E09822 /* LightingViewController.m */,
+				BFB813D01981646100E09822 /* CWHLightingView.h */,
+				BFB813D11981646100E09822 /* CWHLightingView.m */,
+				BFB813D31981646100E09822 /* CWHLightingViewController.h */,
+				BFB813D41981646100E09822 /* CWHLightingViewController.m */,
 				BF035B601986986E00F1C758 /* CWHShadingNode.h */,
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
 				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
@@ -358,7 +358,7 @@
 				BFFB6DE8198BF0A500C14A7C /* PhongPointLightParameterView.xib in Resources */,
 				BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
-				BFFB6DF2198C40CD00C14A7C /* LightingView.xib in Resources */,
+				BFFB6DF2198C40CD00C14A7C /* CWHLightingView.xib in Resources */,
 				BF018EF2199A93F700917508 /* GoochParameterView.xib in Resources */,
 				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
 				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
@@ -384,8 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB813D51981646100E09822 /* LightingViewController.m in Sources */,
-				BFB813D21981646100E09822 /* LightingView.m in Sources */,
+				BFB813D51981646100E09822 /* CWHLightingViewController.m in Sources */,
+				BFB813D21981646100E09822 /* CWHLightingView.m in Sources */,
 				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
 				BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */,
 				BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */,

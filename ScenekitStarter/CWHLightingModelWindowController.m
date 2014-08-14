@@ -7,7 +7,7 @@
 //
 
 #import "CWHLightingModelWindowController.h"
-#import "LightingViewController.h"
+#import "CWHLightingViewController.h"
 #import "CWHParameterViewController.h"
 #import "CWHGoochParameterViewController.h"
 #import "CWHPhongPointLightParameterViewController.h"
@@ -22,7 +22,7 @@
 
 - (void)awakeFromNib
 {
-    self.lightingViewController = [[LightingViewController alloc] initWithNibName:@"LightingView" bundle:nil];
+    self.lightingViewController = [[CWHLightingViewController alloc] initWithNibName:@"CWHLightingView" bundle:nil];
     //NSLog(@"self.lightingViewController %@", self.lightingViewController);
     [targetView addSubview:[self.lightingViewController view]];
     //NSLog(@"self.scene %@", self.lightingViewController.view);

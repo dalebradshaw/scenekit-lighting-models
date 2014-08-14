@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
-#import "LightingViewController.h"
+#import "CWHLightingViewController.h"
 
-@implementation LightingViewController
+@implementation CWHLightingViewController
 
 -(void)awakeFromNib
 {
@@ -66,7 +66,8 @@
     self.lightingView.showsStatistics = YES;
     
     // configure the view
-    self.lightingView.backgroundColor = [NSColor blackColor];  
+    self.lightingView.backgroundColor = [NSColor blackColor];
+
 }
 
 @end
