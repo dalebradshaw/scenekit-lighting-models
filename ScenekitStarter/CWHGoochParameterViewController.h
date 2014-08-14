@@ -9,10 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "ParameterViewProtocol.h"
 #import "CWHGoochProgram.h"
+#import "CWHParameterViewController.h"
 
-@interface CWHGoochParameterViewController : NSViewController
-
-@property (nonatomic, retain) id delegate;
+@interface CWHGoochParameterViewController : CWHParameterViewController
 
 @property (weak) IBOutlet NSTextField *diffuseWarmTextField;
 @property (weak) IBOutlet NSTextField *diffuseCoolTextField;

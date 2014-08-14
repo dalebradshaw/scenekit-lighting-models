@@ -58,15 +58,16 @@
     return self;
 }
 
--(void)updateLightingModel:(NSString*)lightingModel
+-(void)updateLightingModel:(SCNProgram*)lightingModel
 {
     //NSLog(@"updateLightingModel::lightingModel(%@)", lightingModel);
     
-    CWHGoochProgram *program = [CWHGoochProgram program];
     SCNMaterial *programMaterial = [SCNMaterial material];
-
-    programMaterial.program = program;
-    self.geometry.materials = @[programMaterial];
+    
+    if ([lightingModel isKindOfClass:[SCNProgram class]]) {
+        programMaterial.program = lightingModel;
+        self.geometry.materials = @[programMaterial];
+    }
     
 }
 

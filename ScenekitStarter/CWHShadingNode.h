@@ -16,5 +16,5 @@
                           light:(SCNNode *)light;
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
                             light:(SCNNode *)light;
--(void)updateLightingModel:(NSString*)lightingModel;
+-(void)updateLightingModel:(SCNProgram*)lightingModel;
 @end

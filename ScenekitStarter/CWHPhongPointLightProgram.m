@@ -47,6 +47,7 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        
         //some defaults
         self.shininess = 10.8;
     }

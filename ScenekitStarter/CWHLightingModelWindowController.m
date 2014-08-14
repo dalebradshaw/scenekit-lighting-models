@@ -8,7 +8,11 @@
 
 #import "CWHLightingModelWindowController.h"
 #import "LightingViewController.h"
+#import "CWHParameterViewController.h"
+#import "CWHGoochParameterViewController.h"
 #import "CWHPhongPointLightParameterViewController.h"
+#import "CWHPhongPointLightProgram.h"
+#import "CWHGoochProgram.h"
 
 @interface CWHLightingModelWindowController ()
 
@@ -24,6 +28,7 @@
     //NSLog(@"self.scene %@", self.lightingViewController.view);
     //NSLog(@"self.window.contentView %@", self.window.contentView);
     self.lightingParameterState = FALSE;
+    self.currentLightingProgram = @"Phong Point Light";
 }
 
 - (void)windowDidLoad {
@@ -41,11 +46,28 @@
     [self.lightingViewController.torusNode updateParameters:values];
 }
 
+-(CWHParameterViewController *)parameterViewControllerForLightingModel:(NSString *)lightingModel
+{
+    CWHParameterViewController *parameterViewController;
+    
+    if([lightingModel isEqualToString:@"Phong Point Light"]){
+          parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
+                                                                    initWithNibName:@"PhongPointLightParameterView" bundle:nil];
+    }
+
+    if([lightingModel isEqualToString:@"Gooch"]){
+        parameterViewController = [[CWHGoochParameterViewController alloc]
+                                   initWithNibName:@"GoochParameterView" bundle:nil];
+    }
+    
+    return parameterViewController;
+}
+
 -(IBAction)showInputParameters:(id)sender
 {
 
     if(self.lightingParameterState == FALSE){
-        CWHPhongPointLightParameterViewController  *parameterViewController = [[CWHPhongPointLightParameterViewController alloc] initWithNibName:@"PhongPointLightParameterView" bundle:nil];
+
         NSRect targetRect = [targetView frame];
         CGFloat toolbarHeight = 0;
         NSRect  windowFrame;
@@ -59,6 +81,8 @@
         NSLog(@" bounds %@", NSStringFromRect(targetRect));
         */
         
+        CWHParameterViewController *parameterViewController = [self parameterViewControllerForLightingModel:self.currentLightingProgram];
+        
         [self.lightingViewController presentViewController:parameterViewController
                                        asPopoverRelativeToRect:NSMakeRect(targetRect.origin.x / 2, targetRect.size.height - parameterViewController.view.frame.size.height / 2 + 9, targetRect.size.width, targetRect.size.height / 2)
                                                         ofView:targetView
@@ -66,7 +90,7 @@
                                                       behavior:NSPopoverBehaviorTransient];
         parameterViewController.delegate = self;
         
-        self.currentLightingProgram = @"Phong Point Light";//use enum?
+       
         self.lightingParameterState = TRUE;
     }else{
         self.lightingParameterState = FALSE;
@@ -74,12 +98,27 @@
 
 }
 
+-(SCNProgram *)programForLightingModel:(NSString *)lightingModel
+{
+    SCNProgram *program;
+    if([lightingModel isEqualToString:@"Phong Point Light"]){
+        program = [CWHPhongPointLightProgram program];
+    }
+    
+    if ([lightingModel isEqualToString:@"Gooch"]) {
+        program = [CWHGoochProgram program];
+    }
+    
+    return program;
+}
+
 - (IBAction)updateLightingModel:(id)sender {
     NSString *updatedModel = [sender titleOfSelectedItem];
     
     NSLog(@" updateLightingModel %@", updatedModel);
     if(![self.currentLightingProgram isEqualToString:updatedModel]){
-        [self.lightingViewController.torusNode updateLightingModel:updatedModel];
+    
+        [self.lightingViewController.torusNode updateLightingModel:[self programForLightingModel:updatedModel]];
          self.currentLightingProgram = updatedModel;
     }
    
