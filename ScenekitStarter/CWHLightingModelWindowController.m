@@ -51,7 +51,7 @@
     CWHParameterViewController *parameterViewController;
     
     if([lightingModel isEqualToString:@"Phong Point Light"]){
-          parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
+        parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
                                                                     initWithNibName:@"PhongPointLightParameterView" bundle:nil];
     }
 

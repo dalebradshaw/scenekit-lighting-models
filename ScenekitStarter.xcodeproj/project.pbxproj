@@ -40,7 +40,6 @@
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
 		BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */; };
-		BFE9F690199CFF52000D9153 /* CWHParameterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F68E199CFF52000D9153 /* CWHParameterViewController.xib */; };
 		BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */; };
 		BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */; };
 		BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE08198847D100FBDAAD /* Gooch.fsh */; };
@@ -113,7 +112,7 @@
 		BFB813E71981646200E09822 /* ScenekitStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScenekitStarterTests.m; sourceTree = "<group>"; };
 		BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewController.h; sourceTree = "<group>"; };
 		BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHParameterViewController.m; sourceTree = "<group>"; };
-		BFE9F68E199CFF52000D9153 /* CWHParameterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWHParameterViewController.xib; sourceTree = "<group>"; };
+		BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewProtocol.h; sourceTree = "<group>"; };
 		BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHPhongPointLightProgram.h; sourceTree = "<group>"; };
 		BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHPhongPointLightProgram.m; sourceTree = "<group>"; };
 		BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGoochProgram.h; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 		BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLightingModelWindowController.m; sourceTree = "<group>"; };
 		BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingModelWindow.xib; sourceTree = "<group>"; };
 		BFFB6DF1198C40CD00C14A7C /* LightingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingView.xib; sourceTree = "<group>"; };
-		BFFB6DF31990048200C14A7C /* ParameterViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterViewProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,10 +221,9 @@
 				BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
-				BFFB6DF31990048200C14A7C /* ParameterViewProtocol.h */,
+				BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */,
 				BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */,
 				BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */,
-				BFE9F68E199CFF52000D9153 /* CWHParameterViewController.xib */,
 				BF018EF3199A948F00917508 /* CWHGoochParameterViewController.h */,
 				BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */,
 				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
@@ -356,7 +353,6 @@
 				BF728C52198966CF0018E76C /* Velvet.vsh in Resources */,
 				BFB813D71981646200E09822 /* art.scnassets in Resources */,
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
-				BFE9F690199CFF52000D9153 /* CWHParameterViewController.xib in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
 				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
 				BFFB6DE8198BF0A500C14A7C /* PhongPointLightParameterView.xib in Resources */,

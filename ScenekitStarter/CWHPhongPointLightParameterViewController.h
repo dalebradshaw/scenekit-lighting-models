@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ParameterViewProtocol.h"
+#import "CWHParameterViewProtocol.h"
 #import "CWHPhongPointLightProgram.h"
 #import "CWHParameterViewController.h"
 

@@ -10,7 +10,7 @@
 #import "CWHPhongPointLightParameterViewController.h"
 @class LightingViewController;
 
-@interface CWHLightingModelWindowController : NSWindowController<ParameterViewProtocol>
+@interface CWHLightingModelWindowController : NSWindowController<CWHParameterViewProtocol>
 {
     __weak IBOutlet NSView *targetView;
 }

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SceneKit/SceneKit.h> 
 
-@protocol ParameterViewProtocol <NSObject>
+@protocol CWHParameterViewProtocol <NSObject>
 -(void)parameterViewDidClose;
 -(void)updateShaderValues:(SCNProgram *)program;
 @end
