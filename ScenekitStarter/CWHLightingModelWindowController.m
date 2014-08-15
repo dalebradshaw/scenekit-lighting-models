@@ -9,10 +9,14 @@
 #import "CWHLightingModelWindowController.h"
 #import "CWHLightingViewController.h"
 #import "CWHParameterViewController.h"
-#import "CWHGoochParameterViewController.h"
-#import "CWHPhongPointLightParameterViewController.h"
-#import "CWHPhongPointLightProgram.h"
+#import "CWHBlinnProgram.h"
+#import "CWHBlinnParameterViewController.h"
+#import "CWHEdgeFuzzProgram.h"
+#import "CWHEdgeFuzzParameterViewController.h"
 #import "CWHGoochProgram.h"
+#import "CWHGoochParameterViewController.h"
+#import "CWHPhongPointLightProgram.h"
+#import "CWHPhongPointLightParameterViewController.h"
 #import "CWHVelvetParameterViewController.h"
 #import "CWHVelvetProgram.h"
 
@@ -50,6 +54,15 @@
 {
     CWHParameterViewController *parameterViewController;
     
+    if ([lightingModel isEqualToString:@"Blinn"]) {
+        parameterViewController = [[CWHBlinnParameterViewController alloc]
+                                   initWithNibName:@"BlinnParameterView" bundle:nil];
+    }
+    
+    if ([lightingModel isEqualToString:@"Edge Fuzz"]) {
+        parameterViewController = [[CWHEdgeFuzzParameterViewController alloc]
+                                   initWithNibName:@"EdgeFuzzParameterView" bundle:nil];
+    }
     if([lightingModel isEqualToString:@"Phong Point Light"]){
         parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
                                                                     initWithNibName:@"PhongPointLightParameterView" bundle:nil];
@@ -106,6 +119,15 @@
 -(SCNProgram *)programForLightingModel:(NSString *)lightingModel
 {
     SCNProgram *program;
+    
+    if ([lightingModel isEqualToString:@"Blinn"]) {
+        program = [CWHBlinnProgram program];
+    }
+    
+    if ([lightingModel isEqualToString:@"Edge Fuzz"]) {
+        program = [CWHEdgeFuzzProgram program];
+    }
+    
     if([lightingModel isEqualToString:@"Phong Point Light"]){
         program = [CWHPhongPointLightProgram program];
     }

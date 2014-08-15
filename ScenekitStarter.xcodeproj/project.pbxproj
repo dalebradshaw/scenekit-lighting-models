@@ -42,6 +42,10 @@
 		BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */; };
 		BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */; };
 		BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F696199E385E000D9153 /* VelvetParameterView.xib */; };
+		BFE9F69C199EB178000D9153 /* CWHBlinnParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F69A199EB178000D9153 /* CWHBlinnParameterViewController.m */; };
+		BFE9F69D199EB178000D9153 /* BlinnParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F69B199EB178000D9153 /* BlinnParameterView.xib */; };
+		BFE9F6A1199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F69F199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m */; };
+		BFE9F6A2199EB2CD000D9153 /* EdgeFuzzParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F6A0199EB2CD000D9153 /* EdgeFuzzParameterView.xib */; };
 		BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */; };
 		BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */; };
 		BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE08198847D100FBDAAD /* Gooch.fsh */; };
@@ -118,6 +122,12 @@
 		BFE9F694199E385E000D9153 /* CWHVelvetParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHVelvetParameterViewController.h; sourceTree = "<group>"; };
 		BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHVelvetParameterViewController.m; sourceTree = "<group>"; };
 		BFE9F696199E385E000D9153 /* VelvetParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VelvetParameterView.xib; sourceTree = "<group>"; };
+		BFE9F699199EB178000D9153 /* CWHBlinnParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHBlinnParameterViewController.h; sourceTree = "<group>"; };
+		BFE9F69A199EB178000D9153 /* CWHBlinnParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHBlinnParameterViewController.m; sourceTree = "<group>"; };
+		BFE9F69B199EB178000D9153 /* BlinnParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlinnParameterView.xib; sourceTree = "<group>"; };
+		BFE9F69E199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHEdgeFuzzParameterViewController.h; sourceTree = "<group>"; };
+		BFE9F69F199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHEdgeFuzzParameterViewController.m; sourceTree = "<group>"; };
+		BFE9F6A0199EB2CD000D9153 /* EdgeFuzzParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EdgeFuzzParameterView.xib; sourceTree = "<group>"; };
 		BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHPhongPointLightProgram.h; sourceTree = "<group>"; };
 		BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHPhongPointLightProgram.m; sourceTree = "<group>"; };
 		BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGoochProgram.h; sourceTree = "<group>"; };
@@ -157,6 +167,8 @@
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
 				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */,
+				BFE9F69B199EB178000D9153 /* BlinnParameterView.xib */,
+				BFE9F6A0199EB2CD000D9153 /* EdgeFuzzParameterView.xib */,
 				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
 				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
 				BFE9F696199E385E000D9153 /* VelvetParameterView.xib */,
@@ -213,12 +225,18 @@
 				BF035B611986986E00F1C758 /* CWHShadingNode.m */,
 				BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */,
 				BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */,
+				BFE9F699199EB178000D9153 /* CWHBlinnParameterViewController.h */,
+				BFE9F69A199EB178000D9153 /* CWHBlinnParameterViewController.m */,
 				BF728C68198AE6800018E76C /* CWHEdgeFuzzProgram.h */,
 				BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */,
+				BFE9F69E199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.h */,
+				BFE9F69F199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m */,
 				BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */,
 				BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */,
 				BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */,
 				BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */,
+				BF018EF3199A948F00917508 /* CWHGoochParameterViewController.h */,
+				BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */,
 				BF728C53198A77E60018E76C /* CWHHemisphereProgram.h */,
 				BF728C54198A77E60018E76C /* CWHHemisphereProgram.m */,
 				BF728C61198ABF450018E76C /* CWHLambSkinProgram.h */,
@@ -227,13 +245,11 @@
 				BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
+				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
+				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */,
 				BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */,
 				BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */,
-				BF018EF3199A948F00917508 /* CWHGoochParameterViewController.h */,
-				BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */,
-				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
-				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
 				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
 				BFE9F694199E385E000D9153 /* CWHVelvetParameterViewController.h */,
@@ -363,6 +379,7 @@
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
 				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
+				BFE9F6A2199EB2CD000D9153 /* EdgeFuzzParameterView.xib in Resources */,
 				BFFB6DE8198BF0A500C14A7C /* PhongPointLightParameterView.xib in Resources */,
 				BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
@@ -374,6 +391,7 @@
 				BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
 				BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */,
+				BFE9F69D199EB178000D9153 /* BlinnParameterView.xib in Resources */,
 				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
 				BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */,
 			);
@@ -404,9 +422,11 @@
 				BFFB6DEB198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m in Sources */,
 				BFB813CC1981646100E09822 /* main.m in Sources */,
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
+				BFE9F69C199EB178000D9153 /* CWHBlinnParameterViewController.m in Sources */,
 				BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */,
 				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
 				BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */,
+				BFE9F6A1199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m in Sources */,
 				BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */,
 				BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */,
 				BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */,
