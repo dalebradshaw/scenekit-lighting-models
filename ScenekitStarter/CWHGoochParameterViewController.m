@@ -71,7 +71,7 @@
     program.diffuseCool = self.diffuseCool;
     program.diffuseWarm = self.diffuseWarm;
     
-    [self.delegate updateShaderValues];
+    [self.delegate updateShaderValues:program];
 }
 
 @end

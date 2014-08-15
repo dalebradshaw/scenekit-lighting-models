@@ -61,6 +61,7 @@
                                         <menuItem title="Blinn" id="iCM-jc-oNK"/>
                                         <menuItem title="Edge Fuzz" id="uez-MC-ZVr"/>
                                         <menuItem title="Gooch" id="qPy-6U-M8Z"/>
+                                        <menuItem title="Velvet" id="gsc-xb-G84" userLabel="Velvet"/>
                                     </items>
                                 </menu>
                             </popUpButtonCell>

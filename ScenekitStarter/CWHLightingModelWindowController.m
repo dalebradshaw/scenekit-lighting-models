@@ -13,6 +13,8 @@
 #import "CWHPhongPointLightParameterViewController.h"
 #import "CWHPhongPointLightProgram.h"
 #import "CWHGoochProgram.h"
+#import "CWHVelvetParameterViewController.h"
+#import "CWHVelvetProgram.h"
 
 @interface CWHLightingModelWindowController ()
 
@@ -23,10 +25,8 @@
 - (void)awakeFromNib
 {
     self.lightingViewController = [[CWHLightingViewController alloc] initWithNibName:@"CWHLightingView" bundle:nil];
-    //NSLog(@"self.lightingViewController %@", self.lightingViewController);
     [targetView addSubview:[self.lightingViewController view]];
-    //NSLog(@"self.scene %@", self.lightingViewController.view);
-    //NSLog(@"self.window.contentView %@", self.window.contentView);
+
     self.lightingParameterState = FALSE;
     self.currentLightingProgram = @"Phong Point Light";
 }
@@ -41,9 +41,9 @@
     self.lightingParameterState = FALSE;
 }
 
--(void)updateShaderValues:(NSDictionary *)values
+-(void)updateShaderValues:(SCNProgram *)program;
 {
-    [self.lightingViewController.torusNode updateParameters:values];
+    [self.lightingViewController.torusNode updateParameters:program];
 }
 
 -(CWHParameterViewController *)parameterViewControllerForLightingModel:(NSString *)lightingModel
@@ -60,12 +60,17 @@
                                    initWithNibName:@"GoochParameterView" bundle:nil];
     }
     
+    if ([lightingModel isEqualToString:@"Velvet"]) {
+        parameterViewController = [[CWHGoochParameterViewController alloc]
+                                   initWithNibName:@"VelvetParameterView" bundle:nil];
+    }
+    
     return parameterViewController;
 }
 
 -(IBAction)showInputParameters:(id)sender
 {
-
+   
     if(self.lightingParameterState == FALSE){
 
         NSRect targetRect = [targetView frame];
@@ -89,7 +94,7 @@
                                                  preferredEdge:NSMinYEdge
                                                       behavior:NSPopoverBehaviorTransient];
         parameterViewController.delegate = self;
-        
+       
        
         self.lightingParameterState = TRUE;
     }else{
@@ -108,6 +113,10 @@
     if ([lightingModel isEqualToString:@"Gooch"]) {
         program = [CWHGoochProgram program];
     }
+   
+    if ([lightingModel isEqualToString:@"Velvet"]) {
+        program = [CWHGoochProgram program];
+    }
     
     return program;
 }
@@ -116,8 +125,9 @@
     NSString *updatedModel = [sender titleOfSelectedItem];
     
     NSLog(@" updateLightingModel %@", updatedModel);
+    //NSLog(@"self.currentLightingProgram %@", self.currentLightingProgram);
     if(![self.currentLightingProgram isEqualToString:updatedModel]){
-    
+      
         [self.lightingViewController.torusNode updateLightingModel:[self programForLightingModel:updatedModel]];
          self.currentLightingProgram = updatedModel;
     }

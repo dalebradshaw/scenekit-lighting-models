@@ -14,7 +14,6 @@
 @interface CWHLightingViewController : NSViewController
 
 @property (weak) IBOutlet CWHLightingView *lightingView;
-
 @property (nonatomic, retain) CWHShadingNode *torusNode;
 
 @end

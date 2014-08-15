@@ -47,6 +47,12 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        //defaults
+        NSColor *underColor = [NSColor colorWithRed:0.7 green:0.7 blue:0 alpha:1.];
+        self.underColor = underColor;
+        NSColor *fuzzColor = [NSColor colorWithRed:0.9 green:0.7 blue:0.5 alpha:1.];
+        self.fuzzColor = fuzzColor;
+        self.rolloff = 0.528;
     }
     
     return self;

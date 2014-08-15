@@ -40,6 +40,8 @@
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
 		BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */; };
+		BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */; };
+		BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F696199E385E000D9153 /* VelvetParameterView.xib */; };
 		BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */; };
 		BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */; };
 		BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFF2DE08198847D100FBDAAD /* Gooch.fsh */; };
@@ -113,6 +115,9 @@
 		BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewController.h; sourceTree = "<group>"; };
 		BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHParameterViewController.m; sourceTree = "<group>"; };
 		BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewProtocol.h; sourceTree = "<group>"; };
+		BFE9F694199E385E000D9153 /* CWHVelvetParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHVelvetParameterViewController.h; sourceTree = "<group>"; };
+		BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHVelvetParameterViewController.m; sourceTree = "<group>"; };
+		BFE9F696199E385E000D9153 /* VelvetParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VelvetParameterView.xib; sourceTree = "<group>"; };
 		BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHPhongPointLightProgram.h; sourceTree = "<group>"; };
 		BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHPhongPointLightProgram.m; sourceTree = "<group>"; };
 		BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGoochProgram.h; sourceTree = "<group>"; };
@@ -152,6 +157,9 @@
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
 				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */,
+				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
+				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
+				BFE9F696199E385E000D9153 /* VelvetParameterView.xib */,
 				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
@@ -166,8 +174,6 @@
 				BF728C65198AC03E0018E76C /* LambSkin.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
-				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
-				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
 				BF728C4F198966CF0018E76C /* Velvet.fsh */,
 				BF728C50198966CF0018E76C /* Velvet.vsh */,
 			);
@@ -230,6 +236,8 @@
 				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
 				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
+				BFE9F694199E385E000D9153 /* CWHVelvetParameterViewController.h */,
+				BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */,
 				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BF035B631986999600F1C758 /* Resources */,
@@ -367,6 +375,7 @@
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
 				BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */,
 				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
+				BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +406,7 @@
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
 				BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */,
 				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
+				BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */,
 				BFF2DE07198846F500FBDAAD /* CWHGoochProgram.m in Sources */,
 				BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */,
 				BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */,

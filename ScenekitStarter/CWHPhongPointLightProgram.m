@@ -49,7 +49,11 @@
         self.delegate = self;
         
         //some defaults
+        self.ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.lightColor = [NSColor redColor];
+        self.materialSpecularity = 1;
         self.shininess = 10.8;
+
     }
     
     return self;

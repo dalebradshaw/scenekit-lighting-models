@@ -11,7 +11,7 @@
 
 @interface CWHShadingNode : SCNNode<SCNProgramDelegate>
 
--(void)updateParameters:(NSDictionary*)parameters;
+-(void)updateParameters:(SCNProgram *)program;
 -(instancetype)initWithGeometry:(SCNGeometry *)geometry
                           light:(SCNNode *)light;
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry

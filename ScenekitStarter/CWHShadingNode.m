@@ -65,6 +65,7 @@
     SCNMaterial *programMaterial = [SCNMaterial material];
     
     if ([lightingModel isKindOfClass:[SCNProgram class]]) {
+
         programMaterial.program = lightingModel;
         self.geometry.materials = @[programMaterial];
     }
