@@ -85,7 +85,7 @@
 
 -(void)updateShaderValues
 {
-   
+
     CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
 
     program.lightColor = self.lightColor;

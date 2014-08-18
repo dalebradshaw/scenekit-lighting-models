@@ -118,8 +118,9 @@
     }
     
     if ([symbol isEqualToString:@"material_specular"]) {
-        
+
         if(self.materialSpecularity){
+            //NSLog(@" self.materialSpecularity %f", self.materialSpecularity);
             glUniform1f(location, self.materialSpecularity);
         }
         
