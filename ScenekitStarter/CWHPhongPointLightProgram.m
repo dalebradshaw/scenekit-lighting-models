@@ -99,7 +99,7 @@
     if ([symbol isEqualToString:@"light_ambient"]) {
         
         if(self.ambientColor){
-            
+            //NSLog(@" self.ambient red %f green %f blue %f", [self.ambientColor redComponent], [self.ambientColor greenComponent], [self.ambientColor blueComponent]);
             glUniform3f(location,[self.ambientColor redComponent] , [self.ambientColor greenComponent] , [self.ambientColor blueComponent]);
             
         }

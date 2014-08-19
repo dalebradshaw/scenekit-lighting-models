@@ -11,5 +11,7 @@
 @interface CWHBlinnProgram : SCNProgram<SCNProgramDelegate>
 
 @property (strong) SCNNode *lightnode;
+@property (strong) NSColor *lightColor;
+@property (strong) NSColor *ambientColor;
 
 @end

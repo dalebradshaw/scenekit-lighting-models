@@ -11,18 +11,16 @@
 varying vec3 normal,lightDir, lightColor, eyeVec;
 //Uniforms
 uniform float shininess, material_specular;
-uniform vec4 light_ambient;
+uniform vec4 light_ambient;//parameter default is black
 
 //vec4 scene_color = vec4(0.,0.,0.,1.);
 //vec4 light_ambient = vec4(0.,0.,0.,1.);
 vec4 light_diffuse = vec4(lightColor.r,lightColor.g,lightColor.b,1.);
-vec4 light_specular = vec4(lightColor.r,lightColor.g,lightColor.b,1.);
+vec4 light_specular = vec4(1.,1.,1.,1.);//hard coded white, add parameter to change
 
 vec4 material_ambient = vec4(0.,0.,0.,1.);
 vec4 material_emission = vec4(0.,0.,0.,1.);
 vec4 material_diffuse = vec4(1., 1., 1.,1.);
-
-
 
 // Phong Point function
 vec4 phongPointFS()
@@ -42,8 +40,7 @@ vec4 phongPointFS()
         vec3 E = normalize(eyeVec);
         vec3 R = reflect(-L, N);
         float specular = pow(max(dot(R, E), 0.0), shininess);
-        final_color += light_specular
-        * material_specular * specular;
+        final_color += light_specular * material_specular * specular;
     }
 
     return final_color;

@@ -7,6 +7,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CWHBlinnParameterViewController">
             <connections>
+                <outlet property="ambientColor" destination="m5p-uf-e1o" id="wJm-da-fkM"/>
+                <outlet property="lightColor" destination="ara-9z-4gW" id="cpe-Cr-YRO"/>
+                <outlet property="updateAmbientColor" destination="m5p-uf-e1o" id="Zmd-sz-Vbk"/>
                 <outlet property="view" destination="fjy-yO-5Za" id="Ffk-OO-8jZ"/>
             </connections>
         </customObject>
@@ -19,6 +22,9 @@
                 <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ara-9z-4gW">
                     <rect key="frame" x="189" y="24" width="44" height="23"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateLightColor:" target="-2" id="WIF-aa-wQs"/>
+                    </connections>
                 </colorWell>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-C1-Tdy">
                     <rect key="frame" x="66" y="24" width="117" height="17"/>
@@ -39,6 +45,9 @@
                 <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-uf-e1o">
                     <rect key="frame" x="189" y="55" width="44" height="23"/>
                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateAmbientColor:" target="-2" id="NBf-B4-MUm"/>
+                    </connections>
                 </colorWell>
             </subviews>
             <point key="canvasLocation" x="739" y="677"/>

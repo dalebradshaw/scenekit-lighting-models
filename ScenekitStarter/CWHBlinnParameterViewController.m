@@ -19,4 +19,30 @@
     // Do view setup here.
 }
 
+- (IBAction)updateLightColor:(id)sender {
+    NSColorWell *colorWell = sender;
+    NSColor *color = [colorWell color];
+    
+    self.lightColor = color;
+    [self updateShaderValues];
+}
+
+- (IBAction)updateAmbientColor:(id)sender {
+    NSColorWell *colorWell = sender;
+    NSColor *color = [colorWell color];
+    
+    self.ambientColor = color;
+    [self updateShaderValues];
+}
+
+-(void)updateShaderValues
+{
+    CWHBlinnProgram *program = [CWHBlinnProgram program];
+    
+    program.lightColor = self.lightColor;
+    program.ambientColor = self.ambientColor;
+    
+    [self.delegate updateShaderValues:program];
+}
+
 @end

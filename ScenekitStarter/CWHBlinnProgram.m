@@ -47,6 +47,9 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        //defaults
+        self.ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.lightColor = [NSColor redColor];
     }
     
     return self;
@@ -75,13 +78,29 @@
     
     if ([symbol isEqualToString:@"light_color"]) {
 
-        if(self.lightnode){
-            glUniform3f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent]);
+        if(self.lightColor){
+            
+            glUniform3f(location,[self.lightColor redComponent] , [self.lightColor greenComponent] , [self.lightColor blueComponent]);
+            
+        }else{
+            if(self.lightnode){
+                glUniform3f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent]);
+            }
         }
         
         return YES;
     }
     
+    if ([symbol isEqualToString:@"light_ambient"]) {
+        
+        if(self.ambientColor){
+            //NSLog(@" self.ambient red %f green %f blue %f", [self.ambientColor redComponent], [self.ambientColor greenComponent], [self.ambientColor blueComponent]);
+            glUniform3f(location,[self.ambientColor redComponent] , [self.ambientColor greenComponent] , [self.ambientColor blueComponent]);
+            
+        }
+        
+        return YES;
+    }
     
     return NO; // no symbol was bound.
 }
