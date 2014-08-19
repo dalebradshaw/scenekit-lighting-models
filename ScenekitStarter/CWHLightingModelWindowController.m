@@ -100,9 +100,15 @@
         */
         
         CWHParameterViewController *parameterViewController = [self parameterViewControllerForLightingModel:self.currentLightingProgram];
+        double viewHeight = parameterViewController.view.frame.size.height;
+        //NSLog(@" viewHeight %f", viewHeight);
+        viewHeight = 180;//calc min height here
         
         [self.lightingViewController presentViewController:parameterViewController
-                                       asPopoverRelativeToRect:NSMakeRect(targetRect.origin.x / 2, targetRect.size.height - parameterViewController.view.frame.size.height / 2 + 9, targetRect.size.width, targetRect.size.height / 2)
+                                       asPopoverRelativeToRect:NSMakeRect(targetRect.origin.x / 2,
+                                                                          targetRect.size.height - viewHeight / 2,
+                                                                          targetRect.size.width,
+                                                                          targetRect.size.height / 2)
                                                         ofView:targetView
                                                  preferredEdge:NSMinYEdge
                                                       behavior:NSPopoverBehaviorTransient];

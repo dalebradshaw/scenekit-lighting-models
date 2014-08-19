@@ -7,50 +7,47 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CWHBlinnParameterViewController">
             <connections>
-                <outlet property="ambientColor" destination="m5p-uf-e1o" id="wJm-da-fkM"/>
-                <outlet property="lightColor" destination="ara-9z-4gW" id="cpe-Cr-YRO"/>
-                <outlet property="updateAmbientColor" destination="m5p-uf-e1o" id="Zmd-sz-Vbk"/>
-                <outlet property="view" destination="fjy-yO-5Za" id="Ffk-OO-8jZ"/>
+                <outlet property="view" destination="jsr-j5-tcm" id="N9P-pv-w8B"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="fjy-yO-5Za" userLabel="BlinnParameterView">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="98"/>
+        <customView id="jsr-j5-tcm" userLabel="PhongPointLightParameterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="92"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ara-9z-4gW">
-                    <rect key="frame" x="189" y="24" width="44" height="23"/>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQ0-G5-TH4">
+                    <rect key="frame" x="174" y="18" width="44" height="23"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <action selector="updateLightColor:" target="-2" id="WIF-aa-wQs"/>
+                        <action selector="updateLightColor:" target="-2" id="Vfn-dx-4N4"/>
                     </connections>
                 </colorWell>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-C1-Tdy">
-                    <rect key="frame" x="66" y="24" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Light Color" id="2CU-0L-kra">
-                        <font key="font" metaFont="cellTitle"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJe-cO-3Yd">
+                    <rect key="frame" x="51" y="18" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Light Color" id="Bwm-ep-LXQ">
+                        <font key="font" metaFont="titleBar" size="12"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMt-ev-8YF">
-                    <rect key="frame" x="66" y="55" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Ambient Color" id="IrB-vw-nGz">
-                        <font key="font" metaFont="cellTitle"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOt-gP-o4F">
+                    <rect key="frame" x="51" y="49" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Ambient Color" id="zdA-Ik-Oov">
+                        <font key="font" metaFont="titleBar" size="12"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-uf-e1o">
-                    <rect key="frame" x="189" y="55" width="44" height="23"/>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-XW-zVm">
+                    <rect key="frame" x="174" y="49" width="44" height="23"/>
                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <action selector="updateAmbientColor:" target="-2" id="NBf-B4-MUm"/>
+                        <action selector="updateAmbientColor:" target="-2" id="Ep0-Pd-fVK"/>
                     </connections>
                 </colorWell>
             </subviews>
-            <point key="canvasLocation" x="739" y="677"/>
+            <point key="canvasLocation" x="749" y="707"/>
         </customView>
     </objects>
 </document>
