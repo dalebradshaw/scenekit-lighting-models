@@ -38,7 +38,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLC-qG-Dj4">
                     <rect key="frame" x="141" y="124" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="wh9-c3-vk3"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="wh9-c3-vk3"/>
                 </slider>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xO-m0-JZb">
                     <rect key="frame" x="246" y="123" width="45" height="22"/>
@@ -70,7 +70,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycn-9c-GWG">
                     <rect key="frame" x="141" y="94" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="128" doubleValue="10.800000000000001" tickMarkPosition="above" sliderType="linear" id="abv-Zf-4U5"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="128" doubleValue="10.800000000000001" tickMarkPosition="above" sliderType="linear" id="abv-Zf-4U5"/>
                 </slider>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dv-Ha-QzX">
                     <rect key="frame" x="246" y="93" width="45" height="22"/>

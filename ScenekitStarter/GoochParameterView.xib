@@ -31,7 +31,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcY-T4-Pon">
                     <rect key="frame" x="141" y="149" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="dir-gD-Ktb"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="dir-gD-Ktb"/>
                     <connections>
                         <action selector="updateDiffuseWarm:" target="-2" id="uq1-mK-mj0"/>
                     </connections>
@@ -54,7 +54,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-cH-b3M">
                     <rect key="frame" x="141" y="119" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="128" doubleValue="10.800000000000001" tickMarkPosition="above" sliderType="linear" id="5ua-Vl-ENS"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="128" doubleValue="10.800000000000001" tickMarkPosition="above" sliderType="linear" id="5ua-Vl-ENS"/>
                     <connections>
                         <action selector="updateDiffuseCool:" target="-2" id="X9F-hI-8C0"/>
                     </connections>

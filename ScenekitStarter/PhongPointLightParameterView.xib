@@ -47,7 +47,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHy-lz-2Fs">
                     <rect key="frame" x="141" y="124" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="P9F-7g-K9s"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="P9F-7g-K9s"/>
                     <connections>
                         <action selector="updateMaterialSpecularity:" target="-2" id="UU4-FC-rSP"/>
                     </connections>
@@ -85,7 +85,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yt-tz-YHz">
                     <rect key="frame" x="141" y="94" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="128" doubleValue="10.800000000000001" tickMarkPosition="above" sliderType="linear" id="VNA-Hc-fp4"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="128" doubleValue="10.800000000000001" tickMarkPosition="above" sliderType="linear" id="VNA-Hc-fp4"/>
                     <connections>
                         <action selector="updateShininess:" target="-2" id="EeW-hB-NzZ"/>
                     </connections>

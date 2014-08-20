@@ -22,6 +22,9 @@
 - (IBAction)updateFuzziness:(id)sender {
     //NSLog(@" update Fuzziness %f", [sender doubleValue]);
     self.fuzziness = [sender doubleValue];
+    if ([sender isKindOfClass:[NSSlider class]]) {
+        [self.fuzzinessTextField setDoubleValue:[sender doubleValue]];
+    }
     [self updateShaderValues];
 }
 
@@ -32,11 +35,18 @@
 
 - (IBAction)updateEdgeFade:(id)sender {
     self.edgeFade= [sender doubleValue];
+    if ([sender isKindOfClass:[NSSlider class]]) {
+        [self.edgeFadeTextField setDoubleValue:[sender doubleValue]];
+    }
     [self updateShaderValues];
 }
 
 - (IBAction)updateSpecularity:(id)sender {
     self.specularity = [sender doubleValue];
+    if ([sender isKindOfClass:[NSSlider class]]) {
+        [self.specularityTextField setDoubleValue:[sender doubleValue]];
+    }
+    
     [self updateShaderValues];
 }
 
