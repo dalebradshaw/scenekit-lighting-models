@@ -28,6 +28,9 @@
 @property (assign) double diffuseCool;
 - (IBAction)updateDiffuseCool:(id)sender;
 
+@property  (strong) NSColor *surfaceColor;
+- (IBAction)updateSurfaceColor:(id)sender;
+
 @property (strong) NSColor *warmColor;
 - (IBAction)updateWarmColor:(id)sender;
 

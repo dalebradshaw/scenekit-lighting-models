@@ -47,6 +47,20 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        
+        //defaults
+        NSColor *surfaceColor = [NSColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:1.];
+        self.surfaceColor = surfaceColor;
+        NSColor *edgeColor = [NSColor colorWithRed:0.4 green:0.8 blue:1. alpha:1.];
+        self.edgeColor = edgeColor;
+        NSColor *lightColor = [NSColor colorWithRed:1. green:1. blue:1. alpha:1.];
+        self.lightColor = lightColor;
+        NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.ambientColor = ambientColor;
+        
+        self.fuzziness = 0.166;
+        self.edgeFade = 3.868;
+        self.specularity = 0.1488;
     }
     
     return self;

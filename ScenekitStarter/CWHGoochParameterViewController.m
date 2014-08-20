@@ -25,6 +25,15 @@
     self.delegate  = nil;
 }
 
+- (IBAction)updateSurfaceColor:(id)sender {
+
+    NSColorWell *colorWell = sender;
+    NSColor *color = [colorWell color];
+    
+    self.surfaceColor = color;
+    [self updateShaderValues];
+}
+
 - (IBAction)updateCoolColor:(id)sender {
     NSColorWell *colorWell = sender;
     NSColor *color = [colorWell color];
@@ -66,6 +75,7 @@
 -(void)updateShaderValues
 {
     CWHGoochProgram *program = [CWHGoochProgram program];
+    program.surfaceColor = self.surfaceColor;
     program.warmColor = self.warmColor;
     program.coolColor = self.coolColor;
     program.diffuseCool = self.diffuseCool;
@@ -73,5 +83,6 @@
     
     [self.delegate updateShaderValues:program];
 }
+
 
 @end

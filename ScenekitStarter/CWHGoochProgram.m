@@ -49,11 +49,15 @@
         self.delegate = self;
         
         //defaults
-        NSColor *warmColor = [NSColor colorWithRed:1. green:.3 blue:.3 alpha:1.];
-        self.warmColor = warmColor;
-        NSColor *coolColor = [NSColor colorWithRed:0.2 green:0.2 blue:1. alpha:1.];
+        NSColor *surfaceColor = [NSColor redColor];
+        self.surfaceColor = surfaceColor;
         
+        NSColor *coolColor = [NSColor colorWithRed:0.2 green:1. blue:0.2 alpha:1.];
         self.coolColor = coolColor;
+
+        NSColor *warmColor = [NSColor purpleColor];
+        self.warmColor = warmColor;
+       
         
         self.diffuseCool = 0.;
         self.diffuseWarm = 1.;
@@ -85,9 +89,10 @@
     }
     
     if ([symbol isEqualToString:@"SurfaceColor"]) {
-
-        if(self.lightnode){
-            glUniform4f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent], 1.);
+       
+        if(self.surfaceColor){
+             //NSLog(@"self.surfaceColor %f %f %f", [self.surfaceColor redComponent], [self.surfaceColor blueComponent], [self.surfaceColor greenComponent]);
+             glUniform4f(location,[self.surfaceColor redComponent] , [self.surfaceColor greenComponent] , [self.surfaceColor blueComponent], [self.surfaceColor alphaComponent]);
         }
         
         return YES;
@@ -95,6 +100,7 @@
     if ([symbol isEqualToString:@"WarmColor"]) {
         
         if(self.warmColor){
+            //NSLog(@"self.warmColor %f %f %f", [self.warmColor redComponent], [self.warmColor blueComponent], [self.warmColor greenComponent]);
             glUniform4f(location,[self.warmColor redComponent] , [self.warmColor greenComponent] , [self.warmColor blueComponent], [self.warmColor alphaComponent]);
         }
         
@@ -103,6 +109,7 @@
     if ([symbol isEqualToString:@"CoolColor"]) {
         
         if(self.coolColor){
+            //NSLog(@"self.coolColor %f %f %f", [self.coolColor redComponent], [self.coolColor blueComponent], [self.coolColor greenComponent]);
             glUniform4f(location,[self.coolColor redComponent] , [self.coolColor greenComponent] , [self.coolColor blueComponent], [self.coolColor alphaComponent]);
         }
         

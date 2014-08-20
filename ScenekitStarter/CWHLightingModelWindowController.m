@@ -74,7 +74,7 @@
     }
     
     if ([lightingModel isEqualToString:@"Velvet"]) {
-        parameterViewController = [[CWHGoochParameterViewController alloc]
+        parameterViewController = [[CWHVelvetParameterViewController alloc]
                                    initWithNibName:@"VelvetParameterView" bundle:nil];
     }
     
@@ -143,7 +143,7 @@
     }
    
     if ([lightingModel isEqualToString:@"Velvet"]) {
-        program = [CWHGoochProgram program];
+        program = [CWHVelvetProgram program];
     }
     
     return program;

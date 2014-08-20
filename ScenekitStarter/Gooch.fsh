@@ -35,6 +35,7 @@ vec4 goochFS()
     spec = pow(spec, 32.0);
     
     return vec4(min(kfinal + spec, 1.0), 1.0);
+    
 }
 
 // Main Function

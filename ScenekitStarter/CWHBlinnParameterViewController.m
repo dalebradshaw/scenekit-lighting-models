@@ -18,6 +18,7 @@
     [super viewDidLoad];
 
 }
+
 - (IBAction)updateAmbientColor:(id)sender {
     
     NSColorWell *colorWell = sender;
@@ -27,6 +28,7 @@
     [self updateShaderValues];
 
 }
+
 - (IBAction)updateLightColor:(id)sender {
     NSColorWell *colorWell = sender;
     NSColor *color = [colorWell color];
@@ -34,8 +36,6 @@
     self.lightColor = color;
     [self updateShaderValues];
 }
-
-
 
 -(void)updateShaderValues
 {
