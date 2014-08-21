@@ -12,7 +12,7 @@
 // Tweakable controls
 uniform vec4 AmbientColor;
 uniform vec4 DiffuseColor;
-uniform vec4 light_color;
+uniform vec4 SubColor;
 uniform float Rolloff;
 // Varyings (from Vertex Shader)
 varying vec3 LightVec, EyeNormal;
@@ -34,7 +34,7 @@ vec4 lambSkin()
     // Calculate simulated subsurface contribution
     float subLamb = smoothstep(-Rolloff,1.0,ldn) - smoothstep(0.0,1.0,ldn);
     subLamb = max(0.0,subLamb);
-    vec4 Subsurface = subLamb * LightColor;
+    vec4 Subsurface = subLamb * SubColor;
     //vec4 Subsurface = subLamb * vec4(1.,0.,0.,1.);
     // Output
     return Diffuse + AmbientColor + Subsurface;

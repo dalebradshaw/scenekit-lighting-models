@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CWHLambSkinParameterViewController">
+            <connections>
+                <outlet property="rolloffSlider" destination="UOv-s7-icG" id="yUg-wG-QLW"/>
+                <outlet property="rolloffTextField" destination="dSf-vy-MrG" id="QWh-Gr-RUH"/>
+                <outlet property="view" destination="myn-aw-fEc" id="Pzw-Po-4WJ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="myn-aw-fEc" userLabel="LambSkinParameterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fK9-Tx-6Ri">
+                    <rect key="frame" x="18" y="113" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Rolloff" id="vXh-qP-v0x">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOv-s7-icG">
+                    <rect key="frame" x="141" y="112" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.57499999999999996" tickMarkPosition="above" sliderType="linear" id="fBG-tt-QcQ"/>
+                    <connections>
+                        <action selector="updateRolloff:" target="-2" id="tdD-kP-CzF"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-vy-MrG">
+                    <rect key="frame" x="246" y="111" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="rlh-5K-gVk">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateRolloff:" target="-2" id="Hlg-Yr-e3N"/>
+                    </connections>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-J9-TKq">
+                    <rect key="frame" x="141" y="51" width="44" height="23"/>
+                    <color key="color" white="0.44891036184210531" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="updateDiffuseColor:" target="-2" id="igt-Jk-SQU"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSF-y8-0WG">
+                    <rect key="frame" x="18" y="51" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="DiffuseColor" id="j4I-px-bfy">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8S-VR-Itp">
+                    <rect key="frame" x="18" y="82" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="AmbientColor" id="X2n-E0-gve">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zk6-TK-xtf">
+                    <rect key="frame" x="141" y="82" width="44" height="23"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateAmbientColor:" target="-2" id="bt3-QW-Mx9"/>
+                    </connections>
+                </colorWell>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-21-K9b">
+                    <rect key="frame" x="141" y="20" width="44" height="23"/>
+                    <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateSubColor:" target="-2" id="yTi-WZ-RWh"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfO-8S-Acl">
+                    <rect key="frame" x="18" y="20" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="SubColor" id="iUI-Cp-lwp">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="739" y="707"/>
+        </customView>
+    </objects>
+</document>

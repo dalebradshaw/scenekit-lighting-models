@@ -13,6 +13,7 @@
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *diffuseColor;
 @property (strong) NSColor *ambientColor;
+@property (strong) NSColor *subColor;
 @property (assign) double rolloff;
 
 @end

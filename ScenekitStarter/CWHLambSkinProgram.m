@@ -47,6 +47,14 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        
+        NSColor *diffuseColor = [NSColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.];
+        self.diffuseColor = diffuseColor;
+        NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.ambientColor = ambientColor;
+        NSColor *subColor = [NSColor colorWithRed:1. green:0. blue:0. alpha:1.];
+        self.subColor = subColor;
+        self.rolloff = 0.575;
     }
     
     return self;
@@ -96,6 +104,15 @@
         
         if(self.ambientColor){
             glUniform4f(location,[self.ambientColor redComponent] , [self.ambientColor greenComponent] , [self.ambientColor blueComponent], [self.ambientColor alphaComponent]);
+        }
+        
+        return YES;
+    }
+    
+    if ([symbol isEqualToString:@"SubColor"]) {
+        
+        if(self.subColor){
+            glUniform4f(location,[self.subColor redComponent] , [self.subColor greenComponent] , [self.subColor blueComponent], [self.subColor alphaComponent]);
         }
         
         return YES;

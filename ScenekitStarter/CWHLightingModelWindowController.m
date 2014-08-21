@@ -17,6 +17,8 @@
 #import "CWHGoochParameterViewController.h"
 #import "CWHHemisphereParameterViewController.h"
 #import "CWHHemisphereProgram.h"
+#import "CWHLambSkinProgram.h"
+#import "CWHLambSkinParameterViewController.h"
 #import "CWHPhongPointLightProgram.h"
 #import "CWHPhongPointLightParameterViewController.h"
 #import "CWHVelvetParameterViewController.h"
@@ -56,6 +58,11 @@
 {
     CWHParameterViewController *parameterViewController;
     
+    if([lightingModel isEqualToString:@"Phong Point Light"]){
+        parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
+                                   initWithNibName:@"PhongPointLightParameterView" bundle:nil];
+    }
+    
     if ([lightingModel isEqualToString:@"Blinn"]) {
         parameterViewController = [[CWHBlinnParameterViewController alloc]
                                    initWithNibName:@"BlinnParameterView" bundle:nil];
@@ -66,22 +73,20 @@
                                    initWithNibName:@"EdgeFuzzParameterView" bundle:nil];
     }
     
-    if([lightingModel isEqualToString:@"Phong Point Light"]){
-        parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
-                                                                    initWithNibName:@"PhongPointLightParameterView" bundle:nil];
-    }
-
     if([lightingModel isEqualToString:@"Gooch"]){
         parameterViewController = [[CWHGoochParameterViewController alloc]
                                    initWithNibName:@"GoochParameterView" bundle:nil];
     }
     
-    if([lightingModel isEqualToString:@"Hemishphere"]){
+    if([lightingModel isEqualToString:@"Hemisphere"]){
         parameterViewController = [[CWHHemisphereParameterViewController alloc]
                                    initWithNibName:@"HemisphereParameterView" bundle:nil];
     }
     
-    
+    if([lightingModel isEqualToString:@"Lamb Skin"]){
+        parameterViewController = [[CWHLambSkinParameterViewController alloc]
+                                   initWithNibName:@"LambSkinParameterView" bundle:nil];
+    }
     if ([lightingModel isEqualToString:@"Velvet"]) {
         parameterViewController = [[CWHVelvetParameterViewController alloc]
                                    initWithNibName:@"VelvetParameterView" bundle:nil];
@@ -135,6 +140,10 @@
 {
     SCNProgram *program;
     
+    if([lightingModel isEqualToString:@"Phong Point Light"]){
+        program = [CWHPhongPointLightProgram program];
+    }
+    
     if ([lightingModel isEqualToString:@"Blinn"]) {
         program = [CWHBlinnProgram program];
     }
@@ -143,16 +152,16 @@
         program = [CWHEdgeFuzzProgram program];
     }
     
-    if([lightingModel isEqualToString:@"Phong Point Light"]){
-        program = [CWHPhongPointLightProgram program];
-    }
-    
     if ([lightingModel isEqualToString:@"Gooch"]) {
         program = [CWHGoochProgram program];
     }
   
-    if ([lightingModel isEqualToString:@"Hemishphere"]) {
+    if ([lightingModel isEqualToString:@"Hemisphere"]) {
         program = [CWHHemisphereProgram program];
+    }
+    
+    if ([lightingModel isEqualToString:@"Lamb Skin"]) {
+        program = [CWHLambSkinProgram program];
     }
     
     if ([lightingModel isEqualToString:@"Velvet"]) {
