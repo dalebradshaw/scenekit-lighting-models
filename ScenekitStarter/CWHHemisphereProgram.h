@@ -11,6 +11,7 @@
 @interface CWHHemisphereProgram : SCNProgram<SCNProgramDelegate>
 
 @property (strong) SCNNode *lightnode;
+
 @property (strong) NSColor *skyColor;
 @property (strong) NSColor *groundColor;
 

@@ -47,6 +47,12 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        
+        NSColor *skyColor = [NSColor colorWithRed:0.0 green:0.7 blue:1. alpha:1.];
+        self.skyColor = skyColor;
+        NSColor *groundColor = [NSColor colorWithRed:0.7 green:0.5 blue:0.2 alpha:1.];
+        self.groundColor = groundColor;
+        
     }
     
     return self;

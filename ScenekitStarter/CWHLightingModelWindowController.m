@@ -15,6 +15,8 @@
 #import "CWHEdgeFuzzParameterViewController.h"
 #import "CWHGoochProgram.h"
 #import "CWHGoochParameterViewController.h"
+#import "CWHHemisphereParameterViewController.h"
+#import "CWHHemisphereProgram.h"
 #import "CWHPhongPointLightProgram.h"
 #import "CWHPhongPointLightParameterViewController.h"
 #import "CWHVelvetParameterViewController.h"
@@ -63,6 +65,7 @@
         parameterViewController = [[CWHEdgeFuzzParameterViewController alloc]
                                    initWithNibName:@"EdgeFuzzParameterView" bundle:nil];
     }
+    
     if([lightingModel isEqualToString:@"Phong Point Light"]){
         parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
                                                                     initWithNibName:@"PhongPointLightParameterView" bundle:nil];
@@ -72,6 +75,12 @@
         parameterViewController = [[CWHGoochParameterViewController alloc]
                                    initWithNibName:@"GoochParameterView" bundle:nil];
     }
+    
+    if([lightingModel isEqualToString:@"Hemishphere"]){
+        parameterViewController = [[CWHHemisphereParameterViewController alloc]
+                                   initWithNibName:@"HemisphereParameterView" bundle:nil];
+    }
+    
     
     if ([lightingModel isEqualToString:@"Velvet"]) {
         parameterViewController = [[CWHVelvetParameterViewController alloc]
@@ -141,7 +150,11 @@
     if ([lightingModel isEqualToString:@"Gooch"]) {
         program = [CWHGoochProgram program];
     }
-   
+  
+    if ([lightingModel isEqualToString:@"Hemishphere"]) {
+        program = [CWHHemisphereProgram program];
+    }
+    
     if ([lightingModel isEqualToString:@"Velvet"]) {
         program = [CWHVelvetProgram program];
     }

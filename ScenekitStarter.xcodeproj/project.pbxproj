@@ -39,6 +39,8 @@
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
+		BFE295D719A62CA2006D5336 /* CWHHemisphereParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE295D519A62CA2006D5336 /* CWHHemisphereParameterViewController.m */; };
+		BFE295D819A62CA2006D5336 /* HemisphereParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */; };
 		BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */; };
 		BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */; };
 		BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F696199E385E000D9153 /* VelvetParameterView.xib */; };
@@ -116,6 +118,9 @@
 		BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScenekitStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813E61981646200E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813E71981646200E09822 /* ScenekitStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScenekitStarterTests.m; sourceTree = "<group>"; };
+		BFE295D419A62CA2006D5336 /* CWHHemisphereParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHHemisphereParameterViewController.h; sourceTree = "<group>"; };
+		BFE295D519A62CA2006D5336 /* CWHHemisphereParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHHemisphereParameterViewController.m; sourceTree = "<group>"; };
+		BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HemisphereParameterView.xib; sourceTree = "<group>"; };
 		BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewController.h; sourceTree = "<group>"; };
 		BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHParameterViewController.m; sourceTree = "<group>"; };
 		BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewProtocol.h; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
 				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */,
+				BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */,
 				BFE9F69B199EB178000D9153 /* BlinnParameterView.xib */,
 				BFE9F6A0199EB2CD000D9153 /* EdgeFuzzParameterView.xib */,
 				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
@@ -239,6 +245,8 @@
 				BF018EF4199A948F00917508 /* CWHGoochParameterViewController.m */,
 				BF728C53198A77E60018E76C /* CWHHemisphereProgram.h */,
 				BF728C54198A77E60018E76C /* CWHHemisphereProgram.m */,
+				BFE295D419A62CA2006D5336 /* CWHHemisphereParameterViewController.h */,
+				BFE295D519A62CA2006D5336 /* CWHHemisphereParameterViewController.m */,
 				BF728C61198ABF450018E76C /* CWHLambSkinProgram.h */,
 				BF728C62198ABF450018E76C /* CWHLambSkinProgram.m */,
 				BF91E0AD198AEF6A00965DF7 /* CWHLUTSkinProgram.h */,
@@ -386,6 +394,7 @@
 				BFFB6DF2198C40CD00C14A7C /* CWHLightingView.xib in Resources */,
 				BF018EF2199A93F700917508 /* GoochParameterView.xib in Resources */,
 				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
+				BFE295D819A62CA2006D5336 /* HemisphereParameterView.xib in Resources */,
 				BF728C51198966CF0018E76C /* Velvet.fsh in Resources */,
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
 				BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */,
@@ -424,6 +433,7 @@
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
 				BFE9F69C199EB178000D9153 /* CWHBlinnParameterViewController.m in Sources */,
 				BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */,
+				BFE295D719A62CA2006D5336 /* CWHHemisphereParameterViewController.m in Sources */,
 				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
 				BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */,
 				BFE9F6A1199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m in Sources */,
