@@ -32,7 +32,7 @@
     ambientLightNode.light.type = SCNLightTypeAmbient;
     ambientLightNode.light.color = [NSColor redColor];
     [scene.rootNode addChildNode:ambientLightNode];
-    
+    self.lightNode = ambientLightNode;
     
     SCNAction *moveByAction = [SCNAction moveBy:SCNVector3Make(20, 30, 10) duration:2];
     moveByAction.timingMode = SCNActionTimingModeEaseInEaseOut;

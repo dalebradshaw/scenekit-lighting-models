@@ -2,7 +2,7 @@
 //  CWHLambSkinParameterViewController.m
 //  ScenekitStarter
 //
-//  Created by Super on 8/21/14.
+//  Created by Dale Bradshaw on 8/21/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
@@ -26,6 +26,7 @@
     }else{
         [self.rolloffSlider setDoubleValue:[sender doubleValue]];
     }
+    
     [self updateShaderValues];
 }
 

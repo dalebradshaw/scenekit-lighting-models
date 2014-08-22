@@ -17,4 +17,5 @@
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
                             light:(SCNNode *)light;
 -(void)updateLightingModel:(SCNProgram*)lightingModel;
+
 @end

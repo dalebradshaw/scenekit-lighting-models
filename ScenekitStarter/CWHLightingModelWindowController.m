@@ -87,6 +87,7 @@
         parameterViewController = [[CWHLambSkinParameterViewController alloc]
                                    initWithNibName:@"LambSkinParameterView" bundle:nil];
     }
+    
     if ([lightingModel isEqualToString:@"Velvet"]) {
         parameterViewController = [[CWHVelvetParameterViewController alloc]
                                    initWithNibName:@"VelvetParameterView" bundle:nil];
@@ -168,6 +169,8 @@
         program = [CWHVelvetProgram program];
     }
     
+    //Key/Value coding for light node since we pass around Superclass
+    [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
     return program;
 }
 
