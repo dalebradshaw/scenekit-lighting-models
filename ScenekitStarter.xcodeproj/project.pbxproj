@@ -35,7 +35,6 @@
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
 		BFB813D21981646100E09822 /* CWHLightingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D11981646100E09822 /* CWHLightingView.m */; };
 		BFB813D51981646100E09822 /* CWHLightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813D41981646100E09822 /* CWHLightingViewController.m */; };
-		BFB813D71981646200E09822 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D61981646200E09822 /* art.scnassets */; };
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
@@ -43,6 +42,11 @@
 		BFE295D819A62CA2006D5336 /* HemisphereParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */; };
 		BFE295DC19A675B4006D5336 /* CWHLambSkinParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE295DA19A675B4006D5336 /* CWHLambSkinParameterViewController.m */; };
 		BFE295DD19A675B4006D5336 /* LambSkinParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE295DB19A675B4006D5336 /* LambSkinParameterView.xib */; };
+		BFE295E019AB66A7006D5336 /* CWHEnvMapProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE295DF19AB66A7006D5336 /* CWHEnvMapProgram.m */; };
+		BFE2961B19AB6EA3006D5336 /* EnvMap.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961919AB6EA3006D5336 /* EnvMap.png */; };
+		BFE2961C19AB6EA3006D5336 /* EnvMapInterior.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961A19AB6EA3006D5336 /* EnvMapInterior.png */; };
+		BFE2961E19AB6F0A006D5336 /* EnvMap.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961D19AB6F0A006D5336 /* EnvMap.vsh */; };
+		BFE2962019AB6F19006D5336 /* EnvMap.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961F19AB6F19006D5336 /* EnvMap.fsh */; };
 		BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */; };
 		BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */; };
 		BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F696199E385E000D9153 /* VelvetParameterView.xib */; };
@@ -114,7 +118,6 @@
 		BFB813D11981646100E09822 /* CWHLightingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWHLightingView.m; sourceTree = "<group>"; };
 		BFB813D31981646100E09822 /* CWHLightingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHLightingViewController.h; sourceTree = "<group>"; };
 		BFB813D41981646100E09822 /* CWHLightingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWHLightingViewController.m; sourceTree = "<group>"; };
-		BFB813D61981646200E09822 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BFB813D81981646200E09822 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BFB813DB1981646200E09822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScenekitStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,12 @@
 		BFE295D919A675B4006D5336 /* CWHLambSkinParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLambSkinParameterViewController.h; sourceTree = "<group>"; };
 		BFE295DA19A675B4006D5336 /* CWHLambSkinParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLambSkinParameterViewController.m; sourceTree = "<group>"; };
 		BFE295DB19A675B4006D5336 /* LambSkinParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LambSkinParameterView.xib; sourceTree = "<group>"; };
+		BFE295DE19AB66A7006D5336 /* CWHEnvMapProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHEnvMapProgram.h; sourceTree = "<group>"; };
+		BFE295DF19AB66A7006D5336 /* CWHEnvMapProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHEnvMapProgram.m; sourceTree = "<group>"; };
+		BFE2961919AB6EA3006D5336 /* EnvMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnvMap.png; sourceTree = "<group>"; };
+		BFE2961A19AB6EA3006D5336 /* EnvMapInterior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnvMapInterior.png; sourceTree = "<group>"; };
+		BFE2961D19AB6F0A006D5336 /* EnvMap.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EnvMap.vsh; sourceTree = "<group>"; };
+		BFE2961F19AB6F19006D5336 /* EnvMap.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EnvMap.fsh; sourceTree = "<group>"; };
 		BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewController.h; sourceTree = "<group>"; };
 		BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHParameterViewController.m; sourceTree = "<group>"; };
 		BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewProtocol.h; sourceTree = "<group>"; };
@@ -174,6 +183,8 @@
 		BF035B631986999600F1C758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFE2961919AB6EA3006D5336 /* EnvMap.png */,
+				BFE2961A19AB6EA3006D5336 /* EnvMapInterior.png */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
 				BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */,
 				BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */,
@@ -188,6 +199,8 @@
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
 				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
 				BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */,
+				BFE2961D19AB6F0A006D5336 /* EnvMap.vsh */,
+				BFE2961F19AB6F19006D5336 /* EnvMap.fsh */,
 				BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */,
 				BF728C5E198AB4500018E76C /* GlossyWetHighlight.vsh */,
 				BFF2DE08198847D100FBDAAD /* Gooch.fsh */,
@@ -241,6 +254,8 @@
 				BFE9F69A199EB178000D9153 /* CWHBlinnParameterViewController.m */,
 				BF728C68198AE6800018E76C /* CWHEdgeFuzzProgram.h */,
 				BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */,
+				BFE295DE19AB66A7006D5336 /* CWHEnvMapProgram.h */,
+				BFE295DF19AB66A7006D5336 /* CWHEnvMapProgram.m */,
 				BFE9F69E199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.h */,
 				BFE9F69F199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m */,
 				BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */,
@@ -270,7 +285,6 @@
 				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
 				BFE9F694199E385E000D9153 /* CWHVelvetParameterViewController.h */,
 				BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */,
-				BFB813D61981646200E09822 /* art.scnassets */,
 				BFB813D81981646200E09822 /* Images.xcassets */,
 				BF035B631986999600F1C758 /* Resources */,
 				BFB813C91981646100E09822 /* Supporting Files */,
@@ -391,8 +405,8 @@
 				BF728C5F198AB4500018E76C /* GlossyWetHighlight.fsh in Resources */,
 				BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */,
 				BF728C52198966CF0018E76C /* Velvet.vsh in Resources */,
-				BFB813D71981646200E09822 /* art.scnassets in Resources */,
 				BF035B6719869A1000F1C758 /* PhongPointLight.vsh in Resources */,
+				BFE2962019AB6F19006D5336 /* EnvMap.fsh in Resources */,
 				BF035B6619869A1000F1C758 /* PhongPointLight.fsh in Resources */,
 				BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */,
 				BFE9F6A2199EB2CD000D9153 /* EdgeFuzzParameterView.xib in Resources */,
@@ -401,6 +415,7 @@
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
 				BFFB6DF2198C40CD00C14A7C /* CWHLightingView.xib in Resources */,
 				BF018EF2199A93F700917508 /* GoochParameterView.xib in Resources */,
+				BFE2961B19AB6EA3006D5336 /* EnvMap.png in Resources */,
 				BF728C66198AC03E0018E76C /* LambSkin.fsh in Resources */,
 				BFE295DD19A675B4006D5336 /* LambSkinParameterView.xib in Resources */,
 				BFE295D819A62CA2006D5336 /* HemisphereParameterView.xib in Resources */,
@@ -408,9 +423,11 @@
 				BFB813DC1981646200E09822 /* MainMenu.xib in Resources */,
 				BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
+				BFE2961C19AB6EA3006D5336 /* EnvMapInterior.png in Resources */,
 				BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */,
 				BFE9F69D199EB178000D9153 /* BlinnParameterView.xib in Resources */,
 				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
+				BFE2961E19AB6F0A006D5336 /* EnvMap.vsh in Resources */,
 				BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +468,7 @@
 				BF728C63198ABF450018E76C /* CWHLambSkinProgram.m in Sources */,
 				BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */,
 				BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */,
+				BFE295E019AB66A7006D5336 /* CWHEnvMapProgram.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
