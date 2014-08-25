@@ -63,16 +63,46 @@ bindValueForSymbol:(NSString *)symbol
         return YES; // indicate that the symbol was bound successfully.
     }
    
-    if ([symbol isEqualToString:@"env_map"]) {
+    if ([symbol isEqualToString:@"Environment"]) {
         NSError *error = nil;
         NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"EnvMap" ofType:@"png"];
         GLKTextureInfo *texture = [GLKTextureLoader textureWithContentsOfFile:imagePath options:nil error:&error];
-        
+        //NSLog(@" texture %@", texture);
         if(!texture){
             NSLog(@"Error loading file %@", [error localizedDescription] );
         }
         
         glBindTexture(GL_TEXTURE_2D, texture.name);
+        
+        return YES;
+    }
+    if ([symbol isEqualToString:@"DiffuseColor"]) {
+        
+        if(self.diffuseColor){
+             // NSLog(@" self.diffuseColor red %f green %f blue %f", [self.diffuseColor redComponent], [self.diffuseColor greenComponent], [self.diffuseColor blueComponent]);
+            glUniform4f(location,[self.diffuseColor redComponent] , [self.diffuseColor greenComponent] , [self.diffuseColor blueComponent], [self.diffuseColor alphaComponent]);
+        }
+        
+        return YES;
+    }
+    
+    if ([symbol isEqualToString:@"AmbientColor"]) {
+        
+        if(self.ambientColor){
+            //NSLog(@" self.ambient red %f green %f blue %f", [self.ambientColor redComponent], [self.ambientColor greenComponent], [self.ambientColor blueComponent]);
+            glUniform4f(location,[self.ambientColor redComponent] , [self.ambientColor greenComponent] , [self.ambientColor blueComponent], [self.ambientColor alphaComponent]);
+        }
+        
+        return YES;
+    }
+    
+    
+    if ([symbol isEqualToString:@"Ratio"]) {
+        
+        if(self.ratio){
+            //NSLog(@" self.ratio %f", self.ratio);
+            glUniform1f(location,self.ratio);
+        }
         
         return YES;
     }

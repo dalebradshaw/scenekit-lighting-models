@@ -11,5 +11,8 @@
 @interface CWHEnvMapProgram : SCNProgram<SCNProgramDelegate>
 
 @property (strong) SCNNode *lightnode;
+@property (strong) NSColor *diffuseColor;
+@property (strong) NSColor *ambientColor;
+@property (assign) double ratio;
 
 @end

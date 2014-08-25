@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-
 }
 
 - (IBAction)updateFuzziness:(id)sender {

@@ -10,6 +10,7 @@
 #import "CWHBlinnProgram.h"
 #import "CWHPhongPointLightProgram.h"
 #import "CWHEdgeFuzzProgram.h"
+#import "CWHEnvMapProgram.h"
 #import "CWHGoochProgram.h"
 #import "CWHHemisphereProgram.h"
 #import "CWHLambSkinProgram.h"
@@ -93,7 +94,14 @@
     SCNMaterial *programMaterial = [SCNMaterial material];
     
     //CWHBlinnProgram *program = [CWHBlinnProgram program];
-    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    //CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    CWHEnvMapProgram *program = [CWHEnvMapProgram program];
+    NSColor *diffuseColor = [NSColor colorWithRed:1. green:1. blue:1. alpha:1.];
+    program.diffuseColor = diffuseColor;
+    NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+    program.ambientColor = ambientColor;
+    
+    program.ratio = 0.5;
     /*
     CWHGoochProgram *program = [CWHGoochProgram program];
     
