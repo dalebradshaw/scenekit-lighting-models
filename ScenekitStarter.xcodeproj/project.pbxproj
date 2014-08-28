@@ -15,6 +15,7 @@
 		BF035B6A1987E9C300F1C758 /* Blinn.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B681987E9C300F1C758 /* Blinn.fsh */; };
 		BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B691987E9C300F1C758 /* Blinn.vsh */; };
 		BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */; };
+		BF23482D19AFC54500DAEF95 /* CWHThinFilmProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */; };
 		BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */; };
 		BF728C51198966CF0018E76C /* Velvet.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C4F198966CF0018E76C /* Velvet.fsh */; };
 		BF728C52198966CF0018E76C /* Velvet.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C50198966CF0018E76C /* Velvet.vsh */; };
@@ -47,6 +48,8 @@
 		BFE2961C19AB6EA3006D5336 /* EnvMapInterior.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961A19AB6EA3006D5336 /* EnvMapInterior.png */; };
 		BFE2961E19AB6F0A006D5336 /* EnvMap.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961D19AB6F0A006D5336 /* EnvMap.vsh */; };
 		BFE2962019AB6F19006D5336 /* EnvMap.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFE2961F19AB6F19006D5336 /* EnvMap.fsh */; };
+		BFE2962419ABABA3006D5336 /* CWHEnvMapParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2962219ABABA3006D5336 /* CWHEnvMapParameterViewController.m */; };
+		BFE2962519ABABA3006D5336 /* EnvMapParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE2962319ABABA3006D5336 /* EnvMapParameterView.xib */; };
 		BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */; };
 		BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE9F695199E385E000D9153 /* CWHVelvetParameterViewController.m */; };
 		BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE9F696199E385E000D9153 /* VelvetParameterView.xib */; };
@@ -87,6 +90,8 @@
 		BF035B691987E9C300F1C758 /* Blinn.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blinn.vsh; sourceTree = "<group>"; };
 		BF035B6C19882D8200F1C758 /* CWHBlinnProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHBlinnProgram.h; sourceTree = "<group>"; };
 		BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHBlinnProgram.m; sourceTree = "<group>"; };
+		BF23482B19AFC54500DAEF95 /* CWHThinFilmProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWHThinFilmProgram.h; path = ../CWHThinFilmProgram.h; sourceTree = "<group>"; };
+		BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWHThinFilmProgram.m; path = ../CWHThinFilmProgram.m; sourceTree = "<group>"; };
 		BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHVelvetProgram.h; sourceTree = "<group>"; };
 		BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHVelvetProgram.m; sourceTree = "<group>"; };
 		BF728C4F198966CF0018E76C /* Velvet.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Velvet.fsh; sourceTree = "<group>"; };
@@ -135,6 +140,9 @@
 		BFE2961A19AB6EA3006D5336 /* EnvMapInterior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnvMapInterior.png; sourceTree = "<group>"; };
 		BFE2961D19AB6F0A006D5336 /* EnvMap.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EnvMap.vsh; sourceTree = "<group>"; };
 		BFE2961F19AB6F19006D5336 /* EnvMap.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EnvMap.fsh; sourceTree = "<group>"; };
+		BFE2962119ABABA3006D5336 /* CWHEnvMapParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHEnvMapParameterViewController.h; sourceTree = "<group>"; };
+		BFE2962219ABABA3006D5336 /* CWHEnvMapParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHEnvMapParameterViewController.m; sourceTree = "<group>"; };
+		BFE2962319ABABA3006D5336 /* EnvMapParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnvMapParameterView.xib; sourceTree = "<group>"; };
 		BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewController.h; sourceTree = "<group>"; };
 		BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHParameterViewController.m; sourceTree = "<group>"; };
 		BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHParameterViewProtocol.h; sourceTree = "<group>"; };
@@ -191,6 +199,7 @@
 				BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */,
 				BFE9F69B199EB178000D9153 /* BlinnParameterView.xib */,
 				BFE9F6A0199EB2CD000D9153 /* EdgeFuzzParameterView.xib */,
+				BFE2962319ABABA3006D5336 /* EnvMapParameterView.xib */,
 				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
 				BFE295DB19A675B4006D5336 /* LambSkinParameterView.xib */,
 				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
@@ -254,10 +263,12 @@
 				BFE9F69A199EB178000D9153 /* CWHBlinnParameterViewController.m */,
 				BF728C68198AE6800018E76C /* CWHEdgeFuzzProgram.h */,
 				BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */,
-				BFE295DE19AB66A7006D5336 /* CWHEnvMapProgram.h */,
-				BFE295DF19AB66A7006D5336 /* CWHEnvMapProgram.m */,
 				BFE9F69E199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.h */,
 				BFE9F69F199EB2CD000D9153 /* CWHEdgeFuzzParameterViewController.m */,
+				BFE295DE19AB66A7006D5336 /* CWHEnvMapProgram.h */,
+				BFE295DF19AB66A7006D5336 /* CWHEnvMapProgram.m */,
+				BFE2962119ABABA3006D5336 /* CWHEnvMapParameterViewController.h */,
+				BFE2962219ABABA3006D5336 /* CWHEnvMapParameterViewController.m */,
 				BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */,
 				BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */,
 				BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */,
@@ -281,6 +292,8 @@
 				BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */,
 				BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */,
 				BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */,
+				BF23482B19AFC54500DAEF95 /* CWHThinFilmProgram.h */,
+				BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
 				BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */,
 				BFE9F694199E385E000D9153 /* CWHVelvetParameterViewController.h */,
@@ -428,6 +441,7 @@
 				BFE9F69D199EB178000D9153 /* BlinnParameterView.xib in Resources */,
 				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
 				BFE2961E19AB6F0A006D5336 /* EnvMap.vsh in Resources */,
+				BFE2962519ABABA3006D5336 /* EnvMapParameterView.xib in Resources */,
 				BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF23482D19AFC54500DAEF95 /* CWHThinFilmProgram.m in Sources */,
 				BFB813D51981646100E09822 /* CWHLightingViewController.m in Sources */,
 				BFB813D21981646100E09822 /* CWHLightingView.m in Sources */,
 				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
@@ -460,6 +475,7 @@
 				BFF2DE041988369500FBDAAD /* CWHPhongPointLightProgram.m in Sources */,
 				BFE9F69C199EB178000D9153 /* CWHBlinnParameterViewController.m in Sources */,
 				BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */,
+				BFE2962419ABABA3006D5336 /* CWHEnvMapParameterViewController.m in Sources */,
 				BFE295D719A62CA2006D5336 /* CWHHemisphereParameterViewController.m in Sources */,
 				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
 				BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */,

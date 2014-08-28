@@ -33,8 +33,6 @@ void envMapVS(in vec4 V, in vec4 N)
     vec4 Nm = normalize(u_norm * N);
     vec3 nWorld = Nm.xyz;
     
-    //texCoord = a_texcoord;
-    
     // Diffuse
     vec3 vertToLight = normalize(light_position - vWorld.xyz);
     float diffuseLight = max(dot(vertToLight, nWorld), 0.0);

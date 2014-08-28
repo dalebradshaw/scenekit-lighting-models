@@ -12,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="SceneKit Starter Template" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="tL6-i1-KoK" userLabel="LightingModelWindow">
+        <window title="SceneKit Lighting Model Template" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="tL6-i1-KoK" userLabel="LightingModelWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -49,18 +49,19 @@
                     <toolbarItem implicitItemIdentifier="D5744E3A-D31C-4D1C-8215-6AF51D23737B" label="Lighting Model" paletteLabel="Lighting Model" id="aWf-fF-g8m">
                         <nil key="toolTip"/>
                         <size key="minSize" width="80" height="28"/>
-                        <size key="maxSize" width="150" height="40"/>
+                        <size key="maxSize" width="150" height="43"/>
                         <popUpButton key="view" verticalHuggingPriority="750" id="HuQ-mo-ozh">
-                            <rect key="frame" x="0.0" y="14" width="140" height="40"/>
+                            <rect key="frame" x="0.0" y="14" width="149" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UrR-4G-zVx">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
                                 <menu key="menu" id="UlQ-XP-3CW">
                                     <items>
-                                        <menuItem title="Phong Point Light" id="dF8-Ai-y7P"/>
+                                        <menuItem title="Phong Point Light" state="on" id="dF8-Ai-y7P"/>
                                         <menuItem title="Blinn" id="iCM-jc-oNK"/>
                                         <menuItem title="Edge Fuzz" id="uez-MC-ZVr"/>
+                                        <menuItem title="EnvMap" id="qPl-qS-TdE"/>
                                         <menuItem title="Gooch" id="qPy-6U-M8Z"/>
                                         <menuItem title="Hemisphere" id="33t-1X-xrB" userLabel="Hemishphere"/>
                                         <menuItem title="Lamb Skin" id="1xW-tJ-aNb" userLabel="Lamb Skin"/>

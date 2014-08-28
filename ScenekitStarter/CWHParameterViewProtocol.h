@@ -2,7 +2,7 @@
 //  ParameterViewProtocol.h
 //  ScenekitStarter
 //
-//  Created by Super on 8/4/14.
+//  Created by Dale Bradshaw on 8/4/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 

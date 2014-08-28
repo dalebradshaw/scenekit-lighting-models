@@ -94,7 +94,9 @@
     SCNMaterial *programMaterial = [SCNMaterial material];
     
     //CWHBlinnProgram *program = [CWHBlinnProgram program];
-    //CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    /*
+    
     CWHEnvMapProgram *program = [CWHEnvMapProgram program];
     NSColor *diffuseColor = [NSColor colorWithRed:1. green:1. blue:1. alpha:1.];
     program.diffuseColor = diffuseColor;
@@ -102,7 +104,7 @@
     program.ambientColor = ambientColor;
     
     program.ratio = 0.5;
-    /*
+ 
     CWHGoochProgram *program = [CWHGoochProgram program];
     
     NSColor *warmColor = [NSColor colorWithRed:1. green:.3 blue:.3 alpha:1.];

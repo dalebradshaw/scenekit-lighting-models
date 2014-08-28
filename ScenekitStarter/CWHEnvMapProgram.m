@@ -2,7 +2,7 @@
 //  CWHEnvMapProgram.m
 //  ScenekitStarter
 //
-//  Created by Super on 8/25/14.
+//  Created by Dale Bradshaw on 8/25/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 #import <GLKit/GLKit.h>
 #import <OpenGL/gl.h>
 #import <OpenGL/glext.h>
+
 @implementation CWHEnvMapProgram
 - (instancetype)init
 {
@@ -41,7 +42,12 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
-        
+        NSColor *diffuseColor = [NSColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.];
+        self.diffuseColor = diffuseColor;
+        NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.ambientColor = ambientColor;
+        self.ratio = 0.875;
+        self.imagePath = [[NSBundle mainBundle] pathForResource:@"EnvMapInterior" ofType:@"png"];
     }
     return self;
 }
@@ -64,11 +70,13 @@ bindValueForSymbol:(NSString *)symbol
     }
    
     if ([symbol isEqualToString:@"Environment"]) {
+
         NSError *error = nil;
-        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"EnvMap" ofType:@"png"];
-        GLKTextureInfo *texture = [GLKTextureLoader textureWithContentsOfFile:imagePath options:nil error:&error];
+        GLuint gError = glGetError();
+        GLKTextureInfo *texture = [GLKTextureLoader textureWithContentsOfFile: self.imagePath options:nil error:&error];
         //NSLog(@" texture %@", texture);
         if(!texture){
+            NSLog(@"GL Error = %u", gError);
             NSLog(@"Error loading file %@", [error localizedDescription] );
         }
         

@@ -2,7 +2,7 @@
 //  CWHVelvetProgram.m
 //  ScenekitStarter
 //
-//  Created by Super on 7/30/14.
+//  Created by Dale Bradshaw on 7/30/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 

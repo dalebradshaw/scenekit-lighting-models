@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CWHEnvMapParameterViewController">
+            <connections>
+                <outlet property="ambientColor" destination="l2m-RX-POl" id="Cb4-b4-ykh"/>
+                <outlet property="ambientColorWell" destination="l2m-RX-POl" id="VP0-q2-isY"/>
+                <outlet property="diffuseColor" destination="mYj-yq-zjR" id="xrH-eg-xuh"/>
+                <outlet property="diffuseColorWell" destination="mYj-yq-zjR" id="QCy-51-faG"/>
+                <outlet property="envMapMenu" destination="9aJ-KT-wwM" id="ub4-Wr-Xml"/>
+                <outlet property="ratioSlider" destination="YOd-NJ-1bb" id="Sub-SZ-nnR"/>
+                <outlet property="ratioTextField" destination="aeZ-wB-map" id="t02-JO-fca"/>
+                <outlet property="view" destination="Mwh-qD-GLY" id="x0B-h5-ZhJ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Mwh-qD-GLY" userLabel="EnvMapParameterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-Uc-Yfq">
+                    <rect key="frame" x="18" y="113" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Ratio" id="v6k-j0-Bia">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-NJ-1bb">
+                    <rect key="frame" x="141" y="112" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.57499999999999996" tickMarkPosition="above" sliderType="linear" id="PIW-sp-OOj"/>
+                    <connections>
+                        <action selector="updateRatio:" target="-2" id="Jky-mT-l7C"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-wB-map">
+                    <rect key="frame" x="246" y="111" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="RJS-fg-La8">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateRatio:" target="-2" id="zca-hF-I8z"/>
+                    </connections>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYj-yq-zjR">
+                    <rect key="frame" x="141" y="51" width="44" height="23"/>
+                    <color key="color" white="0.44891036179999999" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="updateDiffuseColor:" target="-2" id="4IU-it-mqN"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSE-WD-9FD">
+                    <rect key="frame" x="18" y="51" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="DiffuseColor" id="cMI-Ht-lfC">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-tO-THc">
+                    <rect key="frame" x="18" y="82" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="AmbientColor" id="ylY-Nr-kA4">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2m-RX-POl">
+                    <rect key="frame" x="141" y="82" width="44" height="23"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateAmbientColor:" target="-2" id="Hpz-cD-H4M"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-uO-QwS">
+                    <rect key="frame" x="18" y="20" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="EnvMap" id="720-2x-iAZ">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aJ-KT-wwM">
+                    <rect key="frame" x="138" y="17" width="125" height="26"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="QlW-ys-mCd">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="Pbb-vO-fuC">
+                            <items>
+                                <menuItem title="EnvMapInterior" id="abl-Bc-4mo"/>
+                                <menuItem title="EnvMap" id="5Jd-mB-W2X"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="updateEnvMap:" target="-2" id="ZWY-bU-Hsi"/>
+                    </connections>
+                </popUpButton>
+            </subviews>
+            <point key="canvasLocation" x="739" y="707"/>
+        </customView>
+    </objects>
+</document>

@@ -2,7 +2,7 @@
 //  CWHLightingModelWindowController.m
 //  ScenekitStarter
 //
-//  Created by Super on 8/1/14.
+//  Created by Dale Bradshaw on 8/1/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 
@@ -13,6 +13,8 @@
 #import "CWHBlinnParameterViewController.h"
 #import "CWHEdgeFuzzProgram.h"
 #import "CWHEdgeFuzzParameterViewController.h"
+#import "CWHEnvMapProgram.h"
+#import "CWHEnvMapParameterViewController.h"
 #import "CWHGoochProgram.h"
 #import "CWHGoochParameterViewController.h"
 #import "CWHHemisphereParameterViewController.h"
@@ -71,6 +73,11 @@
     if ([lightingModel isEqualToString:@"Edge Fuzz"]) {
         parameterViewController = [[CWHEdgeFuzzParameterViewController alloc]
                                    initWithNibName:@"EdgeFuzzParameterView" bundle:nil];
+    }
+    
+    if ([lightingModel isEqualToString:@"EnvMap"]) {
+        parameterViewController = [[CWHEnvMapParameterViewController alloc]
+                                   initWithNibName:@"EnvMapParameterView" bundle:nil];
     }
     
     if([lightingModel isEqualToString:@"Gooch"]){
@@ -151,6 +158,10 @@
     
     if ([lightingModel isEqualToString:@"Edge Fuzz"]) {
         program = [CWHEdgeFuzzProgram program];
+    }
+    
+    if ([lightingModel isEqualToString:@"EnvMap"]) {
+        program = [CWHEnvMapProgram program];
     }
     
     if ([lightingModel isEqualToString:@"Gooch"]) {
