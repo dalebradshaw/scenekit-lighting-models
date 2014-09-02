@@ -42,8 +42,8 @@
 
     SCNTorus *torusShape = [SCNTorus torusWithRingRadius:3.
                                               pipeRadius:1.];
-    
-    
+
+
     CWHShadingNode *torusNode = [[CWHShadingNode alloc] initWithGeometry:torusShape
                                                                    light:ambientLightNode];
     torusNode.position = SCNVector3Make(0., 0., 0.);
@@ -68,6 +68,35 @@
     // configure the view
     self.lightingView.backgroundColor = [NSColor blackColor];
 
+}
+
+-(void)viewDidAppear
+{
+    //Abuse responder chain since we aren't sure how we want to hand around the default program
+    //probably more of a hack then just tightly coupling for now.
+    
+    NSString *lightingProgram;
+    SCNProgram *program;
+    NSResponder *responder = [self view];
+    while ((responder = [responder nextResponder])) {
+        //NSLog(@"%@", responder);//
+        SEL currentLightingProgram = NSSelectorFromString(@"currentLightingProgram");
+        if([responder respondsToSelector:currentLightingProgram]){
+            lightingProgram = [responder valueForKey:@"currentLightingProgram"];
+            if (lightingProgram) {
+                //NSLog(@" lightingProgram %@", lightingProgram);
+                SEL programForLightingModel = NSSelectorFromString(@"programForLightingModel:");
+                if ([responder respondsToSelector:programForLightingModel]) {
+                    IMP imp = [responder methodForSelector:programForLightingModel];
+                    SCNProgram* (*func)(id, SEL, NSString *) = (void *)imp;
+                    program = func(responder, programForLightingModel , lightingProgram);
+                    //NSLog(@"program %@", program);
+                }
+            }
+        }
+    }
+    
+    
 }
 
 @end

@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="lightingModelMenu" destination="UlQ-XP-3CW" id="1Wg-az-STJ"/>
                 <outlet property="targetView" destination="66R-ZL-Zgr" id="xAB-Zi-ssV"/>
+                <outlet property="window" destination="tL6-i1-KoK" id="1ef-zg-KqJ"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

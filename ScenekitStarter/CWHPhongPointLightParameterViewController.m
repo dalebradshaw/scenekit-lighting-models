@@ -17,14 +17,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-   
-    self.ambientColor = [self.ambientColorWell color];
-    self.lightColor = [self.lightColorWell color];
-    self.materialSpecularity = [self.specularitySlider doubleValue];
-    self.shininess = [self.shininessSlider doubleValue];
-
-    [self.specularityTextField setDoubleValue:[self.specularitySlider doubleValue]];
-    [self.shininessTextField setDoubleValue:[self.shininessSlider doubleValue]];
+    
+    NSColor *ambientColor = [self.program valueForKey:@"ambientColor"];
+    
+    if (ambientColor) {
+        [self.ambientColorWell setColor:ambientColor];
+        self.ambientColor = ambientColor;
+    }
+    
+    NSColor *lightColor = [self.program valueForKey:@"lightColor"];
+    
+    if(lightColor){
+        [self.lightColorWell setColor:lightColor];
+        self.lightColor = lightColor;
+    }
+    
+    double shininess = [[self.program valueForKey:@"shininess"] doubleValue];
+    if (shininess) {
+        [self.shininessSlider setDoubleValue:shininess];
+        [self.shininessTextField setDoubleValue:shininess];
+        self.shininess = shininess;
+    }
+    
+    double materialSpecularity = [[self.program valueForKey:@"materialSpecularity"] doubleValue];
+    if (materialSpecularity) {
+        [self.specularitySlider setDoubleValue:materialSpecularity];
+        [self.specularityTextField setDoubleValue:materialSpecularity];
+        self.materialSpecularity = materialSpecularity;
+    }
+    
+    
+    
 }
 
 - (void)viewDidAppear

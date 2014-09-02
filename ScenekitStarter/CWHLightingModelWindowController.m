@@ -36,12 +36,14 @@
 {
     self.lightingViewController = [[CWHLightingViewController alloc] initWithNibName:@"CWHLightingView" bundle:nil];
     [targetView addSubview:[self.lightingViewController view]];
+   
 
     self.lightingParameterState = FALSE;
     NSMenuItem *menuItem = [self.lightingModelMenu itemAtIndex:0];
     NSString *programTitle = [menuItem title];
     
     self.currentLightingProgram = programTitle;
+
 }
 
 - (void)windowDidLoad {
@@ -76,6 +78,7 @@
                                    initWithNibName:nibString bundle:nil];
     }
     
+    parameterViewController.program = [self programForLightingModel:lightingModel];
     return parameterViewController;
 }
 

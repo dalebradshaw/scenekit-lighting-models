@@ -37,6 +37,8 @@
         ambientLightNode.light.type = SCNLightTypeAmbient;
         ambientLightNode.light.color = [NSColor redColor];
         
+        //CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+  
         [self prepareProgramWithGeometry:plane
                                    light:ambientLightNode];
     }
@@ -89,13 +91,13 @@
 {
    
     self.geometry = geometry;
-    
+
     // Create a material
     SCNMaterial *programMaterial = [SCNMaterial material];
-    
+   
     //CWHBlinnProgram *program = [CWHBlinnProgram program];
     CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
-    /*
+   /*
     
     CWHEnvMapProgram *program = [CWHEnvMapProgram program];
     NSColor *diffuseColor = [NSColor colorWithRed:1. green:1. blue:1. alpha:1.];
