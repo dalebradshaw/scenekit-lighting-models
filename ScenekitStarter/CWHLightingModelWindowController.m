@@ -59,45 +59,18 @@
 -(CWHParameterViewController *)parameterViewControllerForLightingModel:(NSString *)lightingModel
 {
     CWHParameterViewController *parameterViewController;
+    Class parameterViewControllerClass;
+    NSString *strippedString = [lightingModel stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *programString = [NSString stringWithFormat:@"CWH%@ParameterViewController", strippedString];
+    NSString *nibString = [NSString stringWithFormat:@"%@ParameterView", strippedString];
+    //NSLog(@"programString %@", programString);
+    //NSLog(@"nibString %@", nibString);
     
-    if([lightingModel isEqualToString:@"Phong Point Light"]){
-        parameterViewController = [[CWHPhongPointLightParameterViewController alloc]
-                                   initWithNibName:@"PhongPointLightParameterView" bundle:nil];
-    }
-    
-    if ([lightingModel isEqualToString:@"Blinn"]) {
-        parameterViewController = [[CWHBlinnParameterViewController alloc]
-                                   initWithNibName:@"BlinnParameterView" bundle:nil];
-    }
-    
-    if ([lightingModel isEqualToString:@"Edge Fuzz"]) {
-        parameterViewController = [[CWHEdgeFuzzParameterViewController alloc]
-                                   initWithNibName:@"EdgeFuzzParameterView" bundle:nil];
-    }
-    
-    if ([lightingModel isEqualToString:@"EnvMap"]) {
-        parameterViewController = [[CWHEnvMapParameterViewController alloc]
-                                   initWithNibName:@"EnvMapParameterView" bundle:nil];
-    }
-    
-    if([lightingModel isEqualToString:@"Gooch"]){
-        parameterViewController = [[CWHGoochParameterViewController alloc]
-                                   initWithNibName:@"GoochParameterView" bundle:nil];
-    }
-    
-    if([lightingModel isEqualToString:@"Hemisphere"]){
-        parameterViewController = [[CWHHemisphereParameterViewController alloc]
-                                   initWithNibName:@"HemisphereParameterView" bundle:nil];
-    }
-    
-    if([lightingModel isEqualToString:@"Lamb Skin"]){
-        parameterViewController = [[CWHLambSkinParameterViewController alloc]
-                                   initWithNibName:@"LambSkinParameterView" bundle:nil];
-    }
-    
-    if ([lightingModel isEqualToString:@"Velvet"]) {
-        parameterViewController = [[CWHVelvetParameterViewController alloc]
-                                   initWithNibName:@"VelvetParameterView" bundle:nil];
+    parameterViewControllerClass = NSClassFromString(programString);
+    if(parameterViewControllerClass){
+        //NSLog(@"parameterViewControllerClass %@", parameterViewControllerClass);
+        parameterViewController = [[parameterViewControllerClass alloc]
+                                   initWithNibName:nibString bundle:nil];
     }
     
     return parameterViewController;
@@ -150,15 +123,15 @@
     Class programClass;
     NSString *strippedString = [lightingModel stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *programString = [NSString stringWithFormat:@"CWH%@Program", strippedString];
-    NSLog(@"programString %@", programString);
+    //NSLog(@"programString %@", programString);
    
     programClass = NSClassFromString(programString);
     if(programClass){
         program = (SCNProgram *)[programClass program];
+        //Key/Value coding for light node since we pass around Superclass
+        [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
     }
-      
-    //Key/Value coding for light node since we pass around Superclass
-    [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
+    
     return program;
 }
 
