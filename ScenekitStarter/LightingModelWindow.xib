@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CWHLightingModelWindowController">
             <connections>
+                <outlet property="lightingModelMenu" destination="UlQ-XP-3CW" id="1Wg-az-STJ"/>
                 <outlet property="targetView" destination="66R-ZL-Zgr" id="xAB-Zi-ssV"/>
             </connections>
         </customObject>
@@ -58,7 +59,7 @@
                                 <font key="font" metaFont="menu"/>
                                 <menu key="menu" id="UlQ-XP-3CW">
                                     <items>
-                                        <menuItem title="Phong Point Light" state="on" id="dF8-Ai-y7P"/>
+                                        <menuItem title="Phong Point Light" id="dF8-Ai-y7P"/>
                                         <menuItem title="Blinn" id="iCM-jc-oNK"/>
                                         <menuItem title="Edge Fuzz" id="uez-MC-ZVr"/>
                                         <menuItem title="EnvMap" id="qPl-qS-TdE"/>

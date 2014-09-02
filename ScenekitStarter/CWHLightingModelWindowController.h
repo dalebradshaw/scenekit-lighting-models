@@ -15,6 +15,7 @@
     __weak IBOutlet NSView *targetView;
 }
 
+@property (weak) IBOutlet NSMenu *lightingModelMenu;
 -(IBAction)showInputParameters:(id)sender;
 -(IBAction)updateLightingModel:(id)sender;
 

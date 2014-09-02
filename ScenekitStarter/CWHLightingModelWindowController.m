@@ -38,7 +38,10 @@
     [targetView addSubview:[self.lightingViewController view]];
 
     self.lightingParameterState = FALSE;
-    self.currentLightingProgram = @"Phong Point Light";
+    NSMenuItem *menuItem = [self.lightingModelMenu itemAtIndex:0];
+    NSString *programTitle = [menuItem title];
+    
+    self.currentLightingProgram = programTitle;
 }
 
 - (void)windowDidLoad {
