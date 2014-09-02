@@ -8,6 +8,8 @@
 
 #import <SceneKit/SceneKit.h>
 
-@interface CWHThinFilmProgram : SCNProgram
-
+@interface CWHThinFilmProgram : SCNProgram<SCNProgramDelegate>
+@property (strong) SCNNode *lightnode;
+@property (assign) double filmDepth;
+@property (strong) NSColor *diffuseColor;
 @end

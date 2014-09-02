@@ -147,39 +147,16 @@
 -(SCNProgram *)programForLightingModel:(NSString *)lightingModel
 {
     SCNProgram *program;
-    
-    if([lightingModel isEqualToString:@"Phong Point Light"]){
-        program = [CWHPhongPointLightProgram program];
+    Class programClass;
+    NSString *strippedString = [lightingModel stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *programString = [NSString stringWithFormat:@"CWH%@Program", strippedString];
+    NSLog(@"programString %@", programString);
+   
+    programClass = NSClassFromString(programString);
+    if(programClass){
+        program = (SCNProgram *)[programClass program];
     }
-    
-    if ([lightingModel isEqualToString:@"Blinn"]) {
-        program = [CWHBlinnProgram program];
-    }
-    
-    if ([lightingModel isEqualToString:@"Edge Fuzz"]) {
-        program = [CWHEdgeFuzzProgram program];
-    }
-    
-    if ([lightingModel isEqualToString:@"EnvMap"]) {
-        program = [CWHEnvMapProgram program];
-    }
-    
-    if ([lightingModel isEqualToString:@"Gooch"]) {
-        program = [CWHGoochProgram program];
-    }
-  
-    if ([lightingModel isEqualToString:@"Hemisphere"]) {
-        program = [CWHHemisphereProgram program];
-    }
-    
-    if ([lightingModel isEqualToString:@"Lamb Skin"]) {
-        program = [CWHLambSkinProgram program];
-    }
-    
-    if ([lightingModel isEqualToString:@"Velvet"]) {
-        program = [CWHVelvetProgram program];
-    }
-    
+      
     //Key/Value coding for light node since we pass around Superclass
     [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
     return program;
