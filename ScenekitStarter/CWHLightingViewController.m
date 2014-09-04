@@ -74,7 +74,7 @@
 {
     //Abuse responder chain since we aren't sure how we want to hand around the default program
     //probably more of a hack then just tightly coupling for now.
-    
+
     NSString *lightingProgram;
     SCNProgram *program;
     NSResponder *responder = [self view];

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CWHThinFilmParameterViewController">
+            <connections>
+                <outlet property="diffuseColorWell" destination="56g-jT-qBl" id="nN4-4j-AuD"/>
+                <outlet property="filmDepthSlider" destination="1kT-6S-dzJ" id="wic-zQ-eeg"/>
+                <outlet property="filmDepthTextField" destination="ZBF-Gl-49V" id="PnZ-hT-NRq"/>
+                <outlet property="view" destination="7Lc-gl-6e1" id="n3J-1d-FQc"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="7Lc-gl-6e1" userLabel="ThinFilmParameterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deo-dS-tw8">
+                    <rect key="frame" x="18" y="58" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Ratio" id="aVs-7I-bhS">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-6S-dzJ">
+                    <rect key="frame" x="141" y="57" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.57499999999999996" tickMarkPosition="above" sliderType="linear" id="xS0-uC-rID"/>
+                    <connections>
+                        <action selector="updateFilmDepth:" target="-2" id="FQK-Mo-HEa"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBF-Gl-49V">
+                    <rect key="frame" x="246" y="56" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JbB-Eu-KlF">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateFilmDepth:" target="-2" id="5aL-EB-oey"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfq-MU-jWV">
+                    <rect key="frame" x="18" y="27" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="DiffuseColor" id="bMt-L1-bNv">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56g-jT-qBl">
+                    <rect key="frame" x="141" y="27" width="44" height="23"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateDiffuseColor:" target="-2" id="1GQ-Go-hQ3"/>
+                    </connections>
+                </colorWell>
+            </subviews>
+            <point key="canvasLocation" x="660" y="647.5"/>
+        </customView>
+    </objects>
+</document>

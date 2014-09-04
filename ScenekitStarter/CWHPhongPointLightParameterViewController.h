@@ -35,5 +35,4 @@
 @property (strong) NSColor *lightColor;
 -(IBAction)updateLightColor:(id)sender;
 
-
 @end

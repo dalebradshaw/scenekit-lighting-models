@@ -17,6 +17,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    
+    if(self.program){
+        
+        NSColor *surfaceColor = [self.program valueForKey:@"surfaceColor"];
+        if (surfaceColor) {
+            [self.surfaceColorWell setColor:surfaceColor];
+            self.surfaceColor= surfaceColor;
+        }
+        
+
+        double fuzziness = [[self.program valueForKey:@"fuzziness"] doubleValue];
+        if (fuzziness) {
+            [self.fuzzinessCircularSlider setDoubleValue:fuzziness];
+            [self.fuzzinessTextField setDoubleValue:fuzziness];
+            self.fuzziness = fuzziness;
+        }
+        
+        double edgeFade = [[self.program valueForKey:@"edgeFade"] doubleValue];
+        if (edgeFade) {
+            [self.edgeFadeCircularSlider setDoubleValue:edgeFade];
+            [self.edgeFadeTextField setDoubleValue:edgeFade];
+            self.edgeFade = edgeFade;
+        }
+       
+        double specularity = [[self.program valueForKey:@"specularity"] doubleValue];
+        if (specularity) {
+            [self.specularityCircularSlider setDoubleValue:specularity];
+            [self.specularityTextField setDoubleValue:specularity];
+            self.specularity = specularity;
+        }
+        
+        NSColor *edgeColor = [self.program valueForKey:@"edgeColor"];
+        if (edgeColor) {
+            [self.edgeColorWell setColor:edgeColor];
+            self.edgeColor= edgeColor;
+        }
+        
+        NSColor *lightColor = [self.program valueForKey:@"lightColor"];
+        if (lightColor) {
+            [self.lightColorWell setColor:lightColor];
+            self.lightColor = lightColor;
+        }
+        
+        NSColor *ambientColor = [self.program valueForKey:@"ambientColor"];
+        if (ambientColor) {
+            [self.ambientColorWell setColor:ambientColor];
+            self.ambientColor = ambientColor;
+        }
+    }
+    
 }
 
 - (IBAction)updateFuzziness:(id)sender {

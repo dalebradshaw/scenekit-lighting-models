@@ -7,9 +7,7 @@
 //
 
 #import "CWHThinFilmProgram.h"
-#import <GLKit/GLKit.h>
-#import <OpenGL/gl.h>
-#import <OpenGL/glext.h>
+
 
 @implementation CWHThinFilmProgram
 - (instancetype)init
@@ -42,6 +40,18 @@
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
+        
+        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"FringeMap" ofType:@"png"];
+        
+        NSError *error = nil;
+        GLuint gError = glGetError();
+        self.texture = [GLKTextureLoader textureWithContentsOfFile:imagePath  options:nil error:&error];
+        if (gError != 0) {
+            NSLog(@"error %@", error);
+            NSLog(@"GL Error = %u", gError);
+        }
+
+        
     }
     return self;
 }
@@ -71,6 +81,21 @@
             glUniform3f(location,[self.diffuseColor redComponent] , [self.diffuseColor greenComponent] , [self.diffuseColor blueComponent]);
             
         }
+        
+        return YES;
+    }
+    
+    if ([symbol isEqualToString:@"FringeMap"]) {
+        
+        //NSLog(@" self.texture %@", self.texture);
+        if(!self.texture){
+            NSError *error = nil;
+            GLuint gError = glGetError();
+            NSLog(@"GL Error = %u", gError);
+            NSLog(@"Error loading file %@", [error localizedDescription] );
+        }
+        
+        glBindTexture(GL_TEXTURE_2D, self.texture.name);
         
         return YES;
     }

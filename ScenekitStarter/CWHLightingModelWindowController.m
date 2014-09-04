@@ -58,6 +58,8 @@
 
 -(void)updateShaderValues:(SCNProgram *)program;
 {
+    //archive program here
+    
     [self.lightingViewController.torusNode updateParameters:program];
 }
 
@@ -79,6 +81,7 @@
     }
     
     parameterViewController.program = [self programForLightingModel:lightingModel];
+    
     return parameterViewController;
 }
 
@@ -104,8 +107,8 @@
         double viewHeight = parameterViewController.view.frame.size.height;
         //NSLog(@" viewHeight %f", viewHeight);
         viewHeight = 180;//calc min height here
-        
-        [self.lightingViewController presentViewController:parameterViewController
+        if (parameterViewController) {
+            [self.lightingViewController presentViewController:parameterViewController
                                        asPopoverRelativeToRect:NSMakeRect(targetRect.origin.x / 2,
                                                                           targetRect.size.height - viewHeight / 2,
                                                                           targetRect.size.width,
@@ -113,10 +116,10 @@
                                                         ofView:targetView
                                                  preferredEdge:NSMinYEdge
                                                       behavior:NSPopoverBehaviorTransient];
-        parameterViewController.delegate = self;
-       
-       
-        self.lightingParameterState = TRUE;
+            parameterViewController.delegate = self;
+            self.lightingParameterState = TRUE;
+        }
+    
     }else{
         self.lightingParameterState = FALSE;
     }
@@ -125,6 +128,8 @@
 
 -(SCNProgram *)programForLightingModel:(NSString *)lightingModel
 {
+   //unarchive here if we've changed some parameters
+    
     SCNProgram *program;
     Class programClass;
     NSString *strippedString = [lightingModel stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -147,7 +152,7 @@
     NSLog(@" updateLightingModel %@", updatedModel);
     //NSLog(@"self.currentLightingProgram %@", self.currentLightingProgram);
     if(![self.currentLightingProgram isEqualToString:updatedModel]){
-      
+       
         [self.lightingViewController.torusNode updateLightingModel:[self programForLightingModel:updatedModel]];
          self.currentLightingProgram = updatedModel;
     }

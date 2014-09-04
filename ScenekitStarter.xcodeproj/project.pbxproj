@@ -16,6 +16,11 @@
 		BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF035B691987E9C300F1C758 /* Blinn.vsh */; };
 		BF035B6E19882D8200F1C758 /* CWHBlinnProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */; };
 		BF23482D19AFC54500DAEF95 /* CWHThinFilmProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */; };
+		BF23482F19B777AC00DAEF95 /* ThinFilm.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF23482E19B777AC00DAEF95 /* ThinFilm.vsh */; };
+		BF23483119B777B800DAEF95 /* ThinFilm.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF23483019B777B800DAEF95 /* ThinFilm.fsh */; };
+		BF23483319B7BD4300DAEF95 /* FringeMap.png in Resources */ = {isa = PBXBuildFile; fileRef = BF23483219B7BD4300DAEF95 /* FringeMap.png */; };
+		BF23483719B8EB9500DAEF95 /* CWHThinFilmParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF23483519B8EB9500DAEF95 /* CWHThinFilmParameterViewController.m */; };
+		BF23483819B8EB9500DAEF95 /* ThinFilmParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF23483619B8EB9500DAEF95 /* ThinFilmParameterView.xib */; };
 		BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */; };
 		BF728C51198966CF0018E76C /* Velvet.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C4F198966CF0018E76C /* Velvet.fsh */; };
 		BF728C52198966CF0018E76C /* Velvet.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C50198966CF0018E76C /* Velvet.vsh */; };
@@ -92,6 +97,12 @@
 		BF035B6D19882D8200F1C758 /* CWHBlinnProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHBlinnProgram.m; sourceTree = "<group>"; };
 		BF23482B19AFC54500DAEF95 /* CWHThinFilmProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWHThinFilmProgram.h; path = ../CWHThinFilmProgram.h; sourceTree = "<group>"; };
 		BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWHThinFilmProgram.m; path = ../CWHThinFilmProgram.m; sourceTree = "<group>"; };
+		BF23482E19B777AC00DAEF95 /* ThinFilm.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThinFilm.vsh; sourceTree = "<group>"; };
+		BF23483019B777B800DAEF95 /* ThinFilm.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ThinFilm.fsh; sourceTree = "<group>"; };
+		BF23483219B7BD4300DAEF95 /* FringeMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FringeMap.png; sourceTree = "<group>"; };
+		BF23483419B8EB9500DAEF95 /* CWHThinFilmParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHThinFilmParameterViewController.h; sourceTree = "<group>"; };
+		BF23483519B8EB9500DAEF95 /* CWHThinFilmParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHThinFilmParameterViewController.m; sourceTree = "<group>"; };
+		BF23483619B8EB9500DAEF95 /* ThinFilmParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThinFilmParameterView.xib; sourceTree = "<group>"; };
 		BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHVelvetProgram.h; sourceTree = "<group>"; };
 		BF728C4D1989669F0018E76C /* CWHVelvetProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHVelvetProgram.m; sourceTree = "<group>"; };
 		BF728C4F198966CF0018E76C /* Velvet.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Velvet.fsh; sourceTree = "<group>"; };
@@ -191,6 +202,7 @@
 		BF035B631986999600F1C758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF23483219B7BD4300DAEF95 /* FringeMap.png */,
 				BFE2961919AB6EA3006D5336 /* EnvMap.png */,
 				BFE2961A19AB6EA3006D5336 /* EnvMapInterior.png */,
 				BFB813DA1981646200E09822 /* MainMenu.xib */,
@@ -203,25 +215,28 @@
 				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
 				BFE295DB19A675B4006D5336 /* LambSkinParameterView.xib */,
 				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
+				BF23483619B8EB9500DAEF95 /* ThinFilmParameterView.xib */,
 				BFE9F696199E385E000D9153 /* VelvetParameterView.xib */,
-				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF035B691987E9C300F1C758 /* Blinn.vsh */,
-				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
+				BF035B681987E9C300F1C758 /* Blinn.fsh */,
 				BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */,
+				BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */,
 				BFE2961D19AB6F0A006D5336 /* EnvMap.vsh */,
 				BFE2961F19AB6F19006D5336 /* EnvMap.fsh */,
-				BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */,
 				BF728C5E198AB4500018E76C /* GlossyWetHighlight.vsh */,
-				BFF2DE08198847D100FBDAAD /* Gooch.fsh */,
+				BF728C5D198AB4500018E76C /* GlossyWetHighlight.fsh */,
 				BFF2DE09198847D100FBDAAD /* Gooch.vsh */,
-				BF728C56198A78710018E76C /* Hemisphere.fsh */,
+				BFF2DE08198847D100FBDAAD /* Gooch.fsh */,
 				BF728C57198A78710018E76C /* Hemisphere.vsh */,
-				BF728C64198AC03E0018E76C /* LambSkin.fsh */,
+				BF728C56198A78710018E76C /* Hemisphere.fsh */,
 				BF728C65198AC03E0018E76C /* LambSkin.vsh */,
-				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
+				BF728C64198AC03E0018E76C /* LambSkin.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
-				BF728C4F198966CF0018E76C /* Velvet.fsh */,
+				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
+				BF23482E19B777AC00DAEF95 /* ThinFilm.vsh */,
+				BF23483019B777B800DAEF95 /* ThinFilm.fsh */,
 				BF728C50198966CF0018E76C /* Velvet.vsh */,
+				BF728C4F198966CF0018E76C /* Velvet.fsh */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -292,6 +307,8 @@
 				BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */,
 				BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */,
 				BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */,
+				BF23483419B8EB9500DAEF95 /* CWHThinFilmParameterViewController.h */,
+				BF23483519B8EB9500DAEF95 /* CWHThinFilmParameterViewController.m */,
 				BF23482B19AFC54500DAEF95 /* CWHThinFilmProgram.h */,
 				BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */,
 				BF728C4C1989669F0018E76C /* CWHVelvetProgram.h */,
@@ -415,6 +432,7 @@
 				BF728C60198AB4500018E76C /* GlossyWetHighlight.vsh in Resources */,
 				BFFB6DF0198C368900C14A7C /* LightingModelWindow.xib in Resources */,
 				BF728C59198A78710018E76C /* Hemisphere.vsh in Resources */,
+				BF23483119B777B800DAEF95 /* ThinFilm.fsh in Resources */,
 				BF728C5F198AB4500018E76C /* GlossyWetHighlight.fsh in Resources */,
 				BFF2DE0B198847D100FBDAAD /* Gooch.vsh in Resources */,
 				BF728C52198966CF0018E76C /* Velvet.vsh in Resources */,
@@ -425,6 +443,7 @@
 				BFE9F6A2199EB2CD000D9153 /* EdgeFuzzParameterView.xib in Resources */,
 				BFFB6DE8198BF0A500C14A7C /* PhongPointLightParameterView.xib in Resources */,
 				BF728C58198A78710018E76C /* Hemisphere.fsh in Resources */,
+				BF23482F19B777AC00DAEF95 /* ThinFilm.vsh in Resources */,
 				BFB813D91981646200E09822 /* Images.xcassets in Resources */,
 				BFFB6DF2198C40CD00C14A7C /* CWHLightingView.xib in Resources */,
 				BF018EF2199A93F700917508 /* GoochParameterView.xib in Resources */,
@@ -437,12 +456,14 @@
 				BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
 				BFE2961C19AB6EA3006D5336 /* EnvMapInterior.png in Resources */,
+				BF23483819B8EB9500DAEF95 /* ThinFilmParameterView.xib in Resources */,
 				BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */,
 				BFE9F69D199EB178000D9153 /* BlinnParameterView.xib in Resources */,
 				BF728C67198AC03E0018E76C /* LambSkin.vsh in Resources */,
 				BFE2961E19AB6F0A006D5336 /* EnvMap.vsh in Resources */,
 				BFE2962519ABABA3006D5336 /* EnvMapParameterView.xib in Resources */,
 				BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */,
+				BF23483319B7BD4300DAEF95 /* FringeMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +506,7 @@
 				BFE9F68F199CFF52000D9153 /* CWHParameterViewController.m in Sources */,
 				BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */,
 				BFE295E019AB66A7006D5336 /* CWHEnvMapProgram.m in Sources */,
+				BF23483719B8EB9500DAEF95 /* CWHThinFilmParameterViewController.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

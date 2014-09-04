@@ -17,36 +17,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    
-    NSColor *ambientColor = [self.program valueForKey:@"ambientColor"];
-    
-    if (ambientColor) {
-        [self.ambientColorWell setColor:ambientColor];
-        self.ambientColor = ambientColor;
+    if(self.program){
+        NSColor *ambientColor = [self.program valueForKey:@"ambientColor"];
+        
+        if (ambientColor) {
+            [self.ambientColorWell setColor:ambientColor];
+            self.ambientColor = ambientColor;
+        }
+        
+        NSColor *lightColor = [self.program valueForKey:@"lightColor"];
+        
+        if(lightColor){
+            [self.lightColorWell setColor:lightColor];
+            self.lightColor = lightColor;
+        }
+        
+        double shininess = [[self.program valueForKey:@"shininess"] doubleValue];
+        if (shininess) {
+            [self.shininessSlider setDoubleValue:shininess];
+            [self.shininessTextField setDoubleValue:shininess];
+            self.shininess = shininess;
+        }
+        
+        double materialSpecularity = [[self.program valueForKey:@"materialSpecularity"] doubleValue];
+        if (materialSpecularity) {
+            [self.specularitySlider setDoubleValue:materialSpecularity];
+            [self.specularityTextField setDoubleValue:materialSpecularity];
+            self.materialSpecularity = materialSpecularity;
+        }
     }
-    
-    NSColor *lightColor = [self.program valueForKey:@"lightColor"];
-    
-    if(lightColor){
-        [self.lightColorWell setColor:lightColor];
-        self.lightColor = lightColor;
-    }
-    
-    double shininess = [[self.program valueForKey:@"shininess"] doubleValue];
-    if (shininess) {
-        [self.shininessSlider setDoubleValue:shininess];
-        [self.shininessTextField setDoubleValue:shininess];
-        self.shininess = shininess;
-    }
-    
-    double materialSpecularity = [[self.program valueForKey:@"materialSpecularity"] doubleValue];
-    if (materialSpecularity) {
-        [self.specularitySlider setDoubleValue:materialSpecularity];
-        [self.specularityTextField setDoubleValue:materialSpecularity];
-        self.materialSpecularity = materialSpecularity;
-    }
-    
-    
     
 }
 

@@ -97,6 +97,7 @@
         
         return YES;
     }
+    
     if ([symbol isEqualToString:@"WarmColor"]) {
         
         if(self.warmColor){
@@ -106,6 +107,7 @@
         
         return YES;
     }
+    
     if ([symbol isEqualToString:@"CoolColor"]) {
         
         if(self.coolColor){
