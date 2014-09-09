@@ -27,7 +27,7 @@
 #import "CWHVelvetProgram.h"
 
 @interface CWHLightingModelWindowController ()
-
+-(void)saveShaderValues;
 @end
 
 @implementation CWHLightingModelWindowController
@@ -52,14 +52,15 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
--(void)parameterViewDidClose{
+-(void)parameterViewWillClose{
     self.lightingParameterState = FALSE;
+    [self saveShaderValues];
 }
 
 -(void)updateShaderValues:(SCNProgram *)program;
 {
-    //archive program here
-    
+
+    self.currentProgram = program;
     [self.lightingViewController.torusNode updateParameters:program];
 }
 
@@ -124,6 +125,15 @@
         self.lightingParameterState = FALSE;
     }
 
+}
+-(void)saveShaderValues
+{
+    NSLog(@"saveShaderValues");
+    if(self.currentProgram){
+       NSString *className = NSStringFromClass([self.currentProgram class]);
+        //archive here
+    }
+    
 }
 
 -(SCNProgram *)programForLightingModel:(NSString *)lightingModel

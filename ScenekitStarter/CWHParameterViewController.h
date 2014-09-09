@@ -7,7 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <SceneKit/SceneKit.h> 
+#import <SceneKit/SceneKit.h>
+#import "CWHParameterViewProtocol.h"
+
 
 @interface CWHParameterViewController : NSViewController
 @property (nonatomic, retain) id delegate;

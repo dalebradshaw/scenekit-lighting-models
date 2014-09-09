@@ -23,5 +23,6 @@
 @property (strong) CWHLightingViewController *lightingViewController;
 @property (assign) BOOL lightingParameterState;
 @property (strong) NSString *currentLightingProgram;
+@property (strong) SCNProgram *currentProgram;
 
 @end

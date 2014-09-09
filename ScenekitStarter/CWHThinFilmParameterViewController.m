@@ -20,7 +20,8 @@
 }
 
 - (IBAction)updateFilmDepth:(id)sender {
-    
+    self.filmDepth = [sender doubleValue];
+    [self updateShaderValues];
 }
 
 - (IBAction)updateDiffuseColor:(id)sender {

@@ -8,6 +8,7 @@
 
 #import "CWHParameterViewController.h"
 
+
 @interface CWHParameterViewController ()
 
 @end
@@ -17,6 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+}
+
+- (void)popoverWillClose:(NSNotification *)notification
+{
+
+    if ([self.delegate respondsToSelector:@selector(parameterViewWillClose)]) {
+        [self.delegate parameterViewWillClose];
+    }
+    
+    NSString *closeReason = [[notification userInfo] valueForKey:NSPopoverCloseReasonKey];
+    if (closeReason)
+    {
+        // closeReason can be:
+        //      NSPopoverCloseReasonStandard
+        //      NSPopoverCloseReasonDetachToWindow
+        //
+        // add new code here if you want to respond "before" the popover closes
+        //
+    }
 }
 
 @end

@@ -31,7 +31,7 @@ void thinfilmVS(in vec4 V, in vec4 N)
     //vec4 n = u_norm * N;
     vec4 n = u_norm * N;
     vec3 normalVec = normalize(n.xyz);
-    
+
     // Compute the eye->vertex vector
     const vec3 eyeVector = vec3(0.0,0.0,1.0);
     vec3 eyeVec = eyeVector;   // Infinite viewer (Best looking)

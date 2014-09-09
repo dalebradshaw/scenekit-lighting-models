@@ -29,7 +29,7 @@
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-6S-dzJ">
                     <rect key="frame" x="141" y="57" width="92" height="17"/>
-                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.57499999999999996" tickMarkPosition="above" sliderType="linear" id="xS0-uC-rID"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="2" doubleValue="0.57499999999999996" tickMarkPosition="above" sliderType="linear" id="xS0-uC-rID"/>
                     <connections>
                         <action selector="updateFilmDepth:" target="-2" id="FQK-Mo-HEa"/>
                     </connections>

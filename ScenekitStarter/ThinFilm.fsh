@@ -20,7 +20,8 @@ vec4 thinfilmFS()
 {
     // Diffuse material color
     vec3 diffMaterial = texture2D(DiffuseMap,  gl_TexCoord[0].xy).rgb;
-    diffMaterial  = vec3(0.,0.,0.);
+    diffMaterial  = vec3(0.125,0.125,0.125);
+
     // Lookup fringe value based on view depth
     vec3 fringeColor = texture2D(FringeMap, viewDepth).rgb;
     
@@ -31,5 +32,5 @@ vec4 thinfilmFS()
 // Main Loop
 void main()
 {
-    gl_FragColor = thinfilmFS();
+   gl_FragColor = thinfilmFS();
 }

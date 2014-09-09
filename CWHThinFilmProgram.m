@@ -50,7 +50,9 @@
             NSLog(@"error %@", error);
             NSLog(@"GL Error = %u", gError);
         }
-
+        
+        self.filmDepth = 1.35;
+        self.diffuseColor = [NSColor grayColor];
         
     }
     return self;
@@ -74,10 +76,10 @@
         return YES; // indicate that the symbol was bound successfully.
     }
     
-    if ([symbol isEqualToString:@"light_diffuse"]) {
+    if ([symbol isEqualToString:@"diffColor"]) {
         
         if(self.diffuseColor){
-            //NSLog(@" self.diffuseColor red %f green %f blue %f", [self.diffuseColor redComponent], [self.diffuseColor greenComponent], [self.diffuseColor blueComponent]);
+            NSLog(@" self.diffuseColor red %f green %f blue %f", [self.diffuseColor redComponent], [self.diffuseColor greenComponent], [self.diffuseColor blueComponent]);
             glUniform3f(location,[self.diffuseColor redComponent] , [self.diffuseColor greenComponent] , [self.diffuseColor blueComponent]);
             
         }
@@ -103,6 +105,7 @@
     if ([symbol isEqualToString:@"FilmDepth"]) {
         
         if(self.filmDepth){
+            //NSLog(@" self.filmDepth %f", self.filmDepth);
             glUniform1f(location,self.filmDepth);
         }
         

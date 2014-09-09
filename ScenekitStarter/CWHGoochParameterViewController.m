@@ -21,8 +21,7 @@
 
 -(void)viewDidDisappear
 {
-    [self.delegate parameterViewDidClose];
-    self.delegate  = nil;
+
 }
 
 - (IBAction)updateSurfaceColor:(id)sender {
