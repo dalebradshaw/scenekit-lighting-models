@@ -126,31 +126,44 @@
     }
 
 }
+
 -(void)saveShaderValues
 {
-    NSLog(@"saveShaderValues");
     if(self.currentProgram){
-       NSString *className = NSStringFromClass([self.currentProgram class]);
-        //archive here
+        NSString *className = NSStringFromClass([self.currentProgram class]);
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.currentProgram];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:className];
     }
     
 }
 
 -(SCNProgram *)programForLightingModel:(NSString *)lightingModel
 {
-   //unarchive here if we've changed some parameters
+   
     
     SCNProgram *program;
     Class programClass;
     NSString *strippedString = [lightingModel stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *programString = [NSString stringWithFormat:@"CWH%@Program", strippedString];
     //NSLog(@"programString %@", programString);
-   
+    //unarchive here if we've changed some parameters
+    NSData *programData = [[NSUserDefaults standardUserDefaults] objectForKey:programString];
+    if(programData){
+
+        program = [NSKeyedUnarchiver unarchiveObjectWithData:programData];
+        NSLog(@" unarchived program %@", program);
+
+        [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
+        
+        return program;
+    }
+    
     programClass = NSClassFromString(programString);
     if(programClass){
         program = (SCNProgram *)[programClass program];
         //Key/Value coding for light node since we pass around Superclass
         [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
+        self.currentProgram = program;
     }
     
     return program;

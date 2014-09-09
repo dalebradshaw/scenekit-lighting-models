@@ -44,6 +44,7 @@
 		BFB813D91981646200E09822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB813D81981646200E09822 /* Images.xcassets */; };
 		BFB813DC1981646200E09822 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB813DA1981646200E09822 /* MainMenu.xib */; };
 		BFB813E81981646200E09822 /* ScenekitStarterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813E71981646200E09822 /* ScenekitStarterTests.m */; };
+		BFDF1DC719BF9C8200DD1473 /* CWHLightingProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDF1DC619BF9C8200DD1473 /* CWHLightingProgram.m */; };
 		BFE295D719A62CA2006D5336 /* CWHHemisphereParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE295D519A62CA2006D5336 /* CWHHemisphereParameterViewController.m */; };
 		BFE295D819A62CA2006D5336 /* HemisphereParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */; };
 		BFE295DC19A675B4006D5336 /* CWHLambSkinParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE295DA19A675B4006D5336 /* CWHLambSkinParameterViewController.m */; };
@@ -139,6 +140,8 @@
 		BFB813E11981646200E09822 /* ScenekitStarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScenekitStarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB813E61981646200E09822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB813E71981646200E09822 /* ScenekitStarterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScenekitStarterTests.m; sourceTree = "<group>"; };
+		BFDF1DC519BF9C8200DD1473 /* CWHLightingProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLightingProgram.h; sourceTree = "<group>"; };
+		BFDF1DC619BF9C8200DD1473 /* CWHLightingProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLightingProgram.m; sourceTree = "<group>"; };
 		BFE295D419A62CA2006D5336 /* CWHHemisphereParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHHemisphereParameterViewController.h; sourceTree = "<group>"; };
 		BFE295D519A62CA2006D5336 /* CWHHemisphereParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHHemisphereParameterViewController.m; sourceTree = "<group>"; };
 		BFE295D619A62CA2006D5336 /* HemisphereParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HemisphereParameterView.xib; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 				BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
+				BFDF1DC519BF9C8200DD1473 /* CWHLightingProgram.h */,
+				BFDF1DC619BF9C8200DD1473 /* CWHLightingProgram.m */,
 				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
 				BFFB6DEA198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.m */,
 				BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */,
@@ -508,6 +513,7 @@
 				BFE295E019AB66A7006D5336 /* CWHEnvMapProgram.m in Sources */,
 				BF23483719B8EB9500DAEF95 /* CWHThinFilmParameterViewController.m in Sources */,
 				BF035B621986986E00F1C758 /* CWHShadingNode.m in Sources */,
+				BFDF1DC719BF9C8200DD1473 /* CWHLightingProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

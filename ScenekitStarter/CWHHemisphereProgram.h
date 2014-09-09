@@ -8,7 +8,7 @@
 
 #import <SceneKit/SceneKit.h>
 
-@interface CWHHemisphereProgram : SCNProgram<SCNProgramDelegate>
+@interface CWHHemisphereProgram : SCNProgram<SCNProgramDelegate, NSCoding>
 
 @property (strong) SCNNode *lightnode;
 

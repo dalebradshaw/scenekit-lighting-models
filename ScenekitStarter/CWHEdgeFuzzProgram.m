@@ -67,6 +67,32 @@
     
     
 }
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        self.surfaceColor =[decoder decodeObjectForKey:@"surfaceColor"];
+        self.edgeColor  = [decoder decodeObjectForKey:@"edgeColor"];
+        self.lightColor  = [decoder decodeObjectForKey:@"lightColor"];
+        self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
+        self.fuzziness  = [decoder decodeDoubleForKey:@"fuzziness"];
+        self.edgeFade  = [decoder decodeDoubleForKey:@"edgeColor"];
+        self.specularity  = [decoder decodeDoubleForKey:@"specularity"];
+        
+         self.delegate = self;
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_surfaceColor forKey:@"surfaceColor"];
+    [encoder encodeObject:_edgeColor forKey:@"edgeColor"];
+    [encoder encodeObject:_lightColor forKey:@"lightColor"];
+    [encoder encodeObject:_ambientColor forKey:@"ambientColor"];
+    [encoder encodeDouble:_fuzziness forKey:@"fuzziness"];
+    [encoder encodeDouble:_edgeFade forKey:@"edgeFade"];
+    [encoder encodeDouble:_specularity forKey:@"specularity"];
+    
+}
 
 - (BOOL)    program:(SCNProgram *)program
  bindValueForSymbol:(NSString *)symbol

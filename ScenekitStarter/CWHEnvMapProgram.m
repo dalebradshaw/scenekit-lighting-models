@@ -52,6 +52,25 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        self.diffuseColor =[decoder decodeObjectForKey:@"diffuseColor"];
+        self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
+        self.ratio  = [decoder decodeDoubleForKey:@"ratio"];
+        self.imagePath = [decoder decodeObjectForKey:@"imagePath"];
+        
+         self.delegate = self;
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_diffuseColor forKey:@"diffuseColor"];
+    [encoder encodeObject:_ambientColor forKey:@"ambientColor"];
+    [encoder encodeDouble:_ratio forKey:@"ratio"];
+    [encoder encodeObject:_imagePath forKey:@"imagePath"];
+}
 -(BOOL)    program:(SCNProgram *)program
 bindValueForSymbol:(NSString *)symbol
         atLocation:(unsigned int)location

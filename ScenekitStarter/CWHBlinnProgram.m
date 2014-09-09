@@ -16,34 +16,10 @@
 -(instancetype)init
 {
     
-    self = [super init];
+    self = [super initWithProgram:@"Blinn"];
     
     if ( self != nil )
     {
-        
-        NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"Blinn" withExtension:@"vsh"];
-        NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"Blinn" withExtension:@"fsh"];
-        
-        NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-        NSString *fragmentShader = [[NSString alloc] initWithContentsOfURL:fragmentShaderURL
-                                                                  encoding:NSUTF8StringEncoding
-                                                                     error:NULL];
-        // Assign the shader
-        self.vertexShader   = vertexShader;
-        self.fragmentShader = fragmentShader;
-        
-        // Bind geometry source semantics to the vertex shader attributes
-        [self setSemantic:SCNGeometrySourceSemanticVertex forSymbol:@"a_srcPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticNormal forSymbol:@"a_normPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticTexcoord forSymbol:@"a_texcoord" options:nil];
-        
-        // Bind the uniforms that can benefit from "automatic" values, computed and assigned by Scene Kit at each frame
-        [self setSemantic:SCNModelViewTransform forSymbol:@"u_mv" options:nil];
-        [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
-        [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
-        [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
         
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
@@ -55,6 +31,21 @@
     return self;
     
     
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super initWithProgram:@"Blinn"]) {
+        self.ambientColor =[decoder decodeObjectForKey:@"ambientColor"];
+        self.lightColor  = [decoder decodeObjectForKey:@"lightColor"];
+        
+        self.delegate = self;
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_ambientColor forKey:@"ambientColor"];
+    [encoder encodeObject:_lightColor forKey:@"lightColor"];
 }
 
 - (BOOL)    program:(SCNProgram *)program

@@ -11,7 +11,7 @@
 #import <OpenGL/gl.h>
 #import <OpenGL/glext.h>
 
-@interface CWHEnvMapProgram : SCNProgram<SCNProgramDelegate>
+@interface CWHEnvMapProgram : SCNProgram<SCNProgramDelegate, NSCoding>
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *diffuseColor;

@@ -60,6 +60,23 @@
     
 }
 
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        self.skyColor =[decoder decodeObjectForKey:@"skyColor"];
+        self.groundColor  = [decoder decodeObjectForKey:@"groundColor"];
+      
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_skyColor forKey:@"skyColor"];
+    [encoder encodeObject:_groundColor forKey:@"groundColor"];
+    
+     self.delegate = self;
+}
+
 - (BOOL)    program:(SCNProgram *)program
  bindValueForSymbol:(NSString *)symbol
          atLocation:(unsigned int)location

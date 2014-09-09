@@ -8,7 +8,7 @@
 
 #import <SceneKit/SceneKit.h>
 
-@interface CWHEdgeFuzzProgram : SCNProgram<SCNProgramDelegate>
+@interface CWHEdgeFuzzProgram : SCNProgram<SCNProgramDelegate, NSCoding>
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *surfaceColor;

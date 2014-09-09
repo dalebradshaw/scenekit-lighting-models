@@ -69,6 +69,26 @@
     
 }
 
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super init]) {
+        self.coolColor =[decoder decodeObjectForKey:@"coolColor"];
+        self.warmColor  = [decoder decodeObjectForKey:@"warmColor"];
+        self.diffuseCool  = [decoder decodeDoubleForKey:@"diffuseCool"];
+        self.diffuseWarm  = [decoder decodeDoubleForKey:@"diffuseWarm"];
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_coolColor forKey:@"coolColor"];
+    [encoder encodeObject:_warmColor forKey:@"warmColor"];
+    [encoder encodeDouble:_diffuseCool forKey:@"diffuseCool"];
+    [encoder encodeDouble:_diffuseWarm forKey:@"diffuseWarm"];
+    
+     self.delegate = self;
+}
+
 - (BOOL)    program:(SCNProgram *)program
  bindValueForSymbol:(NSString *)symbol
          atLocation:(unsigned int)location
