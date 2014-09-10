@@ -91,7 +91,7 @@
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
                             light:(SCNNode *)light
 {
-    //this is just here for one off testing
+    //this is just here for one off testing, CWHLightingViewController can bootstrap the app as well.
     self.geometry = geometry;
 
     // Create a material
@@ -101,7 +101,6 @@
     CWHPhongPointLightProgram *program;
     NSData *programData = [[NSUserDefaults standardUserDefaults] objectForKey:@"CWHPhongPointLightProgram"];
     if(programData){
-
         program = [NSKeyedUnarchiver unarchiveObjectWithData:programData];
     }else{
        program = [CWHPhongPointLightProgram program];

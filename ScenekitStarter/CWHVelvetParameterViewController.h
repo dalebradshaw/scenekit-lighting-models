@@ -7,8 +7,27 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CWHVelvetProgram.h"
 #import "CWHParameterViewController.h"
 
 @interface CWHVelvetParameterViewController : CWHParameterViewController
+
+@property (weak) IBOutlet NSTextField *rolloffTextField;
+@property (weak) IBOutlet NSSlider *rolloffCircularSlider;
+@property (weak) IBOutlet NSColorWell *underColorWell;
+@property (weak) IBOutlet NSColorWell *fuzzColorWell;
+@property (weak) IBOutlet NSColorWell *primaryColorWell;
+
+@property (assign) double rolloff;
+- (IBAction)updateRolloff:(id)sender;
+
+@property (strong) NSColor *underColor;
+- (IBAction)updateUnderColor:(id)sender;
+
+@property (strong) NSColor *fuzzColor;
+- (IBAction)updateFuzzColor:(id)sender;
+
+@property (strong) NSColor *primaryColor;
+- (IBAction)updatePrimaryColor:(id)sender;
 
 @end

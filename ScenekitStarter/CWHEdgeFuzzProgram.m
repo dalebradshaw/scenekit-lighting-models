@@ -40,7 +40,9 @@
     
     
 }
+
 - (id)initWithCoder:(NSCoder *)decoder {
+    
     if (self = [super initWithProgram:@"EdgeFuzz"]) {
         self.surfaceColor =[decoder decodeObjectForKey:@"surfaceColor"];
         self.edgeColor  = [decoder decodeObjectForKey:@"edgeColor"];
@@ -49,13 +51,13 @@
         self.fuzziness  = [decoder decodeDoubleForKey:@"fuzziness"];
         self.edgeFade  = [decoder decodeDoubleForKey:@"edgeFade"];
         self.specularity  = [decoder decodeDoubleForKey:@"specularity"];
-        
-        
     }
+    
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
+    
     [encoder encodeObject:_surfaceColor forKey:@"surfaceColor"];
     [encoder encodeObject:_edgeColor forKey:@"edgeColor"];
     [encoder encodeObject:_lightColor forKey:@"lightColor"];

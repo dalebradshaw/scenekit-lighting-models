@@ -27,7 +27,7 @@
             NSLog(@"GL Error = %u", gError);
         }
        //defaults
-        self.filmDepth = 1.35;
+        self.filmDepth = 0.75;
         self.diffuseColor = [NSColor grayColor];
         
     }
