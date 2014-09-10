@@ -151,9 +151,10 @@
     if(programData){
 
         program = [NSKeyedUnarchiver unarchiveObjectWithData:programData];
-        NSLog(@" unarchived program %@", program);
+        //NSLog(@" unarchived program %@", program);
 
         [program  setValue:self.lightingViewController.lightNode forKey:@"lightnode"];
+        self.currentProgram = program;
         
         return program;
     }

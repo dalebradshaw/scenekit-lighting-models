@@ -75,6 +75,7 @@
     if ([sender isKindOfClass:[NSSlider class]]) {
         [self.fuzzinessTextField setDoubleValue:[sender doubleValue]];
     }
+    
     [self updateShaderValues];
 }
 

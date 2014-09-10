@@ -38,7 +38,7 @@
         ambientLightNode.light.color = [NSColor redColor];
         
         //CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
-  
+       
         [self prepareProgramWithGeometry:plane
                                    light:ambientLightNode];
     }
@@ -54,8 +54,10 @@
     
     if ( self != nil )
     {
+        
         [self prepareProgramWithGeometry:geometry
                                    light:light];
+        
     }
     
     return self;
@@ -89,14 +91,22 @@
 -(void)prepareProgramWithGeometry:(SCNGeometry *)geometry
                             light:(SCNNode *)light
 {
-   
+    //this is just here for one off testing
     self.geometry = geometry;
 
     // Create a material
     SCNMaterial *programMaterial = [SCNMaterial material];
    
     //CWHBlinnProgram *program = [CWHBlinnProgram program];
-    CWHPhongPointLightProgram *program = [CWHPhongPointLightProgram program];
+    CWHPhongPointLightProgram *program;
+    NSData *programData = [[NSUserDefaults standardUserDefaults] objectForKey:@"CWHPhongPointLightProgram"];
+    if(programData){
+
+        program = [NSKeyedUnarchiver unarchiveObjectWithData:programData];
+    }else{
+       program = [CWHPhongPointLightProgram program];
+    }
+    
    /*
     
     CWHEnvMapProgram *program = [CWHEnvMapProgram program];

@@ -12,51 +12,57 @@
 @implementation CWHThinFilmProgram
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"ThinFilm" withExtension:@"vsh"];
-        NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"ThinFilm" withExtension:@"fsh"];
+    self = [super initWithProgram:@"ThinFilm"];
+    
+    if ( self != nil )
+    {
         
-        NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-        NSString *fragmentShader = [[NSString alloc] initWithContentsOfURL:fragmentShaderURL
-                                                                  encoding:NSUTF8StringEncoding
-                                                                     error:NULL];
-        // Assign the shader
-        self.vertexShader   = vertexShader;
-        self.fragmentShader = fragmentShader;
-        
-        // Bind geometry source semantics to the vertex shader attributes
-        [self setSemantic:SCNGeometrySourceSemanticVertex forSymbol:@"a_srcPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticNormal forSymbol:@"a_normPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticTexcoord forSymbol:@"a_texcoord" options:nil];
-        
-        // Bind the uniforms that can benefit from "automatic" values, computed and assigned by Scene Kit at each frame
-        [self setSemantic:SCNModelViewTransform forSymbol:@"u_mv" options:nil];
-        [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
-        [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
-        [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-        
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
-        
-        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"FringeMap" ofType:@"png"];
+        self.imagePath = [[NSBundle mainBundle] pathForResource:@"FringeMap" ofType:@"png"];
         
         NSError *error = nil;
         GLuint gError = glGetError();
-        self.texture = [GLKTextureLoader textureWithContentsOfFile:imagePath  options:nil error:&error];
+        self.texture = [GLKTextureLoader textureWithContentsOfFile:self.imagePath  options:nil error:&error];
         if (gError != 0) {
             NSLog(@"error %@", error);
             NSLog(@"GL Error = %u", gError);
         }
-        
+       //defaults
         self.filmDepth = 1.35;
         self.diffuseColor = [NSColor grayColor];
         
     }
     return self;
 }
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super initWithProgram:@"ThinFilm"]) {
+        NSString *imagePath =[decoder decodeObjectForKey:@"imagePath"];
+        if (imagePath) {
+           self.imagePath  = imagePath;
+        }else{
+            self.imagePath = [[NSBundle mainBundle] pathForResource:@"FringeMap" ofType:@"png"];
+        }
+        
+        self.diffuseColor  = [decoder decodeObjectForKey:@"diffuseColor"];
+        self.filmDepth = [decoder decodeDoubleForKey:@"filmDepth"];
+        
+        NSError *error = nil;
+        GLuint gError = glGetError();
+        self.texture = [GLKTextureLoader textureWithContentsOfFile:self.imagePath  options:nil error:&error];
+        if (gError != 0) {
+            NSLog(@"error %@", error);
+            NSLog(@"GL Error = %u", gError);
+        }
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_imagePath forKey:@"imagePath"];
+    [encoder encodeObject:_diffuseColor forKey:@"diffuseColor"];
+    [encoder encodeDouble:_filmDepth  forKey:@"filmDepth"];
+}
+
 - (BOOL)    program:(SCNProgram *)program
  bindValueForSymbol:(NSString *)symbol
          atLocation:(unsigned int)location

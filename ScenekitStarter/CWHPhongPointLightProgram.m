@@ -41,8 +41,7 @@
         self.lightColor  = [decoder decodeObjectForKey:@"lightColor"];
         self.materialSpecularity = [decoder decodeDoubleForKey:@"materialSpecularity"];
         self.shininess = [decoder decodeDoubleForKey:@"shininess"];
-        
-        
+
     }
     return self;
 }
@@ -76,11 +75,12 @@
     if ([symbol isEqualToString:@"light_color"]) {
 
         if(self.lightColor){
-        
+          
             glUniform3f(location,[self.lightColor redComponent] , [self.lightColor greenComponent] , [self.lightColor blueComponent]);
 
         }else{
             if(self.lightnode){
+               
                 glUniform3f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent]);
             }
         }

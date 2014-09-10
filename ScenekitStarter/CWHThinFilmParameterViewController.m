@@ -16,16 +16,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+    if(self.program){
+        NSColor *diffuseColor = [self.program valueForKey:@"diffuseColor"];
+        
+        if (diffuseColor) {
+            [self.diffuseColorWell setColor:diffuseColor];
+            self.diffuseColor = diffuseColor;
+        }
+        
+        double filmDepth = [[self.program valueForKey:@"filmDepth"] doubleValue];
+        if (filmDepth >= 0) {
+            [self.filmDepthSlider setDoubleValue:filmDepth];
+            [self.filmDepthTextField setDoubleValue:filmDepth];
+            self.filmDepth = filmDepth;
+        }
+    }
 }
 
 - (IBAction)updateFilmDepth:(id)sender {
     self.filmDepth = [sender doubleValue];
+    if ([sender isKindOfClass:[NSSlider class]]) {
+       [self.filmDepthTextField setDoubleValue:[sender doubleValue]];
+    }else{
+       [self.filmDepthSlider setDoubleValue:[sender doubleValue]];
+    }
     [self updateShaderValues];
 }
 
 - (IBAction)updateDiffuseColor:(id)sender {
+    NSColorWell *colorWell = sender;
+    NSColor *color = [colorWell color];
     
+    self.diffuseColor = color;
+    [self updateShaderValues];
 }
 
 -(void)updateShaderValues

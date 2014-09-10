@@ -10,11 +10,12 @@
 #import <GLKit/GLKit.h>
 #import <OpenGL/gl.h>
 #import <OpenGL/glext.h>
-
-@interface CWHThinFilmProgram : SCNProgram<SCNProgramDelegate>
+#import "CWHLightingProgram.h"
+@interface CWHThinFilmProgram : CWHLightingProgram<SCNProgramDelegate>
 @property (strong) SCNNode *lightnode;
 @property (assign) double filmDepth;
 @property (strong) NSColor *diffuseColor;
+@property (strong) NSString *imagePath;
 @property (strong) GLKTextureInfo *texture;
 
 @end
