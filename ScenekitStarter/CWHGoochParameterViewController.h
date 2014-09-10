@@ -19,6 +19,7 @@
 @property (weak) IBOutlet NSSlider *diffuseWarmSlider;
 @property (weak) IBOutlet NSSlider *diffuseCoolSlider;
 
+@property (weak) IBOutlet NSColorWell *surfaceColorWell;
 @property (weak) IBOutlet NSColorWell *warmColorWell;
 @property (weak) IBOutlet NSColorWell *coolColorWell;
 

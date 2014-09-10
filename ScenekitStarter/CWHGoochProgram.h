@@ -7,8 +7,9 @@
 //
 
 #import <SceneKit/SceneKit.h>
+#import "CWHLightingProgram.h"
 
-@interface CWHGoochProgram : SCNProgram<SCNProgramDelegate, NSCoding>
+@interface CWHGoochProgram : CWHLightingProgram<SCNProgramDelegate, NSCoding>
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *surfaceColor;

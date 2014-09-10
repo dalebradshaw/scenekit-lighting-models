@@ -14,34 +14,10 @@
 @implementation CWHEnvMapProgram
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"EnvMap" withExtension:@"vsh"];
-        NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"EnvMap" withExtension:@"fsh"];
-        
-        NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-        NSString *fragmentShader = [[NSString alloc] initWithContentsOfURL:fragmentShaderURL
-                                                                  encoding:NSUTF8StringEncoding
-                                                                     error:NULL];
-        // Assign the shader
-        self.vertexShader   = vertexShader;
-        self.fragmentShader = fragmentShader;
-        
-        // Bind geometry source semantics to the vertex shader attributes
-        [self setSemantic:SCNGeometrySourceSemanticVertex forSymbol:@"a_srcPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticNormal forSymbol:@"a_normPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticTexcoord forSymbol:@"a_texcoord" options:nil];
-        
-        // Bind the uniforms that can benefit from "automatic" values, computed and assigned by Scene Kit at each frame
-        [self setSemantic:SCNModelViewTransform forSymbol:@"u_mv" options:nil];
-        [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
-        [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
-        [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-        
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
+    self = [super initWithProgram:@"EnvMap"];
+    
+    if ( self != nil )
+    {
         NSColor *diffuseColor = [NSColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.];
         self.diffuseColor = diffuseColor;
         NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
@@ -53,13 +29,11 @@
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    if (self = [super init]) {
+    if (self = [super initWithProgram:@"EnvMap"]) {
         self.diffuseColor =[decoder decodeObjectForKey:@"diffuseColor"];
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
         self.ratio  = [decoder decodeDoubleForKey:@"ratio"];
         self.imagePath = [decoder decodeObjectForKey:@"imagePath"];
-        
-         self.delegate = self;
         
     }
     return self;
@@ -71,6 +45,7 @@
     [encoder encodeDouble:_ratio forKey:@"ratio"];
     [encoder encodeObject:_imagePath forKey:@"imagePath"];
 }
+
 -(BOOL)    program:(SCNProgram *)program
 bindValueForSymbol:(NSString *)symbol
         atLocation:(unsigned int)location

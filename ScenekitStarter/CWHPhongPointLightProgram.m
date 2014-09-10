@@ -20,10 +20,7 @@
     
     if ( self != nil )
     {
-        
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
-        
+
         //some defaults
 
         self.ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
@@ -38,7 +35,6 @@
     
 }
 
-
 - (id)initWithCoder:(NSCoder *)decoder {
     if (self = [super initWithProgram:@"PhongPointLight"]) {
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
@@ -46,8 +42,7 @@
         self.materialSpecularity = [decoder decodeDoubleForKey:@"materialSpecularity"];
         self.shininess = [decoder decodeDoubleForKey:@"shininess"];
         
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
+        
     }
     return self;
 }

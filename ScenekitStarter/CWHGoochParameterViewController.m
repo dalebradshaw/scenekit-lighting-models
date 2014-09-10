@@ -17,6 +17,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    
+    if(self.program){
+        
+        NSColor *surfaceColor = [self.program valueForKey:@"surfaceColor"];
+        if (surfaceColor) {
+            [self.surfaceColorWell setColor:surfaceColor];
+            self.surfaceColor= surfaceColor;
+        }
+        
+        
+        double diffuseWarm= [[self.program valueForKey:@"diffuseWarm"] doubleValue];
+        if (diffuseWarm) {
+            [self.diffuseWarmSlider setDoubleValue:diffuseWarm];
+            [self.diffuseWarmTextField setDoubleValue:diffuseWarm];
+            self.diffuseWarm = diffuseWarm;
+        }
+        
+        double diffuseCool = [[self.program valueForKey:@"diffuseCool"] doubleValue];
+       
+        [self.diffuseCoolSlider setDoubleValue:diffuseCool];
+        [self.diffuseCoolTextField setDoubleValue:diffuseCool];
+        self.diffuseCool = diffuseCool;
+        
+
+        NSColor *warmColor  = [self.program valueForKey:@"warmColor"];
+        if (warmColor ) {
+            [self.warmColorWell setColor:warmColor ];
+            self.warmColor  = warmColor ;
+        }
+        
+        NSColor *coolColor = [self.program valueForKey:@"coolColor"];
+        if (coolColor) {
+            [self.coolColorWell setColor:coolColor];
+            self.coolColor = coolColor;
+        }
+    }
+    
 }
 
 -(void)viewDidDisappear

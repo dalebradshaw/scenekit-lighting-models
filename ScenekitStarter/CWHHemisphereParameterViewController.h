@@ -13,9 +13,11 @@
 
 @interface CWHHemisphereParameterViewController : CWHParameterViewController
 
+@property (weak) IBOutlet NSColorWell *skyColorWell;
 @property (strong) NSColor *skyColor;
 - (IBAction)updateSkyColor:(id)sender;
 
+@property (weak) IBOutlet NSColorWell *groundColorWell;
 @property (strong) NSColor *groundColor;
 - (IBAction)updateGroundColor:(id)sender;
 

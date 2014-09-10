@@ -17,6 +17,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    
+    if(self.program){
+        NSColor *ambientColor = [self.program valueForKey:@"ambientColor"];
+        
+        if (ambientColor) {
+            [self.ambientColorWell setColor:ambientColor];
+            self.ambientColor = ambientColor;
+        }
+        
+        NSColor *diffuseColor = [self.program valueForKey:@"diffuseColor"];
+        
+        if(diffuseColor){
+            [self.diffuseColorWell setColor:diffuseColor];
+            self.diffuseColor = diffuseColor;
+        }
+        
+        NSColor *subColor = [self.program valueForKey:@"subColor"];
+        
+        if(subColor){
+            [self.subColorWell setColor:subColor];
+            self.subColor= subColor;
+        }
+        
+        double rolloff  = [[self.program valueForKey:@"rolloff" ] doubleValue];
+        
+        [self.rolloffSlider setDoubleValue:rolloff];
+        [self.rolloffTextField setDoubleValue:rolloff];
+        self.rolloff = rolloff;
+       
+    }
 }
 
 - (IBAction)updateRolloff:(id)sender {

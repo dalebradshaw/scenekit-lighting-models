@@ -21,9 +21,6 @@
     if ( self != nil )
     {
         
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
-        
         NSColor *diffuseColor = [NSColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.];
         self.diffuseColor = diffuseColor;
         NSColor *ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
@@ -44,8 +41,7 @@
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
         self.subColor = [decoder decodeObjectForKey:@"subColor"];
         self.rolloff = [decoder decodeDoubleForKey:@"rolloff"];
-        
-        self.delegate = self;
+
     }
     return self;
 }

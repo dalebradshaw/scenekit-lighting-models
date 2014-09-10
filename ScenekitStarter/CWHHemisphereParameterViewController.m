@@ -17,6 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    if(self.program){
+        NSColor *skyColor = [self.program valueForKey:@"skyColor"];
+        
+        if (skyColor) {
+            [self.skyColorWell setColor:skyColor];
+            self.skyColor = skyColor;
+        }
+        
+        NSColor *groundColor = [self.program valueForKey:@"groundColor"];
+        
+        if(groundColor){
+            [self.groundColorWell setColor:groundColor];
+            self.groundColor = groundColor;
+        }
+    }
 }
 
 - (IBAction)updateSkyColor:(id)sender {

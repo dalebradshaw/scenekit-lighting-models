@@ -16,38 +16,11 @@
 -(instancetype)init
 {
     
-    self = [super init];
+    self = [super initWithProgram:@"EdgeFuzz"];
     
     if ( self != nil )
     {
-        
-        NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"EdgeFuzz" withExtension:@"vsh"];
-        NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"EdgeFuzz" withExtension:@"fsh"];
-        
-        NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-        NSString *fragmentShader = [[NSString alloc] initWithContentsOfURL:fragmentShaderURL
-                                                                  encoding:NSUTF8StringEncoding
-                                                                     error:NULL];
-        // Assign the shader
-        self.vertexShader   = vertexShader;
-        self.fragmentShader = fragmentShader;
-        
-        // Bind geometry source semantics to the vertex shader attributes
-        [self setSemantic:SCNGeometrySourceSemanticVertex forSymbol:@"a_srcPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticNormal forSymbol:@"a_normPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticTexcoord forSymbol:@"a_texcoord" options:nil];
-        
-        // Bind the uniforms that can benefit from "automatic" values, computed and assigned by Scene Kit at each frame
-        [self setSemantic:SCNModelViewTransform forSymbol:@"u_mv" options:nil];
-        [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
-        [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
-        [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-        
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
-        
+
         //defaults
         NSColor *surfaceColor = [NSColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:1.];
         self.surfaceColor = surfaceColor;
@@ -68,16 +41,15 @@
     
 }
 - (id)initWithCoder:(NSCoder *)decoder {
-    if (self = [super init]) {
+    if (self = [super initWithProgram:@"EdgeFuzz"]) {
         self.surfaceColor =[decoder decodeObjectForKey:@"surfaceColor"];
         self.edgeColor  = [decoder decodeObjectForKey:@"edgeColor"];
         self.lightColor  = [decoder decodeObjectForKey:@"lightColor"];
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
         self.fuzziness  = [decoder decodeDoubleForKey:@"fuzziness"];
-        self.edgeFade  = [decoder decodeDoubleForKey:@"edgeColor"];
+        self.edgeFade  = [decoder decodeDoubleForKey:@"edgeFade"];
         self.specularity  = [decoder decodeDoubleForKey:@"specularity"];
         
-         self.delegate = self;
         
     }
     return self;

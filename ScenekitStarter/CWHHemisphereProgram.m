@@ -16,37 +16,10 @@
 -(instancetype)init
 {
     
-    self = [super init];
+    self = [super initWithProgram:@"Hemisphere"];
     
     if ( self != nil )
     {
-        
-        NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"Hemisphere" withExtension:@"vsh"];
-        NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"Hemisphere" withExtension:@"fsh"];
-        
-        NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-        NSString *fragmentShader = [[NSString alloc] initWithContentsOfURL:fragmentShaderURL
-                                                                  encoding:NSUTF8StringEncoding
-                                                                     error:NULL];
-        // Assign the shader
-        self.vertexShader   = vertexShader;
-        self.fragmentShader = fragmentShader;
-        
-        // Bind geometry source semantics to the vertex shader attributes
-        [self setSemantic:SCNGeometrySourceSemanticVertex forSymbol:@"a_srcPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticNormal forSymbol:@"a_normPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticTexcoord forSymbol:@"a_texcoord" options:nil];
-        
-        // Bind the uniforms that can benefit from "automatic" values, computed and assigned by Scene Kit at each frame
-        [self setSemantic:SCNModelViewTransform forSymbol:@"u_mv" options:nil];
-        [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
-        [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
-        [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-        
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
         
         NSColor *skyColor = [NSColor colorWithRed:0.0 green:0.7 blue:1. alpha:1.];
         self.skyColor = skyColor;
@@ -61,11 +34,10 @@
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    if (self = [super init]) {
+     if (self = [super initWithProgram:@"Hemisphere"]) {
         self.skyColor =[decoder decodeObjectForKey:@"skyColor"];
         self.groundColor  = [decoder decodeObjectForKey:@"groundColor"];
-      
-        
+
     }
     return self;
 }
@@ -74,7 +46,6 @@
     [encoder encodeObject:_skyColor forKey:@"skyColor"];
     [encoder encodeObject:_groundColor forKey:@"groundColor"];
     
-     self.delegate = self;
 }
 
 - (BOOL)    program:(SCNProgram *)program

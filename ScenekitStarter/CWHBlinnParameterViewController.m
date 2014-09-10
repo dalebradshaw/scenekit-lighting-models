@@ -16,8 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
+    if(self.program){
+        NSColor *ambientColor = [self.program valueForKey:@"ambientColor"];
+        
+        if (ambientColor) {
+            [self.ambientColorWell setColor:ambientColor];
+            self.ambientColor = ambientColor;
+        }
+        
+        NSColor *lightColor = [self.program valueForKey:@"lightColor"];
+        
+        if(lightColor){
+            [self.lightColorWell setColor:lightColor];
+            self.lightColor = lightColor;
+        }
+    }
 }
 
 - (IBAction)updateAmbientColor:(id)sender {

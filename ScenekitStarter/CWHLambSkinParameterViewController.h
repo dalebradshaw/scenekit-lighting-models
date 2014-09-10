@@ -18,12 +18,16 @@
 @property (weak) IBOutlet NSSlider *rolloffSlider;
 @property (weak) IBOutlet NSTextField *rolloffTextField;
 
+@property (weak) IBOutlet NSColorWell *ambientColorWell;
 @property (strong) NSColor *ambientColor;
 - (IBAction)updateAmbientColor:(id)sender;
 
+@property (weak) IBOutlet NSColorWell *diffuseColorWell;
 @property (strong) NSColor *diffuseColor;
 - (IBAction)updateDiffuseColor:(id)sender;
 
+
+@property (weak) IBOutlet NSColorWell *subColorWell;
 @property (strong) NSColor *subColor;
 - (IBAction)updateSubColor:(id)sender;
 

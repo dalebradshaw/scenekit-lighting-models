@@ -40,7 +40,7 @@
         }
         
         double materialSpecularity = [[self.program valueForKey:@"materialSpecularity"] doubleValue];
-        if (materialSpecularity) {
+        if (materialSpecularity >= 0) {
             [self.specularitySlider setDoubleValue:materialSpecularity];
             [self.specularityTextField setDoubleValue:materialSpecularity];
             self.materialSpecularity = materialSpecularity;

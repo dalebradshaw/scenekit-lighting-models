@@ -10,8 +10,9 @@
 #import <GLKit/GLKit.h>
 #import <OpenGL/gl.h>
 #import <OpenGL/glext.h>
+#import "CWHLightingProgram.h"
 
-@interface CWHEnvMapProgram : SCNProgram<SCNProgramDelegate, NSCoding>
+@interface CWHEnvMapProgram : CWHLightingProgram<SCNProgramDelegate, NSCoding>
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *diffuseColor;

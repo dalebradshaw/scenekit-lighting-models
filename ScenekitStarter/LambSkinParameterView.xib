@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CWHLambSkinParameterViewController">
             <connections>
+                <outlet property="ambientColorWell" destination="Zk6-TK-xtf" id="O4Z-hW-K5Z"/>
+                <outlet property="diffuseColorWell" destination="Bbf-J9-TKq" id="C28-Ke-qtG"/>
                 <outlet property="rolloffSlider" destination="UOv-s7-icG" id="yUg-wG-QLW"/>
                 <outlet property="rolloffTextField" destination="dSf-vy-MrG" id="QWh-Gr-RUH"/>
+                <outlet property="subColorWell" destination="QwT-21-K9b" id="coI-Cv-JnP"/>
                 <outlet property="view" destination="myn-aw-fEc" id="Pzw-Po-4WJ"/>
             </connections>
         </customObject>

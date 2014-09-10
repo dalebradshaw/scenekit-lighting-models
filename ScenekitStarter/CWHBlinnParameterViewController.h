@@ -13,11 +13,11 @@
 
 @interface CWHBlinnParameterViewController : CWHParameterViewController
 
-
+@property (weak) IBOutlet NSColorWell *ambientColorWell;
 @property (strong) NSColor *ambientColor;
 - (IBAction)updateAmbientColor:(id)sender;
 
-
+@property (weak) IBOutlet NSColorWell *lightColorWell;
 @property (strong) NSColor *lightColor;
 - (IBAction)updateLightColor:(id)sender;
 
