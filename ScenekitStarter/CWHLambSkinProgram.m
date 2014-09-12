@@ -36,7 +36,7 @@
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
-    if (self = [super init]) {
+    if (self = [super initWithProgram:@"LambSkin"]) {
         self.diffuseColor =[decoder decodeObjectForKey:@"diffuseColor"];
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
         self.subColor = [decoder decodeObjectForKey:@"subColor"];

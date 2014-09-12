@@ -55,7 +55,7 @@
 
 - (IBAction)updateEnvMap:(id)sender {
    NSString *updatedMap = [sender titleOfSelectedItem];
-   NSLog(@"updateEnvMap %@", updatedMap);
+   //NSLog(@"updateEnvMap %@", updatedMap);
    self.imagePath = [[NSBundle mainBundle] pathForResource:updatedMap ofType:@"png"];
 }
 
@@ -71,6 +71,5 @@
     [self.delegate updateShaderValues:program];
 
 }
-
 
 @end

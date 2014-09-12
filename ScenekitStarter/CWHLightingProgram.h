@@ -8,6 +8,7 @@
 
 #import <SceneKit/SceneKit.h>
 
-@interface CWHLightingProgram : SCNProgram
+@interface CWHLightingProgram : SCNProgram<SCNProgramDelegate>
 - (id)initWithProgram:(NSString *)program;
+
 @end

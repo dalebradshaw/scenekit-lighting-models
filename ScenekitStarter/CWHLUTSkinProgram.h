@@ -7,8 +7,10 @@
 //
 
 #import <SceneKit/SceneKit.h>
+#import "CWHLightingProgram.h"
 
-@interface CWHLUTSkinProgram : SCNProgram<SCNProgramDelegate, NSCoding>
+//WIP, Need to implement subscatter, probably through an SCNTransaction
+@interface CWHLUTSkinProgram : CWHLightingProgram<SCNProgramDelegate, NSCoding>
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *diffuseColor;

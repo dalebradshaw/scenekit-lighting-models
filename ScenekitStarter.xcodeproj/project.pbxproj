@@ -36,6 +36,12 @@
 		BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */; };
 		BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */; };
 		BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */; };
+		BF7F560A19C38440004A199A /* CWHLUTSkinParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F560819C38440004A199A /* CWHLUTSkinParameterViewController.m */; };
+		BF7F560B19C38440004A199A /* LUTSkinParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F560919C38440004A199A /* LUTSkinParameterView.xib */; };
+		BF7F560D19C38AAB004A199A /* LUTSkin.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BF7F560C19C38AAB004A199A /* LUTSkin.vsh */; };
+		BF7F560F19C38AC7004A199A /* LUTSkin.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BF7F560E19C38AC7004A199A /* LUTSkin.fsh */; };
+		BF7F561319C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7F561119C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.m */; };
+		BF7F561419C39A6C004A199A /* GlossyWetHighlightParameterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7F561219C39A6C004A199A /* GlossyWetHighlightParameterView.xib */; };
 		BF91E0AF198AEF6A00965DF7 /* CWHLUTSkinProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */; };
 		BFB813CC1981646100E09822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CB1981646100E09822 /* main.m */; };
 		BFB813CF1981646100E09822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB813CE1981646100E09822 /* AppDelegate.m */; };
@@ -124,6 +130,14 @@
 		BF728C69198AE6800018E76C /* CWHEdgeFuzzProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHEdgeFuzzProgram.m; sourceTree = "<group>"; };
 		BF728C6B198AE6EF0018E76C /* EdgeFuzz.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EdgeFuzz.fsh; sourceTree = "<group>"; };
 		BF728C6C198AE6EF0018E76C /* EdgeFuzz.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = EdgeFuzz.vsh; sourceTree = "<group>"; };
+		BF7F560719C38440004A199A /* CWHLUTSkinParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLUTSkinParameterViewController.h; sourceTree = "<group>"; };
+		BF7F560819C38440004A199A /* CWHLUTSkinParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLUTSkinParameterViewController.m; sourceTree = "<group>"; };
+		BF7F560919C38440004A199A /* LUTSkinParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LUTSkinParameterView.xib; sourceTree = "<group>"; };
+		BF7F560C19C38AAB004A199A /* LUTSkin.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LUTSkin.vsh; sourceTree = "<group>"; };
+		BF7F560E19C38AC7004A199A /* LUTSkin.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = LUTSkin.fsh; sourceTree = "<group>"; };
+		BF7F561019C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHGlossyWetHighlightParameterViewController.h; sourceTree = "<group>"; };
+		BF7F561119C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHGlossyWetHighlightParameterViewController.m; sourceTree = "<group>"; };
+		BF7F561219C39A6C004A199A /* GlossyWetHighlightParameterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlossyWetHighlightParameterView.xib; sourceTree = "<group>"; };
 		BF91E0AD198AEF6A00965DF7 /* CWHLUTSkinProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHLUTSkinProgram.h; sourceTree = "<group>"; };
 		BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLUTSkinProgram.m; sourceTree = "<group>"; };
 		BFB813C61981646100E09822 /* ScenekitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScenekitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,8 +229,10 @@
 				BFE9F69B199EB178000D9153 /* BlinnParameterView.xib */,
 				BFE9F6A0199EB2CD000D9153 /* EdgeFuzzParameterView.xib */,
 				BFE2962319ABABA3006D5336 /* EnvMapParameterView.xib */,
+				BF7F561219C39A6C004A199A /* GlossyWetHighlightParameterView.xib */,
 				BF018EF1199A93F700917508 /* GoochParameterView.xib */,
 				BFE295DB19A675B4006D5336 /* LambSkinParameterView.xib */,
+				BF7F560919C38440004A199A /* LUTSkinParameterView.xib */,
 				BFFB6DE7198BF0A500C14A7C /* PhongPointLightParameterView.xib */,
 				BF23483619B8EB9500DAEF95 /* ThinFilmParameterView.xib */,
 				BFE9F696199E385E000D9153 /* VelvetParameterView.xib */,
@@ -234,6 +250,8 @@
 				BF728C56198A78710018E76C /* Hemisphere.fsh */,
 				BF728C65198AC03E0018E76C /* LambSkin.vsh */,
 				BF728C64198AC03E0018E76C /* LambSkin.fsh */,
+				BF7F560C19C38AAB004A199A /* LUTSkin.vsh */,
+				BF7F560E19C38AC7004A199A /* LUTSkin.fsh */,
 				BF035B6519869A1000F1C758 /* PhongPointLight.vsh */,
 				BF035B6419869A1000F1C758 /* PhongPointLight.fsh */,
 				BF23482E19B777AC00DAEF95 /* ThinFilm.vsh */,
@@ -289,6 +307,8 @@
 				BFE2962219ABABA3006D5336 /* CWHEnvMapParameterViewController.m */,
 				BF728C5A198AB3980018E76C /* CWHGlossyWetHighlightProgram.h */,
 				BF728C5B198AB3980018E76C /* CWHGlossyWetHighlightProgram.m */,
+				BF7F561019C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.h */,
+				BF7F561119C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.m */,
 				BFF2DE05198846F500FBDAAD /* CWHGoochProgram.h */,
 				BFF2DE06198846F500FBDAAD /* CWHGoochProgram.m */,
 				BF018EF3199A948F00917508 /* CWHGoochParameterViewController.h */,
@@ -305,6 +325,8 @@
 				BFDF1DC619BF9C8200DD1473 /* CWHLightingProgram.m */,
 				BF91E0AD198AEF6A00965DF7 /* CWHLUTSkinProgram.h */,
 				BF91E0AE198AEF6A00965DF7 /* CWHLUTSkinProgram.m */,
+				BF7F560719C38440004A199A /* CWHLUTSkinParameterViewController.h */,
+				BF7F560819C38440004A199A /* CWHLUTSkinParameterViewController.m */,
 				BFF2DE021988369500FBDAAD /* CWHPhongPointLightProgram.h */,
 				BFF2DE031988369500FBDAAD /* CWHPhongPointLightProgram.m */,
 				BFFB6DE9198C0E1500C14A7C /* CWHPhongPointLightParameterViewController.h */,
@@ -436,6 +458,8 @@
 				BFF2DE0A198847D100FBDAAD /* Gooch.fsh in Resources */,
 				BF728C60198AB4500018E76C /* GlossyWetHighlight.vsh in Resources */,
 				BFFB6DF0198C368900C14A7C /* LightingModelWindow.xib in Resources */,
+				BF7F560F19C38AC7004A199A /* LUTSkin.fsh in Resources */,
+				BF7F561419C39A6C004A199A /* GlossyWetHighlightParameterView.xib in Resources */,
 				BF728C59198A78710018E76C /* Hemisphere.vsh in Resources */,
 				BF23483119B777B800DAEF95 /* ThinFilm.fsh in Resources */,
 				BF728C5F198AB4500018E76C /* GlossyWetHighlight.fsh in Resources */,
@@ -461,6 +485,7 @@
 				BF728C6D198AE6EF0018E76C /* EdgeFuzz.fsh in Resources */,
 				BF035B6B1987E9C300F1C758 /* Blinn.vsh in Resources */,
 				BFE2961C19AB6EA3006D5336 /* EnvMapInterior.png in Resources */,
+				BF7F560B19C38440004A199A /* LUTSkinParameterView.xib in Resources */,
 				BF23483819B8EB9500DAEF95 /* ThinFilmParameterView.xib in Resources */,
 				BF728C6E198AE6EF0018E76C /* EdgeFuzz.vsh in Resources */,
 				BFE9F69D199EB178000D9153 /* BlinnParameterView.xib in Resources */,
@@ -468,6 +493,7 @@
 				BFE2961E19AB6F0A006D5336 /* EnvMap.vsh in Resources */,
 				BFE2962519ABABA3006D5336 /* EnvMapParameterView.xib in Resources */,
 				BFE9F698199E385E000D9153 /* VelvetParameterView.xib in Resources */,
+				BF7F560D19C38AAB004A199A /* LUTSkin.vsh in Resources */,
 				BF23483319B7BD4300DAEF95 /* FringeMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,10 +512,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7F561319C39A6C004A199A /* CWHGlossyWetHighlightParameterViewController.m in Sources */,
 				BF23482D19AFC54500DAEF95 /* CWHThinFilmProgram.m in Sources */,
 				BFB813D51981646100E09822 /* CWHLightingViewController.m in Sources */,
 				BFB813D21981646100E09822 /* CWHLightingView.m in Sources */,
 				BF728C4E1989669F0018E76C /* CWHVelvetProgram.m in Sources */,
+				BF7F560A19C38440004A199A /* CWHLUTSkinParameterViewController.m in Sources */,
 				BF728C5C198AB3980018E76C /* CWHGlossyWetHighlightProgram.m in Sources */,
 				BFE295DC19A675B4006D5336 /* CWHLambSkinParameterViewController.m in Sources */,
 				BF728C55198A77E60018E76C /* CWHHemisphereProgram.m in Sources */,

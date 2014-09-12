@@ -41,11 +41,12 @@
         }
         
         double rolloff  = [[self.program valueForKey:@"rolloff" ] doubleValue];
-        
-        [self.rolloffSlider setDoubleValue:rolloff];
-        [self.rolloffTextField setDoubleValue:rolloff];
-        self.rolloff = rolloff;
-       
+        if (rolloff >= 0) {
+            [self.rolloffSlider setDoubleValue:rolloff];
+            [self.rolloffTextField setDoubleValue:rolloff];
+            self.rolloff = rolloff;
+        }
+
     }
 }
 
@@ -83,6 +84,7 @@
     program.rolloff = self.rolloff;
     program.ambientColor = self.ambientColor;
     program.diffuseColor = self.diffuseColor;
+    program.subColor = self.subColor;
     
     [self.delegate updateShaderValues:program];
 }

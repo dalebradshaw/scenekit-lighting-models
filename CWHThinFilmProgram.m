@@ -26,6 +26,7 @@
             NSLog(@"error %@", error);
             NSLog(@"GL Error = %u", gError);
         }
+        
        //defaults
         self.filmDepth = 0.75;
         self.diffuseColor = [NSColor grayColor];
@@ -85,7 +86,7 @@
     if ([symbol isEqualToString:@"diffColor"]) {
         
         if(self.diffuseColor){
-            NSLog(@" self.diffuseColor red %f green %f blue %f", [self.diffuseColor redComponent], [self.diffuseColor greenComponent], [self.diffuseColor blueComponent]);
+            //NSLog(@" self.diffuseColor red %f green %f blue %f", [self.diffuseColor redComponent], [self.diffuseColor greenComponent], [self.diffuseColor blueComponent]);
             glUniform3f(location,[self.diffuseColor redComponent] , [self.diffuseColor greenComponent] , [self.diffuseColor blueComponent]);
             
         }

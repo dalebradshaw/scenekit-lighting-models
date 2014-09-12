@@ -32,7 +32,6 @@
     
     return self;
     
-    
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -41,7 +40,6 @@
         self.lightColor  = [decoder decodeObjectForKey:@"lightColor"];
         self.materialSpecularity = [decoder decodeDoubleForKey:@"materialSpecularity"];
         self.shininess = [decoder decodeDoubleForKey:@"shininess"];
-
     }
     return self;
 }

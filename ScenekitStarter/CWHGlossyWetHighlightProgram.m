@@ -16,41 +16,45 @@
 -(instancetype)init
 {
     
-    self = [super init];
+    self = [super initWithProgram:@"GlossyWetHighlight"];
     
     if ( self != nil )
     {
-        
-        NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:@"GlossyWetHighlight" withExtension:@"vsh"];
-        NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:@"GlossyWetHighlight" withExtension:@"fsh"];
-        
-        NSString *vertexShader = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-        NSString *fragmentShader = [[NSString alloc] initWithContentsOfURL:fragmentShaderURL
-                                                                  encoding:NSUTF8StringEncoding
-                                                                     error:NULL];
-        // Assign the shader
-        self.vertexShader   = vertexShader;
-        self.fragmentShader = fragmentShader;
-        
-        // Bind geometry source semantics to the vertex shader attributes
-        [self setSemantic:SCNGeometrySourceSemanticVertex forSymbol:@"a_srcPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticNormal forSymbol:@"a_normPos" options:nil];
-        [self setSemantic:SCNGeometrySourceSemanticTexcoord forSymbol:@"a_texcoord" options:nil];
-        
-        // Bind the uniforms that can benefit from "automatic" values, computed and assigned by Scene Kit at each frame
-        [self setSemantic:SCNModelViewTransform forSymbol:@"u_mv" options:nil];
-        [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
-        [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
-        [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-        
-        // Become the program delegate so that you get the binding callback
-        self.delegate = self;
+        self.ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.specularColor = [NSColor colorWithRed:1. green:0. blue:0. alpha:1.];
+        self.specularity = 0.3;
+        self.specularExponent = 3.0;
+        self.glossMax = 1.349;
+        self.glossMin = 1.199;
+        self.glossDrop = 2.661;
     }
     
     return self;
     
+    
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if (self = [super initWithProgram:@"GlossyWetHighlight"]) {
+        self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
+        self.specularColor = [decoder decodeObjectForKey:@"specularColor"];
+        self.specularity = [decoder decodeDoubleForKey:@"specularity"];
+        self.specularExponent= [decoder decodeDoubleForKey:@"specularExponent"];
+        self.glossMax= [decoder decodeDoubleForKey:@"glossMax"];
+        self.glossMin= [decoder decodeDoubleForKey:@"glossMin"];
+        self.specularExponent= [decoder decodeDoubleForKey:@"specularExponent"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeObject:_ambientColor forKey:@"ambientColor"];
+    [encoder encodeObject:_specularColor forKey:@"specularColor"];
+    [encoder encodeDouble:_specularity forKey:@"specularity"];
+    [encoder encodeDouble:_specularExponent forKey:@"specularExponent"];
+    [encoder encodeDouble:_glossMax forKey:@"glossMax"];
+    [encoder encodeDouble:_glossMin forKey:@"glossMin"];
+    [encoder encodeDouble:_glossDrop forKey:@"glossDrop"];
     
 }
 

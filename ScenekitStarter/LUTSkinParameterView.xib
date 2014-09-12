@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CWHLUTSkinParameterViewController">
+            <connections>
+                <outlet property="diffuseColorWell" destination="1Y4-ZS-oBe" id="8WR-D7-kq7"/>
+                <outlet property="scatterColorWell" destination="2Fi-cE-IC2" id="rge-7H-ih5"/>
+                <outlet property="scatterWidthSlider" destination="U35-oB-he4" id="mX8-Ei-CLy"/>
+                <outlet property="scatterWidthTextField" destination="wxb-Qv-Qrz" id="E0o-bU-tIa"/>
+                <outlet property="shininessSlider" destination="Oow-U7-0Ce" id="L2I-uB-1GE"/>
+                <outlet property="shininessTextField" destination="3Yz-wF-gyR" id="nV8-68-3LX"/>
+                <outlet property="specularColorWell" destination="b6I-rx-Eko" id="pjh-sE-dzd"/>
+                <outlet property="view" destination="1On-jM-IaK" id="eKo-4c-gcc"/>
+                <outlet property="wrapSlider" destination="RXI-Mo-UwG" id="Dni-c0-aqk"/>
+                <outlet property="wrapTextField" destination="uae-Bo-ly5" id="po1-0J-d8b"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="1On-jM-IaK" userLabel="LUTSkinParameterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tD5-Vm-waX">
+                    <rect key="frame" x="18" y="171" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Wrap" id="m15-LJ-axv">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXI-Mo-UwG">
+                    <rect key="frame" x="141" y="170" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.47499999999999998" tickMarkPosition="above" sliderType="linear" id="wLj-86-dP4"/>
+                    <connections>
+                        <action selector="updateWrap:" target="-2" id="4NN-Z5-uJI"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uae-Bo-ly5">
+                    <rect key="frame" x="246" y="169" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dKm-lQ-oME">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateWrap:" target="-2" id="O7G-bR-RRf"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JfV-qm-fZy">
+                    <rect key="frame" x="18" y="141" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Scatter  Width" id="n90-6y-jzZ">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U35-oB-he4">
+                    <rect key="frame" x="141" y="140" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.17000000000000001" tickMarkPosition="above" sliderType="linear" id="VKw-eb-3yn"/>
+                    <connections>
+                        <action selector="updateScatterWidth:" target="-2" id="Cic-rb-c6Y"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxb-Qv-Qrz">
+                    <rect key="frame" x="246" y="139" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="9VP-L5-OEF">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateScatterWidth:" target="-2" id="XM5-oy-bOA"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-4v-0Bv">
+                    <rect key="frame" x="18" y="111" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Shininess" id="O2Y-Je-AYz">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oow-U7-0Ce">
+                    <rect key="frame" x="141" y="110" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.375" tickMarkPosition="above" sliderType="linear" id="VXS-bj-Aof"/>
+                    <connections>
+                        <action selector="updateShininess:" target="-2" id="GMN-rN-QDP"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Yz-wF-gyR">
+                    <rect key="frame" x="246" y="109" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Dpg-Jk-040">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fi-cE-IC2">
+                    <rect key="frame" x="141" y="18" width="44" height="23"/>
+                    <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateScatterColor:" target="-2" id="B9g-Ex-hUl"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoX-te-DYT">
+                    <rect key="frame" x="18" y="18" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Scatter Color" id="ibO-GM-Cv9">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6I-rx-Eko">
+                    <rect key="frame" x="141" y="49" width="44" height="23"/>
+                    <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateSpecularColor:" target="-2" id="Oq8-in-x1Z"/>
+                    </connections>
+                </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOP-wz-sHH">
+                    <rect key="frame" x="18" y="49" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Specular Color" id="kCl-af-gO4">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-xD-Pc6">
+                    <rect key="frame" x="18" y="80" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Diffuse Color" id="cmL-6V-0Sb">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Y4-ZS-oBe">
+                    <rect key="frame" x="141" y="80" width="44" height="23"/>
+                    <color key="color" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateDiffuseColor:" target="-2" id="HnP-4h-WQc"/>
+                    </connections>
+                </colorWell>
+            </subviews>
+            <point key="canvasLocation" x="739" y="736"/>
+        </customView>
+    </objects>
+</document>
