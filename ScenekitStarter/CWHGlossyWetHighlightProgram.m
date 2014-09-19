@@ -20,6 +20,7 @@
     
     if ( self != nil )
     {
+      
         self.ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
         self.specularColor = [NSColor colorWithRed:1. green:0. blue:0. alpha:1.];
         self.specularity = 0.3;
@@ -36,6 +37,7 @@
 
 - (id)initWithCoder:(NSCoder *)decoder {
     if (self = [super initWithProgram:@"GlossyWetHighlight"]) {
+       
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
         self.specularColor = [decoder decodeObjectForKey:@"specularColor"];
         self.specularity = [decoder decodeDoubleForKey:@"specularity"];
@@ -43,6 +45,7 @@
         self.glossMax= [decoder decodeDoubleForKey:@"glossMax"];
         self.glossMin= [decoder decodeDoubleForKey:@"glossMin"];
         self.specularExponent= [decoder decodeDoubleForKey:@"specularExponent"];
+        
     }
     return self;
 }
@@ -103,6 +106,16 @@
         
         return YES;
     }
+    
+    if ([symbol isEqualToString:@"diffuseColor"]) {
+        
+        if(self.diffuseColor){
+            glUniform4f(location,[self.diffuseColor redComponent] , [self.diffuseColor greenComponent] , [self.diffuseColor blueComponent], [self.diffuseColor alphaComponent]);
+        }
+        
+        return YES;
+    }
+ 
     
     if ([symbol isEqualToString:@"Specularity"]) {
         

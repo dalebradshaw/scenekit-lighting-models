@@ -73,6 +73,14 @@
 
         programMaterial.program = lightingModel;
         self.geometry.materials = @[programMaterial];
+        //bind inverse transforms here since we don't get inverse in base semantics
+        [self.geometry.firstMaterial handleBindingOfSymbol:@"u_inverseProjectionTransform" usingBlock:^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {
+            
+            SCNMatrix4 invMatrix = SCNMatrix4Invert(renderedNode.worldTransform);
+            GLKMatrix4 matrix = SCNMatrix4ToGLKMatrix4(invMatrix);
+
+            glUniformMatrix4fv(location, 1, false, matrix.m);
+        }];
     }
     
 }

@@ -1,107 +1,135 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6246" systemVersion="14A361c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="101000" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CWHGlossyWetHighlightParameterViewController">
             <connections>
+                <outlet property="ambientColorWell" destination="yvi-rr-xaI" id="2ZC-pd-5HR"/>
+                <outlet property="diffuseColorWell" destination="jWw-VO-uHo" id="vcc-ag-PMu"/>
+                <outlet property="glossDropSlider" destination="lH1-0q-11y" id="Glt-Kj-zLM"/>
+                <outlet property="glossDropTextField" destination="DCd-bc-XaA" id="mKr-Yn-FlL"/>
+                <outlet property="glossMaxSlider" destination="RxA-dn-l1z" id="e83-0M-UuO"/>
+                <outlet property="glossMaxTextField" destination="dvx-Qm-Mei" id="rgG-vp-8aZ"/>
+                <outlet property="glossMinSlider" destination="dcW-S9-Adj" id="lKl-yd-3rR"/>
+                <outlet property="glossMinTextField" destination="GJB-70-45w" id="amS-T1-erM"/>
+                <outlet property="specularColorWell" destination="Sv1-eS-Tnu" id="Q1V-Yc-3Zz"/>
+                <outlet property="specularExponentSlider" destination="cvV-jg-BV3" id="fKS-M2-lHO"/>
+                <outlet property="specularExponentTextField" destination="re6-DL-HTv" id="ILI-xF-I77"/>
+                <outlet property="specularitySlider" destination="AoQ-Dk-PsC" id="ULr-Ej-Gee"/>
+                <outlet property="specularityTextField" destination="SQZ-qW-9jo" id="Gl9-PE-3mq"/>
                 <outlet property="view" destination="0Xa-90-4N8" id="x39-JQ-0a1"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="0Xa-90-4N8" userLabel="LUTSkinParameterView">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="216"/>
+        <customView id="0Xa-90-4N8" userLabel="GlossyWetHighlightParameterView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="279"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UfU-Za-so9">
-                    <rect key="frame" x="18" y="171" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Wrap" id="Due-e8-lOA">
+                    <rect key="frame" x="18" y="234" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="GlossMin" id="Due-e8-lOA">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcW-S9-Adj">
-                    <rect key="frame" x="141" y="170" width="92" height="17"/>
+                    <rect key="frame" x="141" y="233" width="92" height="17"/>
                     <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.47499999999999998" tickMarkPosition="above" sliderType="linear" id="tYP-UV-0BY"/>
+                    <connections>
+                        <action selector="updateGlossMin:" target="-2" id="7aA-bo-sGx"/>
+                    </connections>
                 </slider>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJB-70-45w">
-                    <rect key="frame" x="246" y="169" width="45" height="22"/>
+                    <rect key="frame" x="246" y="232" width="45" height="22"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JI2-Te-DL9">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <action selector="updateGlossMin:" target="-2" id="rXk-a9-XWT"/>
+                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBX-IY-Rec">
-                    <rect key="frame" x="18" y="141" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Scatter  Width" id="Rtw-Fc-fJd">
+                    <rect key="frame" x="18" y="204" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="GlossMax" id="Rtw-Fc-fJd">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RxA-dn-l1z">
-                    <rect key="frame" x="141" y="140" width="92" height="17"/>
+                    <rect key="frame" x="141" y="203" width="92" height="17"/>
                     <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.17000000000000001" tickMarkPosition="above" sliderType="linear" id="pbO-hC-Rbw"/>
+                    <connections>
+                        <action selector="updateGlossMax:" target="-2" id="LlW-lY-plW"/>
+                    </connections>
                 </slider>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-Qm-Mei">
-                    <rect key="frame" x="246" y="139" width="45" height="22"/>
+                    <rect key="frame" x="246" y="202" width="45" height="22"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="sxX-cb-wJQ">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <action selector="updateGlossMax:" target="-2" id="p6v-4D-TPs"/>
+                    </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8q-nO-Zqz">
-                    <rect key="frame" x="18" y="111" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Shininess" id="3du-Ww-DUr">
+                    <rect key="frame" x="18" y="174" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="GlossDrop" id="3du-Ww-DUr">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-0q-11y">
-                    <rect key="frame" x="141" y="110" width="92" height="17"/>
+                    <rect key="frame" x="141" y="173" width="92" height="17"/>
                     <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.375" tickMarkPosition="above" sliderType="linear" id="DtW-Y3-YnP"/>
+                    <connections>
+                        <action selector="updateGlossDrop:" target="-2" id="EsW-EB-m4R"/>
+                    </connections>
                 </slider>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCd-bc-XaA">
-                    <rect key="frame" x="246" y="109" width="45" height="22"/>
+                    <rect key="frame" x="246" y="172" width="45" height="22"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="7co-6l-n9R">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <action selector="updateGlossDrop:" target="-2" id="UGa-D2-k6s"/>
+                    </connections>
                 </textField>
                 <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-eS-Tnu">
-                    <rect key="frame" x="141" y="18" width="44" height="23"/>
+                    <rect key="frame" x="141" y="19" width="44" height="23"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateSpecularColor:" target="-2" id="H4J-CR-w1R"/>
+                    </connections>
                 </colorWell>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5NT-90-NqI">
-                    <rect key="frame" x="18" y="18" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Scatter Color" id="hV2-Fa-mel">
-                        <font key="font" metaFont="cellTitle"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yvi-rr-xaI">
-                    <rect key="frame" x="141" y="49" width="44" height="23"/>
+                    <rect key="frame" x="141" y="50" width="44" height="23"/>
                     <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateAmbientColor:" target="-2" id="OHI-eb-yKo"/>
+                    </connections>
                 </colorWell>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUB-iF-sGB">
-                    <rect key="frame" x="18" y="49" width="117" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Specular Color" id="4YV-90-0aA">
+                    <rect key="frame" x="18" y="50" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Ambient Color" id="4YV-90-0aA">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yH-0s-9fX">
-                    <rect key="frame" x="18" y="80" width="117" height="17"/>
+                    <rect key="frame" x="18" y="81" width="117" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Diffuse Color" id="BJn-5i-eyk">
                         <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -109,11 +137,74 @@
                     </textFieldCell>
                 </textField>
                 <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWw-VO-uHo">
-                    <rect key="frame" x="141" y="80" width="44" height="23"/>
+                    <rect key="frame" x="141" y="81" width="44" height="23"/>
                     <color key="color" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="updateDiffuseColor:" target="-2" id="1LU-6g-gGg"/>
+                    </connections>
                 </colorWell>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFj-Tp-GEl">
+                    <rect key="frame" x="18" y="144" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="SpecularExponent" id="0aS-a7-Bqv">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvV-jg-BV3">
+                    <rect key="frame" x="141" y="143" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.17000000000000001" tickMarkPosition="above" sliderType="linear" id="OQF-54-Rsa"/>
+                    <connections>
+                        <action selector="updateSpecularExponent:" target="-2" id="hW0-Bg-JTs"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="re6-DL-HTv">
+                    <rect key="frame" x="246" y="142" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dwW-Xr-ziW">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateSpecularExponent:" target="-2" id="SRr-zp-6bh"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwQ-WC-ngb">
+                    <rect key="frame" x="18" y="114" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Specularity" id="Hag-Na-qb9">
+                        <font key="font" metaFont="titleBar" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoQ-Dk-PsC">
+                    <rect key="frame" x="141" y="113" width="92" height="17"/>
+                    <sliderCell key="cell" controlSize="small" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="0.375" tickMarkPosition="above" sliderType="linear" id="KBS-fc-eBY"/>
+                    <connections>
+                        <action selector="updateSpecularity:" target="-2" id="gJs-E9-OQv"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQZ-qW-9jo">
+                    <rect key="frame" x="246" y="112" width="45" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="r6P-Mc-BVK">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="updateSpecularity:" target="-2" id="8D6-LF-nt9"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5NT-90-NqI">
+                    <rect key="frame" x="18" y="19" width="117" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Specular Color" id="hV2-Fa-mel">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
-            <point key="canvasLocation" x="739" y="736"/>
+            <point key="canvasLocation" x="739" y="767.5"/>
         </customView>
     </objects>
 </document>

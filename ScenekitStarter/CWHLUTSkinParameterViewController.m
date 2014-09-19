@@ -39,7 +39,7 @@
 
         double wrap = [[self.program valueForKey:@"wrap"] doubleValue];
         
-        if (wrap) {
+        if (wrap >= 0) {
             [self.wrapSlider setDoubleValue:wrap];
             [self.wrapTextField setDoubleValue:wrap];
             

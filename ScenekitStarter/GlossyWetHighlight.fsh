@@ -39,6 +39,7 @@ float glossy_drop(in float v, in float gMax, in float gMin, in float gDrop)
 // Main Glossy Wet Hilight Fragment Shader function
 vec4 glossyWetFS(in vec4 tex)
 {
+    tex = vec4(0.,0.,0.,1.);
     // Normamlze varyings
     vec3 Ln = normalize(LightVec);
     vec3 Nn = normalize(EyeNormal);

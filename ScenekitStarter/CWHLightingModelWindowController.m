@@ -15,6 +15,8 @@
 #import "CWHEdgeFuzzParameterViewController.h"
 #import "CWHEnvMapProgram.h"
 #import "CWHEnvMapParameterViewController.h"
+#import "CWHGlossyWetHighlightProgram.h"
+#import "CWHGlossyWetHighlightParameterViewController.h"
 #import "CWHGoochProgram.h"
 #import "CWHGoochParameterViewController.h"
 #import "CWHHemisphereParameterViewController.h"
@@ -76,7 +78,7 @@
     
     parameterViewControllerClass = NSClassFromString(programString);
     if(parameterViewControllerClass){
-        //NSLog(@"parameterViewControllerClass %@", parameterViewControllerClass);
+        NSLog(@"parameterViewControllerClass %@", parameterViewControllerClass);
         parameterViewController = [[parameterViewControllerClass alloc]
                                    initWithNibName:nibString bundle:nil];
     }

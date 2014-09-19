@@ -13,6 +13,7 @@
 
 @property (strong) SCNNode *lightnode;
 @property (strong) NSColor *ambientColor;
+@property (strong) NSColor *diffuseColor;
 @property (strong) NSColor *specularColor;
 @property (assign) double specularity;
 @property (assign) double specularExponent;

@@ -37,7 +37,8 @@
         [self setSemantic:SCNModelViewProjectionTransform forSymbol:@"u_mvproj" options:nil];
         [self setSemantic:SCNProjectionTransform forSymbol:@"u_proj" options:nil];
         [self setSemantic:SCNNormalTransform forSymbol:@"u_norm" options:nil];
-        
+       
+       
         // Become the program delegate so that you get the binding callback
         self.delegate = self;
     }
