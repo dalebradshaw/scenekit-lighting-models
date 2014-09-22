@@ -22,6 +22,7 @@
     {
       
         self.ambientColor = [NSColor colorWithRed:0. green:0. blue:0. alpha:1.];
+        self.diffuseColor = [NSColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.];
         self.specularColor = [NSColor colorWithRed:1. green:0. blue:0. alpha:1.];
         self.specularity = 0.3;
         self.specularExponent = 3.0;
@@ -39,12 +40,13 @@
     if (self = [super initWithProgram:@"GlossyWetHighlight"]) {
        
         self.ambientColor  = [decoder decodeObjectForKey:@"ambientColor"];
+        self.diffuseColor = [decoder decodeObjectForKey:@"diffuseColor"];
         self.specularColor = [decoder decodeObjectForKey:@"specularColor"];
         self.specularity = [decoder decodeDoubleForKey:@"specularity"];
         self.specularExponent= [decoder decodeDoubleForKey:@"specularExponent"];
         self.glossMax= [decoder decodeDoubleForKey:@"glossMax"];
         self.glossMin= [decoder decodeDoubleForKey:@"glossMin"];
-        self.specularExponent= [decoder decodeDoubleForKey:@"specularExponent"];
+        self.glossDrop = [decoder decodeDoubleForKey:@"glossDrop"];
         
     }
     return self;
@@ -52,6 +54,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     [encoder encodeObject:_ambientColor forKey:@"ambientColor"];
+    [encoder encodeObject:_diffuseColor forKey:@"diffuseColor"];
     [encoder encodeObject:_specularColor forKey:@"specularColor"];
     [encoder encodeDouble:_specularity forKey:@"specularity"];
     [encoder encodeDouble:_specularExponent forKey:@"specularExponent"];
@@ -78,15 +81,6 @@
         }
         
         return YES; // indicate that the symbol was bound successfully.
-    }
-    
-    if ([symbol isEqualToString:@"light_color"]) {
-        
-        if(self.lightnode){
-            glUniform3f(location,[self.lightnode.light.color redComponent] , [self.lightnode.light.color greenComponent] , [self.lightnode.light.color blueComponent]);
-        }
-        
-        return YES;
     }
     
     if ([symbol isEqualToString:@"AmbientColor"]) {

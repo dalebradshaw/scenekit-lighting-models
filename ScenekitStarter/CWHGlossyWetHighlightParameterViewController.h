@@ -2,7 +2,7 @@
 //  CWHGlossyWetHighlightParameterViewController.h
 //  ScenekitStarter
 //
-//  Created by Super on 9/12/14.
+//  Created by Dale Bradshaw on 9/12/14.
 //  Copyright (c) 2014 Creative Workflow Hacks. All rights reserved.
 //
 #import <Cocoa/Cocoa.h>
