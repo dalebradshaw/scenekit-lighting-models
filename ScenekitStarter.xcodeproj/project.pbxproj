@@ -78,6 +78,7 @@
 		BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */; };
 		BFFB6DF0198C368900C14A7C /* LightingModelWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */; };
 		BFFB6DF2198C40CD00C14A7C /* CWHLightingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */; };
+		BFFD8FD919D1AA8C009EAF06 /* CWHThinFilmProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFD8FD819D1AA8C009EAF06 /* CWHThinFilmProgram.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,8 @@
 		BFFB6DED198C272300C14A7C /* CWHLightingModelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHLightingModelWindowController.m; sourceTree = "<group>"; };
 		BFFB6DEF198C368900C14A7C /* LightingModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LightingModelWindow.xib; sourceTree = "<group>"; };
 		BFFB6DF1198C40CD00C14A7C /* CWHLightingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWHLightingView.xib; sourceTree = "<group>"; };
+		BFFD8FD719D1AA8C009EAF06 /* CWHThinFilmProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHThinFilmProgram.h; sourceTree = "<group>"; };
+		BFFD8FD819D1AA8C009EAF06 /* CWHThinFilmProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHThinFilmProgram.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +337,8 @@
 				BFE9F693199D06F7000D9153 /* CWHParameterViewProtocol.h */,
 				BFE9F68C199CFF52000D9153 /* CWHParameterViewController.h */,
 				BFE9F68D199CFF52000D9153 /* CWHParameterViewController.m */,
+				BFFD8FD719D1AA8C009EAF06 /* CWHThinFilmProgram.h */,
+				BFFD8FD819D1AA8C009EAF06 /* CWHThinFilmProgram.m */,
 				BF23482B19AFC54500DAEF95 /* CWHThinFilmProgram.h */,
 				BF23482C19AFC54500DAEF95 /* CWHThinFilmProgram.m */,
 				BF23483419B8EB9500DAEF95 /* CWHThinFilmParameterViewController.h */,
@@ -530,6 +535,7 @@
 				BFE9F69C199EB178000D9153 /* CWHBlinnParameterViewController.m in Sources */,
 				BFFB6DEE198C272300C14A7C /* CWHLightingModelWindowController.m in Sources */,
 				BFE2962419ABABA3006D5336 /* CWHEnvMapParameterViewController.m in Sources */,
+				BFFD8FD919D1AA8C009EAF06 /* CWHThinFilmProgram.m in Sources */,
 				BFE295D719A62CA2006D5336 /* CWHHemisphereParameterViewController.m in Sources */,
 				BF728C6A198AE6800018E76C /* CWHEdgeFuzzProgram.m in Sources */,
 				BFE9F697199E385E000D9153 /* CWHVelvetParameterViewController.m in Sources */,
